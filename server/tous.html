@@ -1,0 +1,22 @@
+<html>
+ <header>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <script type="text/javascript" src="data.js"></script>
+ <script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+ <script type="text/javascript" src="bio.js"> </script>
+ <script type="text/javascript" >
+   $(document).ready(function(){
+      var unused = unused_topics();
+      if (unused.length > 0){
+        display("<b>sujets non utilisés</b>: "+ unused.join(", "));
+      }
+      show_all();
+   });
+ </script>
+ <title>diagnostic</title>
+ </header>
+ <body>
+ <div id="titre"/>
+ <div id="bio"/>
+ </body>
+</html>
