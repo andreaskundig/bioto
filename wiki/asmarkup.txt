@@ -1,3 +1,9 @@
+La <pisan:nom_unisexe>ite décrite par Kenngott en 1860 lui est dédiée, mais elle s’avérera n’être qu’une variété de mélantérite cuprifère.
+clefs: legacy
+
+http://fr.wikipedia.org/wiki/Felix_Pisani
+----
+
 Familièrement, le mot <microbe:nom_unisexe> désigne un micro-organisme (le plus souvent une bactérie) responsable d'une maladie.
 clefs: reputation
 
@@ -189,7 +195,7 @@ http://fr.wikipedia.org/wiki/Khayr_ad-Din_Barberousse
 clefs: presentation
 
 Ce fut un échec cuisant au cours duquel <Arudj:nom_masculin> perdit son bras gauche.
-clefs: carrière
+clefs: carriere
 
 <Arudj:nom_masculin> occupa d’abord Cherchell avant de se rendre maître d'Alger en faisant étrangler le cheikh Salim dans son bain. Il fit ainsi de la ville une redoutable base de corsaires qui allait résister pendant plus de trois siècles.
 clefs: carriere
@@ -906,8 +912,7 @@ clefs: physique
 clefs: ondit
 
 Il nait de l'œuf cosmique issu de l'union de <l'Éther:nom_masculin_2> et du <Chaos:nom_masculin_3>. À la fois mâle et femelle, il a de nombreuses têtes d'animaux.
-clefs: naissance
-clefs: physique
+clefs: naissance physique
 
 <Aristophane:nom_masculin_2> parle de la puissance de <l'Éros:nom_masculin_1> et du mythe de l'androgyne (il y a trois sexes originels : le masculin, produit par le soleil, le féminin par la terre et l'androgyne, celui qui est composé des deux autres, par la lune).
 clefs: ondit
@@ -1511,7 +1516,7 @@ Sa femme est dénommée Hvōvi. Ils ont trois filles : Freni, Friti et Pourucist
 clefs: origine
 
 <Zoroastre:nom_masculin> aurait eu une illumination concernant le dieu <Ahura Mazda:nom_masculin_2>, à l'âge de 30 ans. Il créa les bases de sa religion et y convertit sa femme, ses enfants et son cousin Maidhyoimangha.
-carriere
+clefs: carriere
 
 <Zoroastre:nom_masculin>  figure, probablement, sur la fresque du peintre italien Raphaël : L'École d'Athènes.
 clefs: legacy

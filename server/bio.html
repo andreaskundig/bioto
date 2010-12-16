@@ -4,6 +4,13 @@
  <script type="text/javascript" src="data.js"></script>
  <script type="text/javascript" src="jquery-1.4.4.min.js"></script>
  <script type="text/javascript" src="bio.js"> </script>
+ <script type="text/javascript" >
+   $(document).ready(function(){
+   keys = Math.random() > 0.5 ? keys_f : keys_m;
+   $("#titre").before('<h1>'+ protagonistes[0] +'</h1>');
+   bio();
+   });
+ </script>
  <title>Biographie</title>
  </header>
  <body>

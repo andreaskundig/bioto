@@ -17,14 +17,25 @@ def is_url(element)
   element.start_with? 'http'
 end
 
+def data_end(elements)
+  !(elements.next?) || elements.current.start_with?('STOP')
+end
+
+def para_end(elements)
+  elements.current.start_with? 'clefs:'
+end
+
 def read_para(elements)
   text = elements.next
-  elements.next while ! elements.current.start_with? 'clefs:'
+  text += "<br>" + elements.next while ! para_end elements
   keys = elements.next
   elements.next while elements.current.strip.size == 0
+  placeholders = text.scan(/<([^>]+?):([^>]+?)>/)
+  sex = placeholders.select{|e| e[1] =~ /(masculin|feminin|unisexe)(_1)?$/}.map{|e| $1 if e[1]=~ /([^_]+)(_1)?$/}[0]
   {:text => text,
-   :placeholders => Set.new(text.scan(/<([^>]+?):([^>]+?)>/)),
-   :keys => extract_keys(keys)}
+   :placeholders => Set.new(placeholders),
+   :keys => extract_keys(keys),
+   :sex => sex}
 end
 
 def extract_keys(key_text)

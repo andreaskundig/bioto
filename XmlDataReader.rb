@@ -6,6 +6,7 @@ require 'open-uri'
 require 'generator'
 require 'set'
 
+
 def make_generator(filename)
   content = read_content(filename)
   elements = Generator.new(content.children)
@@ -15,20 +16,32 @@ def read_content(uri)
  doc = Nokogiri::HTML(open(uri)).css('#page-content')
 end
 def is_para(element)
-  element.name == 'p' && element.children.size ==3
+  element.name == 'p' && element.children.size >=3
 end
 
 def is_url(element)
   element.children.size==1 || element.children[0].name == 'a'
 end
 
+def data_end(elements)
+  !(elements.next?) || 
+  (elements.current.name == 'p' && elements.current.text.start_with?('STOP'))
+end
+
 def read_para(elements)
   element = elements.next
+  # aller au prochain paragraphe
   elements.next while elements.current.children.size==0
-  text = element.children[0].text
+  text = element.children[0..-2].select{|ch| 
+         ch.text.strip.size>0 }.map{|ch| ch.text}.join("<br>")
+  placeholders = text.scan(/<([^>]+?):([^>]+?)>/)
+  sex = placeholders.select{|e|
+          e[1] =~ /(masculin|feminin|unisexe)(_1)?$/
+        }.map{|e| $1 if e[1]=~ /([^_]+)(_1)?$/}[0]
   {:text => text,
-   :placeholders => Set.new(text.scan(/<([^>]+?):([^>]+?)>/)),
-   :keys => extract_keys(element.children[2].text)}
+   :placeholders => Set.new(placeholders),
+   :keys => extract_keys(element.children[-1].text),
+   :sex => sex }
 end
 
 def extract_keys(key_text)
