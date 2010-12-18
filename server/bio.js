@@ -7,6 +7,7 @@ var remove_all, replace, display, map_placeholders,
   make_placeholder_regex, starts_with, keys, random,
   show_all;
 
+
 var ordre = [
   ["nom","presentation", "vie",  "introduction"],
   ["naissance", "origine", "existence", "debut"],
@@ -46,6 +47,8 @@ function unused_topics(){
   return tops;
 }
 
+
+
 function bio() {
   var deja_utilise, sujets, sujet, indexes, index, text, i, j;
   deja_utilise = [];
@@ -75,18 +78,41 @@ function show_all(){
   }
 }
 
+function starts_with_vowel(string){
+  var l = string[0].toLowerCase();
+  return l==='a' || l==='e' || l==='i' || l==='o' || l==='u';
+}
+
+function fix_apostrophe(text, original, replacement){
+  var re;
+  if (starts_with_vowel(replacement)){
+    re = new RegExp("(d|qu|l)(?:e|a)\\s+(<"+original+":(pre)?(nom))","gi");
+    text = text.replace( re, "$1' $2");
+  }else{
+    re = new RegExp("l'\\s*(<"+original+":(pre)?(nom_feminin))","gi");
+    text = text.replace( re, "la $1");
+    re = new RegExp("l'\\s*(<"+original+":(pre)?(nom_(masculin|unisexe)))","gi")
+    text = text.replace( re, "le $1");
+    re = new RegExp("(d|qu)'\\s*(<"+original+":(pre)?(nom))", "gi");
+    text = text.replace( re, "$1e $2");
+  }
+  return text;
+}
+
 function replace(text_object, names) {
   var map, result, placeholder, toreplace, replacement, i;
   map = map_placeholders(text_object.placeholders, names);
   result = text_object.text;
   for (i=0 ; i<text_object.placeholders.length ; i += 1){
     placeholder  = text_object.placeholders[i];
-    toreplace = make_placeholder_regex(placeholder);
     replacement = map[placeholder[1]];
+    result = fix_apostrophe(result, placeholder[0],replacement);
+    toreplace = make_placeholder_regex(placeholder);
     result = result.replace(toreplace, replacement);
   }
   return result;
 }
+
 
 function make_placeholder_regex(placeholder) {
     var exp = '<' + placeholder.join(':') + '>';
