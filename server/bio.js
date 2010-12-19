@@ -5,7 +5,8 @@
 /*global keys_m, keys_f, texts, topics, $ */
 var remove_all, replace, display, map_placeholders, 
   make_placeholder_regex, starts_with, keys, random,
-  show_all;
+  show_all, fix_apostrophe, starts_with_vowel, reassemble_original,
+  display_paragraph, add_mouse_behavior, make_replacement, span;
 
 
 var ordre = [
@@ -22,7 +23,7 @@ var ordre = [
 
 var protagonistes = ["Ibn Al Rabin", "Andréas Kündig", 
   "Bob le lapin", "un certain Gérard", 
-  "le cinquantenaire de la victoire"];
+  "Lambert-garou"];
 var livres = ["'l'autre fin du monde'", "la bible", "'Martine à la plage'", "'Cot cot'", "'Figaro Madame'"];
 
 function stats() {
@@ -47,10 +48,8 @@ function unused_topics(){
   return tops;
 }
 
-
-
 function bio() {
-  var deja_utilise, sujets, sujet, indexes, index, text, i, j;
+  var deja_utilise, sujets, sujet, indexes, index, replaced, i, j,original;
   deja_utilise = [];
   for (i = 0; i < ordre.length ; i += 1) {
     sujets = ordre[i];
@@ -58,66 +57,80 @@ function bio() {
     for (j = 0  ; j < sujets.length ; j += 1) {
       sujet = sujets[j];
       if (keys[sujet]) { indexes = indexes.concat(keys[sujet]); }
-      if (indexes.indexOf(undefined) !== -1){ alert("HEY"); }
     }
     remove_all(indexes, deja_utilise);
     if(indexes.length > 0){
       index = indexes[Math.floor(Math.random() * indexes.length)];
       deja_utilise.push(index);
-      text = replace(texts[index], protagonistes);
-      display(text);
+      replaced = replace(texts[index], protagonistes);
+      display(replaced);
     }
   }
+  add_mouse_behavior();
+
 }
 
 function show_all(){
-  var i, text;
+  var i, replaced, original;
   for ( i=0; i < texts.length ; i += 1){
-      text = replace(texts[i], protagonistes);
-      display(text);
+    replaced = replace(texts[i], protagonistes);
+    display(replaced);
   }
+  add_mouse_behavior();
 }
 
-function starts_with_vowel(string){
-  var l = string[0].toLowerCase();
-  return l==='a' || l==='e' || l==='i' || l==='o' || l==='u';
-}
-
-function fix_apostrophe(text, original, replacement){
-  var re;
-  if (starts_with_vowel(replacement)){
-    re = new RegExp("(d|qu|l)(?:e|a)\\s+(<"+original+":(pre)?(nom))","gi");
-    text = text.replace( re, "$1' $2");
-  }else{
-    re = new RegExp("l'\\s*(<"+original+":(pre)?(nom_feminin))","gi");
-    text = text.replace( re, "la $1");
-    re = new RegExp("l'\\s*(<"+original+":(pre)?(nom_(masculin|unisexe)))","gi")
-    text = text.replace( re, "le $1");
-    re = new RegExp("(d|qu)'\\s*(<"+original+":(pre)?(nom))", "gi");
-    text = text.replace( re, "$1e $2");
-  }
-  return text;
+function reassemble_original(text_object){
+  return text_object.text.replace(/<([^:]+):[^>]+>/g, "$1");
 }
 
 function replace(text_object, names) {
-  var map, result, placeholder, toreplace, replacement, i;
+  var map, result, placeholder, toreplace, replacing_name, replacement, i;
   map = map_placeholders(text_object.placeholders, names);
   result = text_object.text;
   for (i=0 ; i<text_object.placeholders.length ; i += 1){
     placeholder  = text_object.placeholders[i];
-    replacement = map[placeholder[1]];
-    result = fix_apostrophe(result, placeholder[0],replacement);
+    replacing_name = map[placeholder[1]];
+    result = fix_apostrophe(result, placeholder[0],replacing_name);
     toreplace = make_placeholder_regex(placeholder);
+    replacement = make_replacement(placeholder, replacing_name);
     result = result.replace(toreplace, replacement);
   }
   return result;
 }
 
+function fix_apostrophe(text, original, replacement){
+  var re;
+  if (starts_with_vowel(replacement)){
+    re =  "\\b(d|qu|l)(e|a)\\s+(<"+original+":(pre)?(nom))";
+    text = text.replace(new RegExp(re ,"gi"),
+			span("$1$2 ",1) + span("$1'",0)+"$3");
+  }else{
+    re = "\\bl'\\s*(<"+original+":(pre)?(nom_feminin))";
+    text = text.replace( new RegExp(re,"gi"), 
+			 span("l'",1)+span("la ",0)+"$1");
+    re = "\\bl'\\s*(<"+original+":(pre)?(nom_masculin))";
+    text = text.replace( new RegExp(re, "gi"),
+			 span("l'",1)+span("le ",0)+"$1");
+    re = "\\b(d|qu)'\\s*(<"+original+":(pre)?(nom))";
+    text = text.replace( new RegExp(re, "gi"), 
+			 span("$1'",1)+span("$1e ",0)+"$2");
+  }
+  return text;
+}
 
 function make_placeholder_regex(placeholder) {
     var exp = '<' + placeholder.join(':') + '>';
     exp = exp.replace(/\(/,'\\(').replace(/\)/,'\\)');
     return new RegExp(exp,"g");
+}
+
+function make_replacement(placeholder, replacing_name){
+  return span(placeholder[0], 1) + span(replacing_name, 0);
+}
+
+function span(to_wrap, original){
+  var clazz = original ? 'o hidden' : 'r';
+  return '<span class="'+clazz+'">'+to_wrap+'</span>';
 }
 
 function map_placeholders(placeholders,names){
@@ -141,10 +154,10 @@ function map_placeholders(placeholders,names){
       if (match){
 	map[phname] = names[0];
       }else{
-          if(remaining_names.length ===0){ 
-             remaining_names = names.slice(1); }
+        if(remaining_names.length ===0){ 
+          remaining_names = names.slice(1); }
         name_index = random(remaining_names.length);
-        map[phname] = remaining_names.splice(name_index, 1);
+        map[phname] = remaining_names.splice(name_index, 1)[0];
       }
     }
   }
@@ -164,16 +177,33 @@ function ends_with(end, a_string){
 			    a_string.length) === end;
 }
 
+function starts_with_vowel(string){
+  var l = string.charAt(0).toLowerCase();
+  return l==='a' || l==='e' || l==='i' || l==='o' || l==='u';
+}
+
 function remove_all(array,elements){
   var index, i, element;
   for (i=0 ; i < elements.length ; i += 1){
    element = elements[i];
-   index = array.indexOf(element);
+   index = $.inArray(element,array);
    if(index>=0) { array.splice(index,1); }
   }
 }
 
 function display(text){
-  $("#bio").before('<p>'+text+'</p>');
+  $("#bio").append('<p class="paragraph">'+text+'</p>');
 }
 
+function add_mouse_behavior(){
+    $(".paragraph").mouseover(function(){
+      $(this).children(".r").addClass('hidden');
+      $(this).children(".o").removeClass('hidden');
+      $(this).addClass("grey");
+   });
+   $(".paragraph").mouseout(function(){
+     $(this).children(".r").removeClass('hidden');
+     $(this).children(".o").addClass('hidden');
+     $(this).removeClass("grey");
+   });
+}

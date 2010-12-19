@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+                    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <script src="jquery-1.4.4.min.js"></script>
+  <link rel="stylesheet" href="qunit.css" type="text/css" media="screen" />
+<script type="text/javascript" src="qunit.js"></script>
+<script type="text/javascript" src="bio.js"></script>
+
+  <script>
+  $(document).ready(function(){
+/*
+  var text = {text:"En 2001, <elle:pronom_feminin> se fait connaître lors de l'émission de télé réalité française Loft Story, d'où elle sort gagnante avec le candidat <Christophe:nom_masculin_2>, et obtient une maison d'une valeur de 460 000 € à Saint-Tropez. L'émission est suivie par plusieurs millions de téléspectateurs chaque semaine. Le point d'orgue de la prestation de <Loana:nom_feminin_1> est le moment où elle aurait eu un rapport sexuel dans la piscine du loft avec Jean-Edouard, le tout filmé par les caméras de la production.",
+ placeholders:[["Loana", "nom_feminin_1"], ["Christophe", "nom_masculin_2"], ["elle", "pronom_feminin"]] };
+  
+*/    
+ test("map_placeholders", function() {
+   var ph, map, nom_m;
+   ph = [["Loana", "nom_feminin_1"], ["Christophe", "nom_masculin_2"], ["elle", "pronom_feminin"]];
+   map = map_placeholders(ph,["a","b"]);
+   deepEqual( map["nom_feminin_1"], "a", "");
+   deepEqual( map["nom_masculin_2"], "b", "");
+   deepEqual( map["pronom_feminin"], "elle", ""); 
+
+   map = map_placeholders(ph,["a", "b", "c", "d"]);
+   deepEqual( map["nom_feminin_1"], "a", "");
+   nom_m = map["nom_masculin_2"];
+   ok( $.inArray(nom_m, ["b", "c", "d"])>-1, "");
+   deepEqual( map["pronom_feminin"], "elle", "");
+ });
+
+test(" fix_apostrophe", function(){
+  var fixed = fix_apostrophe("le <raton:nom_masculin_3> mange", "raton", "animal");
+  equal(fixed,"<span class=\"o hidden\">le </span><span class=\"r\">l'</span><raton:nom_masculin_3> mange");
+
+  fixed = fix_apostrophe("le <raton:nom_masculin> mange", "raton", "animal");
+  equal(fixed, "<span class=\"o hidden\">le </span><span class=\"r\">l'</span><raton:nom_masculin> mange");
+
+  fixed = fix_apostrophe("l'<animal:nom_masculin_3> mange", "animal", "raton");
+  equal(fixed, "<span class=\"o hidden\">l'</span><span class=\"r\">le </span><animal:nom_masculin_3> mange");
+
+  fixed = fix_apostrophe("vénérable <animal:nom_masculin_3> me", "animal", "raton");
+  equal(fixed, "vénérable <animal:nom_masculin_3> me");
+
+  fixed = fix_apostrophe("l'<animal:nom_feminin> mange", "animal", "raton");
+  equal(fixed, "<span class=\"o hidden\">l'</span><span class=\"r\">la </span><animal:nom_feminin> mange");
+
+  fixed = fix_apostrophe("qu'<animal:nom_feminin> mange", "animal", "raton");
+  equal(fixed, "<span class=\"o hidden\">qu'</span><span class=\"r\">que </span><animal:nom_feminin> mange");
+});
+
+});
+
+  </script>
+  
+</head>
+<body>
+  <h1 id="qunit-header">QUnit example</h1>
+ <h2 id="qunit-banner"></h2>
+ <div id="qunit-testrunner-toolbar"></div>
+ <h2 id="qunit-userAgent"></h2>
+ <ol id="qunit-tests"></ol>
+ <div id="qunit-fixture">test markup, will be hidden</div>
+</body>
+</html>

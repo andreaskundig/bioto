@@ -35,7 +35,7 @@ def read_para(elements)
   {:text => text,
    :placeholders => Set.new(placeholders),
    :keys => extract_keys(keys),
-   :sex => sex}
+   :sex => sex || 'unisexe'}
 end
 
 def extract_keys(key_text)
