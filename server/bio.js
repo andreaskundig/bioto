@@ -6,15 +6,18 @@
 var remove_all, replace, display, map_placeholders, 
   make_placeholder_regex, starts_with, keys, random,
   show_all, fix_apostrophe, starts_with_vowel, reassemble_original,
-  display_paragraph, add_mouse_behavior, make_replacement, span;
+  display_paragraph, polish_display, make_replacement, span,
+  choose_keys, build_paragraphs, make_hiding_function;
 
 
 var ordre = [
   ["nom","presentation", "vie",  "introduction"],
   ["naissance", "origine", "existence", "debut"],
-  ["enfance", "jeunesse", "adolescence", "famille", "relation"],
-  ["apparence", "physique", "pouvoir", "sante", "surnom"],
-  ["personnalite", "caractere", "reputation", "ondit"], 
+  ["enfance", "jeunesse", "adolescence", "famille",
+   "relation","divorce","mariage"],
+  ["apparence", "physique", "pouvoir", "sante", "surnom", 
+   "age", "alimentation"],
+  ["personnalite", "caractere", "reputation", "ondit","rumeur", "faculte"],
   ["oeuvre", "carriere", "style"],
   ["citation", "bof", "opinion", "inexplique", "enseignement", 
    "titre", "chasse"],
@@ -22,9 +25,9 @@ var ordre = [
 ];
 
 var protagonistes = ["Ibn Al Rabin", "Andréas Kündig", 
-  "Bob le lapin", "un certain Gérard", 
-  "Lambert-garou"];
-var livres = ["'l'autre fin du monde'", "la bible", "'Martine à la plage'", "'Cot cot'", "'Figaro Madame'"];
+  "Bob le lapin", "un certain Gérard", "Lambert-garou"];
+var livres =["'l'autre fin du monde'", "la bible", "'Martine à la plage'",
+ "'Cot cot'", "'Figaro Madame'"];
 
 function stats() {
   var sujet, sujets, i, j, tot;
@@ -48,14 +51,28 @@ function unused_topics(){
   return tops;
 }
 
-function bio() {
-  var deja_utilise, sujets, sujet, indexes, index, replaced, i, j,original;
-  deja_utilise = [];
-  for (i = 0; i < ordre.length ; i += 1) {
-    sujets = ordre[i];
+function bio(deja_utilise) {
+  var paragraphs, i;
+  deja_utilise = deja_utilise === undefined ? [] : deja_utilise;
+ /* $("#bio").slideUp('slow',function(){
+       $(this).slideDown();
+  });*/
+  $("#bio").children().detach();
+  paragraphs = build_paragraphs(deja_utilise);
+  for(i=0 ; i<paragraphs.length ; i+=1 ){ display(paragraphs[i]); }
+  polish_display();
+  return deja_utilise;
+}
+
+function build_paragraphs(deja_utilise){
+  var keys, paragraphs, i,  j, sujet, 
+  indexes, index, replaced;
+  keys = choose_keys();
+  paragraphs = [];
+  for (i=0 ; i<ordre.length ; i+=1) {
     indexes = [];
-    for (j = 0  ; j < sujets.length ; j += 1) {
-      sujet = sujets[j];
+    for (j=0 ; j<ordre[i].length ; j+=1) {
+      sujet = ordre[i][j];
       if (keys[sujet]) { indexes = indexes.concat(keys[sujet]); }
     }
     remove_all(indexes, deja_utilise);
@@ -63,20 +80,24 @@ function bio() {
       index = indexes[Math.floor(Math.random() * indexes.length)];
       deja_utilise.push(index);
       replaced = replace(texts[index], protagonistes);
-      display(replaced);
+      paragraphs.push(replaced);
     }
   }
-  add_mouse_behavior();
+  return paragraphs;
 
+}
+
+function choose_keys(){
+  return Math.random() > 0.5 ? keys_f : keys_m;  
 }
 
 function show_all(){
   var i, replaced, original;
   for ( i=0; i < texts.length ; i += 1){
     replaced = replace(texts[i], protagonistes);
-    display(replaced);
+    display(i+": "+replaced);
   }
-  add_mouse_behavior();
+  polish_display();
 }
 
 function reassemble_original(text_object){
@@ -99,25 +120,31 @@ function replace(text_object, names) {
 }
 
 function fix_apostrophe(text, original, replacement){
-  var re;
+  var re, orig_paren;
+  orig_paren = original.replace("(","\\(").replace(")","\\)");
   if (starts_with_vowel(replacement)){
-    re =  "\\b(d|qu|l)(e|a)\\s+(<"+original+":(pre)?(nom))";
+    re =  "\\b(d|qu|l)(e|a)\\s+(<"+orig_paren+":(pre)?(nom))";
     text = text.replace(new RegExp(re ,"gi"),
-			span("$1$2 ",1) + span("$1'",0)+"$3");
+			span("$1'",0) + span("$1$2 ",1) + "$3");
+    /*
+    re =  "\\b(d)u\\s+(<"+orig_paren+":(pre)?(nom))";
+    text = text.replace(new RegExp(re ,"gi"),
+			span("$1'",0) + span("du ",1) + "$2");
+    */
   }else{
-    re = "\\bl'\\s*(<"+original+":(pre)?(nom_feminin))";
+    re = "\\bl'\\s*(<"+orig_paren+":(pre)?(nom_feminin))";
     text = text.replace( new RegExp(re,"gi"), 
-			 span("l'",1)+span("la ",0)+"$1");
-    re = "\\bl'\\s*(<"+original+":(pre)?(nom_masculin))";
+			 span("la ",0) + span("l'",1) + "$1");
+    re = "\\bl'\\s*(<"+orig_paren+":(pre)?(nom_masculin))";
     text = text.replace( new RegExp(re, "gi"),
-			 span("l'",1)+span("le ",0)+"$1");
-    re = "\\b(d|qu)'\\s*(<"+original+":(pre)?(nom))";
+			 span("le ",0) + span("l'",1) + "$1");
+    re = "\\b(d|qu)'\\s*(<"+orig_paren+":(pre)?(nom))";
     text = text.replace( new RegExp(re, "gi"), 
-			 span("$1'",1)+span("$1e ",0)+"$2");
+			 span("$1e ",0) + span("$1'",1) + "$2");
   }
   return text;
 }
-
+ 
 function make_placeholder_regex(placeholder) {
     var exp = '<' + placeholder.join(':') + '>';
     exp = exp.replace(/\(/,'\\(').replace(/\)/,'\\)');
@@ -125,11 +152,14 @@ function make_placeholder_regex(placeholder) {
 }
 
 function make_replacement(placeholder, replacing_name){
-  return span(placeholder[0], 1) + span(replacing_name, 0);
+  if(replacing_name === placeholder[0]){
+    return replacing_name;
+  }
+  return  span(replacing_name, 0) + span(placeholder[0], 1);
 }
 
 function span(to_wrap, original){
-  var clazz = original ? 'o hidden' : 'r';
+  var clazz = original ? 'o' : 'r';
   return '<span class="'+clazz+'">'+to_wrap+'</span>';
 }
 
@@ -195,15 +225,29 @@ function display(text){
   $("#bio").append('<p class="paragraph">'+text+'</p>');
 }
 
-function add_mouse_behavior(){
-    $(".paragraph").mouseover(function(){
-      $(this).children(".r").addClass('hidden');
-      $(this).children(".o").removeClass('hidden');
-      $(this).addClass("grey");
-   });
-   $(".paragraph").mouseout(function(){
-     $(this).children(".r").removeClass('hidden');
-     $(this).children(".o").addClass('hidden');
-     $(this).removeClass("grey");
-   });
+function polish_display(){
+  $("span").each(function(){
+      $(this).data('original_width',$(this).width());
+  });
+  $(".o").css({width: '0px',  display: 'inline-block'});
+  $(".paragraph").mouseenter(make_hiding_function('r','o'));
+  $(".paragraph").mouseleave(make_hiding_function('o','r'));
+}
+
+function make_hiding_function(tohide, toshow){
+   return function(){
+     $(this).children("."+tohide).animate({width: '0px'}, 
+					  {queue: false});
+
+     $(this).children("."+toshow).each(function(){
+        var o_width = $(this).data('original_width');
+	$(this).animate({width: o_width});
+      });
+      
+      if(toshow === 'o'){ 
+	$(this).addClass("grey");
+      }else{ 
+	$(this).removeClass("grey");
+      }
+   };
 }

@@ -1,8 +1,96 @@
+Depuis quelques années, <il:pronom_masculin> est directeur sportif de la Fédération de cani-cross belge (FCB-BCF).
+clefs: carriere
+
+http://fr.wikipedia.org/wiki/Philippe_W%C3%A9ry
+-----
+
+<Il:pronom_masculin> est le seul acteur à avoir incarné le personnage de Tintin dans des films live jusqu'ici.
+clefs: carriere
+
+Enseignant de profession, <il:pronom_masculin> est remarqué pour sa ressemblance, autant par le physique que par la voix, avec Tintin, alors qu'il est moniteur de sport sur une plage d'Ostende. On le présente donc à Hergé, avec qui il sympathise immédiatement.
+clefs: physique
+
+http://fr.wikipedia.org/wiki/Jean-Pierre_Talbot
+----
+
+L'âge de <Tintin:nom_masculin> est difficile à déterminer. Ce n'est pas un adulte, comme le laisse à penser sa petite taille et son aspect chétif.
+clefs: age
+
+En outre, <Tintin:nom_unisexe> semble n'avoir aucune famille. Son seul compagnon de tous les jours est son petit chien blanc, Milou.
+clefs: age
+
+<Tintin:nom_masculin> lutte contre le Mal en général, ou du moins contre tout ce qu'il estime être mal.
+clefs: personnalite
+
+<Tintin:nom_masculin> est en somme un archétype du jeune héros asexuel, sans défauts ni états d'âme.
+clefs: personnalite
+
+<Tintin:nom_masculin> n'entretient aucune relation amoureuse ou sexuelle avec une femme.
+clefs: relations
+
+De nombreux auteurs comme <Matthew Parris:nom_masculin_2> ont beaucoup spéculé sur l'homosexualité supposée de <Tintin:nom_masculin>. Toutefois selon le psychologue Serge Tisseron, <Tintin:nom_masculin> n'est pas homosexuel car le sexe de <Tintin:nom_masculin> n'est jamais défini et il n'est jamais question d'un « choix d'une pratique sexuelle explicite ».
+clefs: personnalite
+
+La curiosité naturelle de <Tintin:nom_masculin>, déformation professionnelle du <reporter:litt:dessinateur>, et son désir de justice suffisent à le pousser à se lancer dans de folles aventures.
+clefs: personnalite
+
+Charles de Gaulle a dit de <Tintin:nom_masculin> qu'il était son "seul rival international".
+clefs: reputation
+
+http://fr.wikipedia.org/wiki/Tintin
+----
+
+<Amelia:prenom_feminin> aurait été capturée par les japonais, qui l'utilisèrent durant toute la durée du conflit, en compagnie d'autres prisonnières anglo-saxonnes et nippones anglophones, sous le pseudo de Tokyo Rose  en tant qu'arme psychologique ou de propagande pro-nippone, dans le but de démotiver les Marines via les commentaires radiodiffusés où étaient suggérés, entre des morceaux de jazz ou d'autres « tubes » du moment, l'infidélité de leurs compagnes restées au pays et la crédulité des engagés, utilisés comme de la chair à canon.
+clefs: rumeurs
+
+Depuis sa disparition en mer et l'absence de trace de l'avion, plusieurs hypothèses ont été émises, supposant que sa mort n'est pas due à un banal accident.
+clefs: mort
+
+http://fr.wikipedia.org/wiki/Amelia_Earhart
+------
+
+Il a mis son pied gauche sur la surface lunaire le 21 juillet 1969 à 2 h 56 minutes UTC, et dit les mots suivants : « That's one small step for [a] man, one giant leap for mankind » ce qui peut se traduire par « C'est un petit pas pour l'homme, mais un bond de géant pour l'humanité ». En effet, on a longtemps supposé qu'<Armstrong:nom_masculin> a omis par erreur le mot « un » de sa désormais célèbre phrase, ce qui rendait l'expression contradictoire car l'« homme » est un synonyme d'« humanité ». <Armstrong:nom_masculin> est cité plus tard comme disant qu'il « espère que l'Histoire me permettra de me rattraper pour avoir enlevé la syllabe et comprenne que ce ne fut pas volontaire, même si ce ne fut pas dit — bien que cela l'était ».
+clefs: carriere
+
+La première entreprise qui ait réussi à l'approcher est Chrysler Corporation. Pour cette dernière, <il:pronom_masculin> est apparu dans un spot publicitaire en 1979.
+clefs: carriere
+
+<Neil:prenom_masculin> a rencontré sa future femme, Janet Elizabeth Shearon, à l'université Purdue. Selon <Neil:prenom_masculin> et Janet, il n'y a pas eu de véritable séduction et aucun d'eux n'a pu se souvenir des circonstances exactes de leur engagement mutuel, sauf que cela s'est produit alors qu'<Armstrong:nom_masculin> travaillait au Lewis Flight Propulsion Laboratory.
+clefs: mariage
+
+<Lui:pronom_masculin> et Janet divorcent en 1991. Elle dira que "La Lune lui est montée à la tête".
+clefs: divorce
+
+En 1979, il s'est sectionné accidentellement le doigt alors qu'il travaillait dans sa ferme de Lebanon. Gardant son calme, il a pu être opéré et son doigt fut remis en place. En 1991, <Armstrong:nom_masculin> a eu une crise cardiaque.
+clefs: sante
+
+En mai 2005, <Armstrong:nom_masculin> menaça d'une action en justice son coiffeur qui, après avoir coupé les cheveux d'<Armstrong:nom_masculin>, en a vendu une partie à un collectionneur sans la permission d'<Armstrong:nom_masculin>. 
+clefs: carriere
+
+http://fr.wikipedia.org/wiki/Neil_Armstrong
+-----
+
+La structure interne de <Saturne:nom_unisexe_1> serait similaire à celle de <Jupiter:nom_unisexe_2>, avec un noyau rocheux de silicates  et de fer, entouré d'une couche d'hydrogène métallique, puis d'hydrogène liquide, puis enfin d'hydrogène gazeux.
+clefs: physique
+
+http://fr.wikipedia.org/wiki/Saturne_%28plan%C3%A8te%29
+----
+
+<Issei Sagawa:nom_masculin> (佐川 一政, 11 juin 1949) est un Japonais qui s'est rendu célèbre en France et dans le monde sous le nom de « Japonais cannibale »  à l'époque où il était un étudiant en littérature comparée en France.
+clefs: presentation
+
+<Il:pronom_masculin> est, un temps, devenu une célébrité au Japon où les journaux le surnommaient « l'étudiant français ».
+clefs: carriere
+
+http://fr.wikipedia.org/wiki/Issei_Sagawa
+----
+
 Son alimentation était étroitement surveillée, et se compose habituellement d'une poignée de foin et d'une tasse de grain, deux fois par jour.
 clefs: alimentation
 
-Vue sous un certain angle, Thumbelina ressemble plus à un bison miniature ou à un cochon qu'à un cheval, et son corps évoque un tonneau posé sur de toutes petites jambes.
+Vue sous un certain angle, <Thumbelina:nom_unisexe> ressemble plus à un bison miniature ou à un cochon qu'à un cheval, et son corps évoque un tonneau posé sur de toutes petites jambes.
 clefs: physique
+
 
 http://fr.wikipedia.org/wiki/Thumbelina
 -----
@@ -20,7 +108,7 @@ clefs: reputation
 http://fr.wikipedia.org/wiki/Microbe
 ----
 
-Penseur de l'écologie politique, il lutta contre le système automobile et tous les moyens de transports trop rapides qu'il jugeait aliénants et illusoires. Il avait par exemple calculé qu'en prenant en compte le temps moyen passé à travailler pour acquérir une automobile et faire face aux frais qui y sont liés et non seulement le temps passé à conduire celle-ci, la vitesse du bolide était de 6 km/h.
+Penseur de l'écologie politique, <il:pronom_masculin> lutta contre le système automobile et tous les moyens de transports trop rapides qu'il jugeait aliénants et illusoires. Il avait par exemple calculé qu'en prenant en compte le temps moyen passé à travailler pour acquérir une automobile et faire face aux frais qui y sont liés et non seulement le temps passé à conduire celle-ci, la vitesse du bolide était de 6 km/h.
 clefs: opinions
 
 http://fr.wikipedia.org/wiki/Ivan_Illich
@@ -32,36 +120,34 @@ clefs: opinions
 http://fr.wikipedia.org/wiki/Jacques_Ellul
 ------
 
-Une de ses particularités réside dans son habileté à parfaitement simuler la mort en se couchant sur le côté et en se mettant dans un état quasi catatonique avec les membres raides et la langue pendante alors que ses mouvements respiratoires deviennent quasi imperceptibles. Le danger passé, il se réveille et fuit. Sous la menace, il peut aussi excréter un liquide verdâtre malodorant, grâce à deux glandes situées au niveau de l'anus.
-clefs:  faculté
+Une de ses particularités réside dans son habileté à parfaitement simuler la mort en se couchant sur le côté et en se mettant dans un état quasi catatonique avec les membres raides et la langue pendante alors que ses mouvements respiratoires deviennent quasi imperceptibles. Le danger passé, <il:pronom_masculin> se réveille et fuit. Sous la menace, il peut aussi excréter un liquide verdâtre malodorant, grâce à deux glandes situées au niveau de l'anus.
+clefs:  faculte
 
 http://fr.wikipedia.org/wiki/Opossum_de_Virginie
 ----
 
-Il a une vue puissante, un odorat développé et il peut orienter le pavillon de ses grandes oreilles pour localiser l'origine d'un bruit.
+<Il:pronom_masculin> a une vue puissante, un odorat développé et il peut orienter le pavillon de ses grandes oreilles pour localiser l'origine d'un bruit.
 clefs:physique
 
 http://fr.wikipedia.org/wiki/Kangourou_g%C3%A9ant
 ----
 
-Son ordonnance d'exécution pour « l'inhumain parricide par lui commis en la personne du Roi <Henri:prenom_masculin_2> quatrième » du 27 mai 1610 précise que le condamné, une fois soumis à la question puis pénitence faite, doit être conduit en place de Grève où il est destiné à « [être] tenaillé aux mamelles, bras, cuisses et gras des jambes, sa main droite, qui tenait le couteau avec lequel il a commis ledit parricide, sera brûlée de feu de soufre, et sur les endroits tenaillés, il sera jeté du plomb fondu, de l'huile bouillante, de la poix, de la résine brûlante, de la cire et soufre fondus ensemble. Ensuite, son corps sera tiré et écartelé par quatre chevaux. Les membres de son corps seront consommés au feu, réduits en cendres et jetés au vent. »
+Son ordonnance d'exécution pour « l'inhumain parricide par lui commis en la personne du Roi <Henri:prenom_masculin_2> quatrième » du 27 mai 1610 précise que le condamné, une fois soumis à la question puis pénitence faite, doit être conduit en place de Grève où il est destiné à « [être] tenaillé aux mamelles, bras, cuisses et gras des jambes, sa main droite, qui tenait le couteau avec lequel <il:pronom_masculin> a commis ledit parricide, sera brûlée de feu de soufre, et sur les endroits tenaillés, il sera jeté du plomb fondu, de l'huile bouillante, de la poix, de la résine brûlante, de la cire et soufre fondus ensemble. Ensuite, son corps sera tiré et écartelé par quatre chevaux. Les membres de son corps seront consommés au feu, réduits en cendres et jetés au vent. »
 clefs: mort
 
 http://fr.wikipedia.org/wiki/Ravaillac
 ----
 
-Il sortit un jour d'une motte de terre, sous la charrue d'un laboureur, aux environs de Tarquinia.
+<Il:pronom_masculin> sortit un jour d'une motte de terre, sous la charrue d'un laboureur, aux environs de Tarquinia.
 clefs:naissance
 
 http://fr.wikipedia.org/wiki/Tag%C3%A8s
 ----
 
-En 1965, il obtient le grand prix de l'émission télévisée Âge tendre et tête de bois avec La Prière, une chanson évoquant la solitude d'un adolescent pied-noir.
+En 1965, <il:pronom_masculin> obtient le grand prix de l'émission télévisée Âge tendre et tête de bois avec La Prière, une chanson évoquant la solitude d'un adolescent pied-noir.
 clefs: carriere
 
-
-
-Il est considéré comme la première figure de la chanson nationaliste française devant Docteur Merlin et comme une "valeur sûre" de la musique nationaliste en général
+<Il:pronom_masculin> est considéré comme la première figure de la chanson nationaliste française devant Docteur Merlin et comme une "valeur sûre" de la musique nationaliste en général
 clefs: reputation
 
 http://fr.wikipedia.org/wiki/Jean-Pax_M%C3%A9fret
@@ -70,7 +156,7 @@ http://fr.wikipedia.org/wiki/Jean-Pax_M%C3%A9fret
 Le docteur Merlin, de son véritable nom <Christophe Lespagnon:nom_masculin>, est un chanteur, guitariste et militant politique français.
 clefs: presentation
 
-Il est considéré comme la deuxième figure de la chanson nationaliste française après Jean-Pax Méfret et comme une "valeur sûre" de la musique nationaliste en général.
+<Il:pronom_masculin> est considéré comme la deuxième figure de la chanson nationaliste française après Jean-Pax Méfret et comme une "valeur sûre" de la musique nationaliste en général.
 clefs: reputation
 
 http://fr.wikipedia.org/wiki/Docteur_Merlin
@@ -96,7 +182,7 @@ clefs:carriere
 http://fr.wikipedia.org/wiki/Hir%C5%8D_Onoda
 -----
 
-Homme d'esprit universel, il fut notamment géologue, astronome, mathématicien, cartographe, inventeur, météorologue, agronome, ethnographe, zoologiste, botaniste, ingénieur en hydraulique, pharmacologue, auteur encyclopédiste, poète, musicien, diplomate, général, chancelier académique, ministre des finances et inspecteur des services de l'État.
+Homme d'esprit universel, <il:pronom_masculin> fut notamment géologue, astronome, mathématicien, cartographe, inventeur, météorologue, agronome, ethnographe, zoologiste, botaniste, ingénieur en hydraulique, pharmacologue, auteur encyclopédiste, poète, musicien, diplomate, général, chancelier académique, ministre des finances et inspecteur des services de l'État.
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Shen_Kuo
@@ -142,7 +228,7 @@ clefs: presentation
 http://fr.wikipedia.org/wiki/Theodore_Kaczynski
 ------
 
-Plusieurs théories ont été émises sur la raison de son suicide, le liant notamment à un problème possible de bipolarité ou à une peine d'amour. On peut aussi penser que le référendum de 1995, perdu par le camp du OUI à 49,4 %  contre 50,6 % pour le NON, l'ont longtemps affecté, tout comme la mort de Patrick Esposito Di Napoli.
+Plusieurs théories ont été émises sur la raison de son suicide, le liant notamment à un problème possible de bipolarité ou à une peine d'amour. On peut aussi penser que le référendum de 1995, perdu par le camp du OUI à 49,4 %  contre 50,6 % pour le NON, l'ont longtemps affecté, tout comme la mort de Patrick Esposito Di Napoli.< :pronom_masculin>
 clefs: mort
 
 http://fr.wikipedia.org/wiki/Andr%C3%A9_Fortin
@@ -154,19 +240,19 @@ clefs: enfance
 http://fr.wikipedia.org/wiki/Date_Masamune
 ------
 
-Il est également connu sous les sobriquets de « Saru Kuanja » (i.e. « Le singe serviteur ») et de « Saru Kuanja » (I.E. « tête de singe ») en raison de sa laideur
+<Il:pronom_masculin> est également connu sous les sobriquets de « Saru Kuanja » (i.e. « Le singe serviteur ») et de « Saru Kuanja » (I.E. « tête de singe ») en raison de sa laideur
 clefs: apparence, surnoms
 
-En 1588, suprême honneur, il reçoit la visite de l'Empereur du Japon en personne.
+En 1588, suprême honneur, <il:pronom_masculin> reçoit la visite de l'Empereur du Japon en personne.
 clefs: carriere
 
-En 1596, il reçoit, par l'intermédiaire de l'ambassadeur, une missive de l'Empereur de Chine qu'il juge insultante. D'après le Taiko ki, il la déchire et chasse l'ambassadeur. Il réunit une armée pour châtier la Chine mais la maladie l'emporte le 18 septembre  1598, à l'âge de 61 ans, dans son château de Fishomo.
+En 1596, <il:pronom_masculin> reçoit, par l'intermédiaire de l'ambassadeur, une missive de l'Empereur de Chine qu'il juge insultante. D'après le Taiko ki, il la déchire et chasse l'ambassadeur. Il réunit une armée pour châtier la Chine mais la maladie l'emporte le 18 septembre  1598, à l'âge de 61 ans, dans son château de Fishomo.
 clefs: mort
 
 http://fr.wikipedia.org/wiki/Hideyoshi_Toyotomi
 ------
 
-Jusqu'à l'âge de 29 ans, il participa à une soixantaine de duels, la plupart avec un sabre en bois (bokken) alors que ses adversaires avaient de vrais sabres (katana). Il défia et anéantit à lui seul la totalité de l'école d'escrime Yoshiyoka, en se battant contre 60 combattants.
+Jusqu'à l'âge de 29 ans, <il:pronom_masculin> participa à une soixantaine de duels, la plupart avec un sabre en bois (bokken) alors que ses adversaires avaient de vrais sabres (katana). Il défia et anéantit à lui seul la totalité de l'école d'escrime Yoshiyoka, en se battant contre 60 combattants.
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Musashi_Miyamoto
@@ -195,7 +281,7 @@ http://fr.wikipedia.org/wiki/Orson_Welles
 
 ------
 
-Le front bombé, des yeux scrutateurs et un nez qui fondait sur des lèvres charnues et dédaigneuses donnaient au <corsaire:litt:dessinateur> une espèce d'intelligence froide et peu scrupuleuse. Quant à la fossette du menton et au pli de la mâchoire, ils disaient mieux que tout le passé peu amène du personnage. Mais son corps résistait bien aux affres du temps et à 60 ans, il séduisait encore.
+Le front bombé, des yeux scrutateurs et un nez qui fondait sur des lèvres charnues et dédaigneuses donnaient au <corsaire:litt:dessinateur> une espèce d'intelligence froide et peu scrupuleuse. Quant à la fossette du menton et au pli de la mâchoire, ils disaient mieux que tout le passé peu amène du personnage. Mais son corps résistait bien aux affres du temps et à 60 ans, <il:pronom_masculin> séduisait encore.
 clefs: apparence
 
 http://fr.wikipedia.org/wiki/Khayr_ad-Din_Barberousse
@@ -237,13 +323,13 @@ http://fr.wikipedia.org/wiki/Charles_Quint
 
 ------
 
-À l’âge de trois ans, il contracte la petite vérole, ce qui, entre autres séquelles, affaiblit sévèrement sa vue.
+À l’âge de trois ans, <il:pronom_masculin> contracte la petite vérole, ce qui, entre autres séquelles, affaiblit sévèrement sa vue.
 clefs: enfance
 
 En 1615, sa mère, alors âgée de 68 ans, est accusée de sorcellerie  par les autorités de sa ville natale Leonberg.
 clefs: famille
 
-En 1595, il prédit un soulèvement de la population, une invasion turque ainsi qu’un hiver rigoureux. Il se trouve que de tels événements se produisirent.
+En 1595, <il:pronom_masculin> prédit un soulèvement de la population, une invasion turque ainsi qu’un hiver rigoureux. Il se trouve que de tels événements se produisirent.
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Johannes_Kepler
@@ -269,6 +355,7 @@ Dès sa tendre enfance, <il:pronom_masculin> cultive une voix ténor particuliè
 clefs: debuts
 
 En 2003, <Papa Wemba:nom_masculin> est suspecté d'être au cœur d'une affaire de trafic de visas et d'aide à l'immigration clandestine, à travers ses tournées musicales entre son pays, la République démocratique du Congo, la France et la Belgique.
+clefs: reputation
 
 http://fr.wikipedia.org/wiki/Papa_Wemba
 ------
@@ -341,6 +428,7 @@ En 1518, de retour de l’un de ses voyages, le navire sur lequel <il:pronom_mas
 clefs: debuts
 
 Sur demande du pape, <il:pronom_masculin> écrit sa fameuse Cosmographia de Affrica, publiée à Venise sous le titre Description de l'Afrique. Cet ouvrage de référence, qui évite soigneusement de donner des informations à caractère militaire, est la seule source de renseignement sur la vie, les mœurs, les us et coutumes dans l'Afrique du XVIe siècle. C’est en particulier grâce à ce livre que Tombouctou deviendra une ville mythique dans l’imaginaire européen; il sera l’inspirateur de <René Caillé:nom_masculin_2> parti à sa découverte. Il sera la Bible de tous les diplomates et explorateurs intéressés par l’Afrique.
+clefs: carriere
 
 http://fr.wikipedia.org/wiki/L%C3%A9on_l%27Africain
 ----
@@ -399,7 +487,7 @@ clefs: mort
 Le corps de <Raspoutine:nom_masculin> fut exhumé et brûlé et ses cendres furent dispersées dans les forêts environnantes. Mais, selon la légende, seul le cercueil brûla, le corps de <Raspoutine:nom_masculin> restant intact sous les flammes.
 clefs: mort
 
-Un pénis momifié de 30 cm qui serait le sien, est conservé et exposé au Musée de l'érotisme de Saint-Pétersbourg.
+Un pénis momifié de 30 cm qui serait le sien, est conservé et exposé au Musée de l'érotisme de Saint-Pétersbourg.<:pronom_masculin>
 clefs: legacy
 
 http://fr.wikipedia.org/wiki/Raspoutine
@@ -434,6 +522,7 @@ Le lundi 10 septembre 1945, dans une ferme de Fruita dans le Colorado, un fermie
 clefs: enfance
 
 Depuis 1999, Fruita fête la Journée de <Mike:nom_masculin> le <poulet:litt:dessinateur> sans tête (<Mike:nom_masculin> the Headless <Chicken:litt:Artist> Day en anglais) le troisième week-end de mai (et non pas le 10 septembre, jour de sa décapitation), pendant la Colorado Heritage Week, qui célèbre normalement les pionniers.
+clefs: legacy
 
 http://fr.wikipedia.org/wiki/Mike_le_poulet_sans_t%C3%AAte
 -----
@@ -570,7 +659,7 @@ http://fr.wikipedia.org/wiki/Ava_Gardner
 
 ------
 
-Dans le milieu du « Ping », il est surnommé « le Mozart du tennis de table ». Il est appelé ainsi pour trois raisons : ses dons prodigieux, son palmarès inégalé dans le ping moderne, et la beauté de son jeu.
+Dans le milieu du « Ping », <il:pronom_masculin> est surnommé « le Mozart du tennis de table ». Il est appelé ainsi pour trois raisons : ses dons prodigieux, son palmarès inégalé dans le ping moderne, et la beauté de son jeu.
 clefs: reputation
 
 Son style de jeu est basé sur l'offensive. Ses points forts : un jeu très varié (surement le joueur le plus complet), top spin coup droit efficace (notamment grâce à une importante variation d'effet et à un placement de balle très précis), revers très varié (top spin, bloc à plat, bloc latéral, claque), et de très bons services.
@@ -586,7 +675,7 @@ clefs: debuts
 En 1984, <Diego Maradona:nom_masculin_1> conclut son épopée barcelonaise en étant à l'origine d'une bagarre générale contre l'Athletic Bilbao, lors de la finale de la Coupe du Roi, en présence de <Juan Carlos:nom_masculin_2>. Il s'agissait des retrouvailles entre El Pibe de Oro et son bourreau <Andoni Goikoetxea:nom_masculin_3>. Ce nouveau coup de sang marquera le divorce de <Maradona:nom_masculin_1> avec l'Espagne.
 clefs: debuts carriere
 
-hors du terrain les scandales commencent à trouver écho au sein des médias. On lui trouve un fils illégitime, on parle de ses liens avec la Camorra (mafia napolitaine).
+Mais hors du terrain, les scandales commencent à trouver écho au sein des médias. On lui trouve un fils illégitime, on parle de ses liens avec la Camorra (mafia napolitaine).<:pronom_masculin>
 clefs: carriere
 
 En 1991, il est arrêté par la police italienne après avoir été contrôlé positif à la cocaïne. Pour <Maradona:nom_masculin_1>, c'est le début du déclin.
@@ -600,11 +689,12 @@ http://fr.wikipedia.org/wiki/Maradona
 ------
 
 <Mathieu Baillif:nom_masculin_1> alias <Ibn Al Rabin:nom_masculin_2>, né en 1975 à Genève est un auteur de bande dessinée suisse. C'est un des grands représentants de la bande dessinée minimaliste francophone des années 2000.
+clefs: presentation
 
 http://fr.wikipedia.org/wiki/Mathieu_Baillif
 ------
 
-Lors d'un concours organisé par le Komsomol, ce mineur du Donbass aurait accompli quatorze fois la norme dans l’extraction du charbon, le 31 août 1935 : 102 tonnes en 6 heures de travail.
+Lors d'un concours organisé par le Komsomol, ce mineur du Donbass aurait accompli quatorze fois la norme dans l’extraction du charbon, le 31 août 1935 : 102 tonnes en 6 heures de travail.<:pronom_masculin>
 clefs: carriere
 
 <Stakhanov:nom_masculin> fut député du premier Soviet suprême. Il reçut deux Ordres de Lénine, un Ordre du Drapeau Rouge et de nombreuses médailles. Le dernier dimanche d'août fut déclaré « Journée du mineur de charbon », vraisemblablement en son honneur.
@@ -627,7 +717,7 @@ http://fr.wikipedia.org/wiki/Simonisme
 
 ------
 
-Selon certains démonographes, il apparaît sous la forme d'une chimère avec une tête de coq, des pieds de dragon et un fouet à la main. D'autres prétendent qu'il se montre avec une tête de roi portant une couronne et des serpents à la place des pieds.
+Selon certains démonographes, <il:pronom_masculin> apparaît sous la forme d'une chimère avec une tête de coq, des pieds de dragon et un fouet à la main. D'autres prétendent qu'il se montre avec une tête de roi portant une couronne et des serpents à la place des pieds.
 clefs: physique
 
 Les basilidiens, hérétiques du IIe siècle, voyaient en lui leur dieu suprême. Ils disaient encore que Jésus-Christ n'était qu'un fantôme bienveillant envoyé sur la terre par <Abrasax:nom_masculin>.
@@ -639,7 +729,7 @@ clefs: legacy
 http://fr.wikipedia.org/wiki/Abrasax
 ------
 
-Petit immigrant néerlandais entré illégalement aux États-Unis, il commença sa vie professionnelle dans la marine marchande, avant d'entrer comme « aboyeur » de cirque chez le grand Barnum.
+Petit immigrant néerlandais entré illégalement aux États-Unis, <il:pronom_masculin> commença sa vie professionnelle dans la marine marchande, avant d'entrer comme « aboyeur » de cirque chez le grand Barnum.
 clefs: carriere
 
 En un an seulement, <Elvis:nom_masculin_2> est devenu ce que <Parker:nom_masculin_1> souhaitait, une star nationale. Grâce à son travail d'agent efficace, <Elvis:nom_masculin_2> a connu un bond extraordinaire. Sur scène, il est le plus grand. Sur disques, <Elvis:nom_masculin_2> alterne rock, blues, gospel et même chansons de Noël. Il entre ainsi dans chaque foyer américain. Il bat dans le cœur de chaque Américain. Chacun peut se retrouver en <Elvis:nom_masculin_2>, chacun aime un morceau d'<Elvis:nom_masculin_2>.
@@ -652,22 +742,23 @@ http://fr.wikipedia.org/wiki/Thomas_Andrew_Parker
 À l'école, <Schwarzenegger:nom_masculin> est « dans la moyenne » mais est remarqué pour son caractère « enjoué, joyeux et exubérant ». Le manque d'argent est un problème dans le foyer et  <Schwarzenegger:nom_masculin> se souvient que l'un des moments importants de sa jeunesse est l'achat d'un réfrigérateur par sa famille.
 clefs: enfance
 
-Dans le film Pumping Iron, <Schwarzenegger:nom_masculin> déclare qu'il n'a pas pu se rendre à l'enterrement de son père car il était alors en pleine période d'entraînement pour une grande compétition de culturisme[
+Dans le film Pumping Iron, <Schwarzenegger:nom_masculin> déclare qu'il n'a pas pu se rendre à l'enterrement de son père car il était alors en pleine période d'entraînement pour une grande compétition de culturisme.
 clefs: carriere
 
-À cette époque, il déclare à son père : « Je veux devenir l'homme le mieux bâti du monde, puis je veux aller en Amérique et être acteur »
+À cette époque, <il:pronom_masculin> déclare à son père : « Je veux devenir l'homme le mieux bâti du monde, puis je veux aller en Amérique et être acteur »
 clefs: enfance
 
 En 1964, son père, très concerné par la passion envahissante d'<Arnold:nom_masculin> pour le « sport le moins populaire d'Autriche », lui interdit d'aller plus de trois fois par semaine à l'entraînement, mais celui ci contourne cette limitation en construisant sa propre salle à la maison.
 clefs:enfance
 
-En 1968, il gagne le Stone Lifting Contest à Munich, et prouve que les bodybuilders sont également des hommes forts.
+En 1968, <il:pronom_masculin> gagne le Stone Lifting Contest à Munich, et prouve que les bodybuilders sont également des hommes forts.
 clefs: carriere
 
 <Schwarzenegger:nom_masculin> dira que « durant l'apogée de sa carrière, ses mollets faisaient 50.8 centimètres de circonférence, ses cuisses 72.4 cm, sa taille 86.4 cm, sa poitrine 144.8 cm, et ses bras 55.9 cm. »
 clefs:carriere
 
 En mars 2008, Clint Eastwood, fervent défenseur des causes environnementales, s’oppose à la construction d’une route à péage dans un parc du sud de la Californie alors qu'<Arnold Schwarzenegger:nom_masculin> défend le projet. Pour clore le débat, <Schwarzenegger:nom_masculin> décide de renvoyer l’acteur américain de la commission sur les parcs californiens
+clefs: carriere
 
 http://fr.wikipedia.org/wiki/Arnold_Schwarzenegger
 ------
@@ -726,13 +817,13 @@ clefs: opinions
 http://fr.wikipedia.org/wiki/Marie_de_Rabutin-Chantal,_marquise_de_S%C3%A9vign%C3%A9
 ------
 
-Guitariste, il se rend à Paris en 1961 pour devenir chanteur de rue. Sous le pseudonyme de Claude Celler, il a sorti plusieurs chansons inspirées par son idole Jacques Brel en 1966, dont : Le miel et la cannelle, Madam' Pipi, Monsieur votre femme me trompe, Quand on se mariera, et Sacrée sale gueule ; en 1971 : Mon amour Patricia. Il entre chez Disc'AZ avec Lucien Morisse, où il fait six disques, dont Le Miel et la Cannelle. Cependant, en septembre 1970, son producteur se suicide et la carrière de Claude Celler, le « petit Brel », s'arrête là.
+Guitariste, <il:pronom_masculin> se rend à Paris en 1961 pour devenir chanteur de rue. Sous le pseudonyme de Claude Celler, il a sorti plusieurs chansons inspirées par son idole Jacques Brel en 1966, dont : Le miel et la cannelle, Madam' Pipi, Monsieur votre femme me trompe, Quand on se mariera, et Sacrée sale gueule ; en 1971 : Mon amour Patricia. Il entre chez Disc'AZ avec Lucien Morisse, où il fait six disques, dont Le Miel et la Cannelle. Cependant, en septembre 1970, son producteur se suicide et la carrière de Claude Celler, le « petit Brel », s'arrête là.
 clefs: debuts
 
 <Claude Vorilhon:nom_masculin> affirme avoir vécu deux expériences de rencontre avec des extraterrestres qui sont les fondements de son idéologie. Des coïncidences troublantes penchent plutôt pour un plagiat de certains ouvrages de Jean Sendy et de la Genèse.
 clefs: debuts
 
-Il explique  que, le 7 octobre 1975, il rentre de nouveau en contact avec les Elohim qui l'emmènent sur leur planète où il retrouve le Bouddha, Moïse, son « demi-frère » Jésus et Mahomet et reçoit de nombreux enseignements qu'il décrira dans son second livre, Les extraterrestres m'ont emmené sur leur planète. Il affirme y avoir découvert des êtres merveilleux, harmonieux et pacifiques qui lui enseignent une philosophie fondée sur le plaisir, l'amour, la connaissance et la conscience.
+<Il:pronom_masculin> explique  que, le 7 octobre 1975, il rentre de nouveau en contact avec les Elohim qui l'emmènent sur leur planète où il retrouve le Bouddha, Moïse, son « demi-frère » Jésus et Mahomet et reçoit de nombreux enseignements qu'il décrira dans son second livre, Les extraterrestres m'ont emmené sur leur planète. Il affirme y avoir découvert des êtres merveilleux, harmonieux et pacifiques qui lui enseignent une philosophie fondée sur le plaisir, l'amour, la connaissance et la conscience.
 clefs: carriere
 
 
@@ -740,21 +831,21 @@ http://fr.wikipedia.org/wiki/Claude_Vorilhon
 ------
 
 
-Fils d'un pharmacien et cadet de quatre enfants, il est élevé dans la misère et doit très tôt vivre du produit de ses vols et rapines.
+Fils d'un pharmacien et cadet de quatre enfants, <il:pronom_masculin> est élevé dans la misère et doit très tôt vivre du produit de ses vols et rapines.
 clefs: enfance
 
 http://fr.wikipedia.org/wiki/Klaus_Kinski
 
 ------
 
-Le style de Green, austère et employant à grand effet le passé simple, un temps quasiment abandonné par ses auteurs contemporains, trouve la faveur de l'Académie Française dont il sera membre.
+Le style de <Green:nom_masculin>, austère et employant à grand effet le passé simple, un temps quasiment abandonné par ses auteurs contemporains, trouve la faveur de l'Académie Française dont il sera membre.
 clefs:carriere
 
 http://fr.wikipedia.org/wiki/Julien_Green
 
 ------
 
-Apparu sur la place de Nuremberg le 26 mai 1828, il était probablement âgé d'environ 17 ans. Surnommé « l'orphelin de l'Europe », il est encore aujourd'hui au centre d'une énigme relative à ses origines.
+Apparu sur la place de Nuremberg le 26 mai 1828, <il:pronom_masculin> était probablement âgé d'environ 17 ans. Surnommé « l'orphelin de l'Europe », il est encore aujourd'hui au centre d'une énigme relative à ses origines.
 clefs: adolescence
 
 <Kaspar Hauser:nom_masculin> apparaît le 26 mai 1828 dans une rue de Nuremberg, épuisé, titubant, gesticulant et grognant de façon incompréhensible ...
@@ -770,7 +861,7 @@ http://fr.wikipedia.org/wiki/Kaspar_Hauser
 
 ------
 
-En 1797 un <enfant:litt:dessinateur> d'environ 9-10 ans est apercu dans le Tarn, mais ce n'est que deux ans plus tard qu'il sera attrapé, escorté au village de Lacaune et recueilli par une veuve.
+En 1797 un <enfant:litt:dessinateur> d'environ 9-10 ans est apercu dans le Tarn, mais ce n'est que deux ans plus tard qu'<il:pronom_masculin> sera attrapé, escorté au village de Lacaune et recueilli par une veuve.
 clefs: enfance
 
 http://fr.wikipedia.org/wiki/Victor_de_l%27Aveyron
@@ -780,13 +871,13 @@ http://fr.wikipedia.org/wiki/Victor_de_l%27Aveyron
 À l’âge de quatre ans, <Adam Smith:nom_masculin> est enlevé par des bohémiens, qui, prenant peur en voyant l’oncle du jeune garçon les poursuivre, l’abandonnent sur la route où il sera retrouvé.
 clefs: enfance
 
-Il est apprécié de ses étudiants : ses manières et son allure peu commune lui valent d’être imité, et on voit même de petits bustes de lui dans certaines librairies de la ville
+<Il:pronom_masculin> est apprécié de ses étudiants : ses manières et son allure peu commune lui valent d’être imité, et on voit même de petits bustes de lui dans certaines librairies de la ville
 clefs: carriere
 
-Ses fréquents hochements de tête et sa diction maladroite dérivaient d’une maladie nerveuse dont il souffrit tout au long de sa vie.
+Ses fréquents hochements de tête et sa diction maladroite dérivaient d’une maladie nerveuse dont <il:pronom_masculin> souffrit tout au long de sa vie.
 clefs: physique
 
-Il passe les douze dernières années de sa vie en célibataire, vivant avec sa mère (jusqu’à la mort de celle-ci à quatre-vingt-dix ans).
+<Il:pronom_masculin> passe les douze dernières années de sa vie en célibataire, vivant avec sa mère (jusqu’à la mort de celle-ci à quatre-vingt-dix ans).
 clefs: retraite
 
 http://fr.wikipedia.org/wiki/Adam_Smith
@@ -794,19 +885,19 @@ http://fr.wikipedia.org/wiki/Adam_Smith
 ------
 
 En 1993, ses parents ont ouvert en Normandie « la ferme de <Jordy:nom_masculin> », un parc d'attraction avec des animaux miniatures. Ce parc ne connaitra pas le succès escompté, et sera fermé en 1996. La même année, ses parents ont décidé de divorcer.
-clefs: legacy
+clefs: enfance
 
 http://fr.wikipedia.org/w/index.php?title=Jordy&oldid=43621643
 
 ------
 
-Il prône une politique appelant à la protection des intérêts et des traditions suisses et au durcissement de la politique d'immigration et d'asile, afin de « protéger l'indépendance, la prospérité et la réputation du pays ainsi que la sécurité de la population » selon lui.
+<Il:pronom_masculin> prône une politique appelant à la protection des intérêts et des traditions suisses et au durcissement de la politique d'immigration et d'asile, afin de « protéger l'indépendance, la prospérité et la réputation du pays ainsi que la sécurité de la population » selon lui.
 clefs: opinions
 
 http://fr.wikipedia.org/wiki/Blocher
 
 ------
-Avant cela, il inscrit un but d'anthologie de 40 mètres contre le Betis Seville, en huitièmes de finale de la coupe de l’UEFA.
+Avant cela, <il:pronom_masculin> inscrit un but d'anthologie de 40 mètres contre le Betis Seville, en huitièmes de finale de la coupe de l’UEFA.
 clefs: carriere
 
 Grâce à une application dans son entraînement hebdomadaire, <Zidane:nom_masculin_1> a ajouté à sa technique un physique adapté aux exigences du football moderne, qui lui a donné une bonne mobilité et une vitesse d’exécution très au-dessus de la moyenne.
@@ -825,7 +916,7 @@ http://fr.wikipedia.org/wiki/Sauron
 
 ------
 
-La légende le présente de petite taille, composé à la façon d'une chimère et se nourrissant de touristes égarés.
+La légende le présente de petite taille, composé à la façon d'une chimère et se nourrissant de touristes égarés.<:pronom_masculin>
 clefs: ondit physique
 
 http://fr.wikipedia.org/wiki/Wolpertinger
@@ -834,7 +925,7 @@ http://fr.wikipedia.org/wiki/Wolpertinger
 L'existence du <dahu:nom_masculin_1> est généralement évoquée en milieu rural et par plaisanterie auprès de personnes particulièrement naïves et de citadins peu au fait, par exemple, de la faune montagnarde (comme dans les Pyrénées ou les Alpes), ou simplement forestière, comme en Bourgogne. 
 clefs: existence
 
-<Cet animal:litt:Ce dessinateur> aurait comme principale caractéristique le fait que deux de ses quatre pattes seraient plus courtes que les autres : la différence s'observerait non pas entre les pattes antérieures et les pattes postérieures (comme chez le kangourou), mais entre celles de gauche et celles de droite.
+<Cet animal:litt:Ce dessinateur> aurait comme principale caractéristique le fait que deux de ses quatre pattes seraient plus courtes que les autres : la différence s'observerait non pas entre les pattes antérieures et les pattes postérieures (comme chez le kangourou), mais entre celles de gauche et celles de droite.<:pronom_masculin>
 clefs: physique
 
 Pour chasser le <dahu:nom_masculin_1>, il faut un sac et des bâtons. En tapant régulièrement du bâton contre les arbres, les chasseurs effaroucheraient <l'animal:litt:le dessinateur> et parviendraient à lui faire perdre l'équilibre.
@@ -844,7 +935,7 @@ http://fr.wikipedia.org/wiki/Dahu
 
 ------
 
-Doté d'une force herculéenne et d'une queue démesurée mais néanmoins très utile, sa fantaisie fascine autant qu'elle amuse.
+Doté d'une force herculéenne et d'une queue démesurée mais néanmoins très utile, sa fantaisie fascine autant qu'elle amuse.<:pronom_masculin>
 clefs: physique
 
 Sa queue préhensile mesure jusqu'à 8 mètres (...). C'est principalement un moyen de locomotion : elle lui permet de se déplacer à une vitesse soutenue entre les arbres, elle peut être utilisée comme un ressort, ou comme une roue, et elle sert à l'escalade; elle permet au <marsupilami:litt:dessinateur> de se surélever au-dessus de la cime des arbres pour avoir une vue d'ensemble de son biotope. C'est aussi une arme, notamment lorsqu'il en fait un poing, ou lorsqu'elle lui permet l'immobilisation de ses prédateurs. La queue est aussi le principal instrument qui lui sert à pêcher. Elle est encore un instrument de jeu (balançoire, par exemple) et sert aux manœuvres de séduction dans la parade nuptiale. 
@@ -854,7 +945,7 @@ http://fr.wikipedia.org/wiki/Marsupilami
 
 ----
 
-Onzième enfant d'une famille ouvrière d'origine lituanienne d'origine Tatare[1], <Charles Bronson:nom_masculin_1> est d'abord mineur de fond, puis mitrailleur de queue d'un bombardier pendant la Seconde Guerre mondiale.
+Onzième enfant d'une famille ouvrière d'origine lituanienne d'origine Tatare, <Charles Bronson:nom_masculin_1> est d'abord mineur de fond, puis mitrailleur de queue d'un bombardier pendant la Seconde Guerre mondiale.
 clefs: origines, carrière
 
 <Charles Bronson:nom_masculin_1> ne mesurait qu'1,58m.
@@ -873,7 +964,7 @@ http://fr.wikipedia.org/wiki/Charles_Bukowski
 
 ------
 
-Ce <poisson:litt:dessinateur> est particulier par sa constitution (il est constitué à 35% de gras) et par sa capacité à s'adapter à des pressions très diverses et très intenses, tant que la température de l'eau et son oxygénation lui conviennent. Ceci dit, il préfère les grandes profondeurs bien oxygénées. À noter qu'il est reconnu pour se désagréger en un amalgame de graisses, d'huile et d'os s'il est remonté trop rapidement des profondeurs par les pêcheurs, et qu'il se liquéfie en huile si on tente de le faire frire comme les autres <poissons:litt:dessinateurs>.
+Ce <poisson:litt:dessinateur> est particulier par sa constitution (<il:pronom_masculin> est constitué à 35% de gras) et par sa capacité à s'adapter à des pressions très diverses et très intenses, tant que la température de l'eau et son oxygénation lui conviennent. Ceci dit, il préfère les grandes profondeurs bien oxygénées. À noter qu'il est reconnu pour se désagréger en un amalgame de graisses, d'huile et d'os s'il est remonté trop rapidement des profondeurs par les pêcheurs, et qu'il se liquéfie en huile si on tente de le faire frire comme les autres <poissons:litt:dessinateurs>.
 clefs: physique
 
 http://fr.wikipedia.org/wiki/Coméphore
@@ -886,7 +977,7 @@ clefs: physique
 http://fr.wikipedia.org/wiki/Godzilla
 
 ------
-Capturé par des explorateurs américains et emmené à New York, il échappe au contrôle de ces derniers avant d'être tué au sommet d'un gratte-ciel.
+Capturé par des explorateurs américains et emmené à New York, <il:pronom_masculin> échappe au contrôle de ces derniers avant d'être tué au sommet d'un gratte-ciel.
 clefs: mort
 
 http://fr.wikipedia.org/wiki/King_Kong
@@ -915,19 +1006,19 @@ clefs: physique
 http://fr.wikipedia.org/wiki/Chaos_%28mythologie%29
 ------
 
-Il est beau, immortel, « dompte l'intelligence et la sagesse ». 
+<Il:pronom_masculin> est beau, immortel, « dompte l'intelligence et la sagesse ». 
 clefs: physique
 
-<Jean-Pierre Vernant:nom_masculin_2> le présente comme le principe qui « rend manifeste la dualité, la multiplicité incluse dans l'unité »
+<Jean-Pierre Vernant:nom_masculin_2> le présente comme le principe qui « rend manifeste la dualité, la multiplicité incluse dans l'unité ».<:pronom_masculin>
 clefs: ondit
 
-Il nait de l'œuf cosmique issu de l'union de <l'Éther:nom_masculin_2> et du <Chaos:nom_masculin_3>. À la fois mâle et femelle, il a de nombreuses têtes d'animaux.
+<Il:pronom_masculin> nait de l'œuf cosmique issu de l'union de <l'Éther:nom_masculin_2> et du <Chaos:nom_masculin_3>. À la fois mâle et femelle, il a de nombreuses têtes d'animaux.
 clefs: naissance physique
 
 <Aristophane:nom_masculin_2> parle de la puissance de <l'Éros:nom_masculin_1> et du mythe de l'androgyne (il y a trois sexes originels : le masculin, produit par le soleil, le féminin par la terre et l'androgyne, celui qui est composé des deux autres, par la lune).
 clefs: ondit
 
-Sa représentation devient très populaire à partir de 490 av. J.-C. On le voit alors sur les vases, la lyre ou avec un lièvre — cadeau pédérastique par excellence — à la main, ou encore poursuivant un garçon.
+Sa représentation devient très populaire à partir de 490 av. J.-C. On le voit alors sur les vases, la lyre ou avec un lièvre — cadeau pédérastique par excellence — à la main, ou encore poursuivant un garçon.<:pronom_masculin>
 clefs: ondit
 
 À partir de l'époque hellénistique, le type de l'<Éros:nom_masculin>-enfant apparaît concurremment à celui de l'<Éros:nom_masculin>-éphèbe. Dès cette époque, <Éros:nom_masculin> perd sa signification religieuse pour devenir ornemental.
@@ -936,7 +1027,7 @@ clefs: ondit
 Son avatar romain, <Cupidon:nom_masculin_2>, est souvent représenté sous les traits d'un jeune enfant espiègle, joufflu, avec deux petites ailes dans le dos et portant un arc, qui lui sert à décocher des flèches d'amour.
 clefs: legacy
 
-On peut voir une statue le représentant sur la place Piccadilly Circus à Londres.
+On peut voir une statue le représentant sur la place Piccadilly Circus à Londres.<:pronom_masculin>
 clefs: legacy
 
 http://fr.wikipedia.org/wiki/%C3%89ros 
@@ -960,10 +1051,10 @@ http://fr.wikipedia.org/wiki/Barbe_Noire
 <C':litt:Ce dessinateur> est un pantin de bois, à la tête articulée par un ressort qui se balance d'avant en arrière, comme pour dire oui. 
 clefs: physique
 
-Il porte toujours un bonnet bleu surmonté d'un grelot qui sonne quand sa tête bouge et un éternel foulard jaune à pois rouges.
+<Il:pronom_masculin> porte toujours un bonnet bleu surmonté d'un grelot qui sonne quand sa tête bouge et un éternel foulard jaune à pois rouges.
 clefs: physique
 
-Bien qu'on le considère comme un enfant, il est le chauffeur de taxi de la ville, et il transporte ses amis dans sa voiture, douée elle aussi d'une personnalité (elle ne parle pas, mais prend des initiatives et s'exprime à coups d'avertisseur sonore).
+Bien qu'on le considère comme un enfant, <il:pronom_masculin> est le chauffeur de taxi de la ville, et il transporte ses amis dans sa voiture, douée elle aussi d'une personnalité (elle ne parle pas, mais prend des initiatives et s'exprime à coups d'avertisseur sonore).
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Oui-Oui
@@ -973,10 +1064,10 @@ http://fr.wikipedia.org/wiki/Oui-Oui
 <Nureyev:nom_masculin_1> était un cheval de course pur-sang anglais né aux États-Unis en 1977 de l'union de <Northern Dancer:nom_masculin_2> et de <Special:nom_feminin_2>, par Forli. Il est le 3/4 frère de Sadler's Wells et de Fairy King.
 clefs: physique
 
-Acheté 1.300.000 dollars yearling, un record à l'époque, il remporta ses trois premières courses, dont les 2000 guinées , qu'il perdit ensuite sur le tapis vert. On ne le revit plus en compétition, et il se retira au haras. Après une année de monte en France, il fut syndiqué pour 14 millions de dollars et partit aux Etats-Unis.
+Acheté 1.300.000 dollars yearling, un record à l'époque, <il:pronom_masculin> remporta ses trois premières courses, dont les 2000 guinées , qu'il perdit ensuite sur le tapis vert. On ne le revit plus en compétition, et il se retira au haras. Après une année de monte en France, il fut syndiqué pour 14 millions de dollars et partit aux Etats-Unis.
 clefs: carriere
 
-Il s'avéra aussitôt être un étalon exceptionnel, l'un des meilleurs fils de <Northern Dancer:nom_masculin_2> au stud, avec Sadler's Wells, Danzig, Lyphard, Nijinsky II et Storm Bird. 580 de ses produits connurent la compétition, 135 d'entre eux furent "stakes winners" (vainqueurs d'une course importante), dont une trentaine de lauréats de Groupe 1. Son prix de saillie grimpa jusqu'à 250.000 dollars.
+<Il:pronom_masculin> s'avéra aussitôt être un étalon exceptionnel, l'un des meilleurs fils de <Northern Dancer:nom_masculin_2> au stud, avec Sadler's Wells, Danzig, Lyphard, Nijinsky II et Storm Bird. 580 de ses produits connurent la compétition, 135 d'entre eux furent "stakes winners" (vainqueurs d'une course importante), dont une trentaine de lauréats de Groupe 1. Son prix de saillie grimpa jusqu'à 250.000 dollars.
 clefs: legacy
 
 http://fr.wikipedia.org/wiki/Nureyev
@@ -988,7 +1079,7 @@ clefs: naissance enfance
 http://fr.wikipedia.org/wiki/Cyrus_II
 ---------------------------
 
-« Au fond, Picasso, il ne faut pas que nous fassions les malins. Vous êtes comme moi : ce que nous cherchons tous à retrouver en art, c'est le climat de notre première communion ». (Réponse de Matisse à Picasso)
+« Au fond, <Picasso:nom_masculin>, il ne faut pas que nous fassions les malins. Vous êtes comme moi : ce que nous cherchons tous à retrouver en art, c'est le climat de notre première communion ». (Réponse de Matisse à <Picasso:nom_masculin>)
 clefs: citation
 
 http://fr.wikipedia.org/wiki/Chapelle_du_Rosaire_de_Vence
@@ -1041,10 +1132,10 @@ http://fr.wikipedia.org/wiki/Tungst%C3%A8ne
 
 ---------------------
 
-On dit qu'il promettait tout au diable, excepté son âme et sa vie. Mais tandis qu'il prodiguait l'encens au démon et qu'il faisait l'aumône en son honneur, il continuait ses exercices pieux avec ses chapelains, alliant ainsi une extrême superstition aux pratiques les plus impies et à la dépravation de mœurs la plus criminelle. En effet, il semble que ce fut à cette époque qu'il commença d'immoler des enfants, soit pour mettre plus de raffinement dans ses plaisirs abominables, soit pour employer leurs sangs, leurs cœurs ou quelques autres parties de leurs corps dans ses charmes diaboliques.
+On dit qu'<il:pronom_masculin> promettait tout au diable, excepté son âme et sa vie. Mais tandis qu'il prodiguait l'encens au démon et qu'il faisait l'aumône en son honneur, il continuait ses exercices pieux avec ses chapelains, alliant ainsi une extrême superstition aux pratiques les plus impies et à la dépravation de mœurs la plus criminelle. En effet, il semble que ce fut à cette époque qu'il commença d'immoler des enfants, soit pour mettre plus de raffinement dans ses plaisirs abominables, soit pour employer leurs sangs, leurs cœurs ou quelques autres parties de leurs corps dans ses charmes diaboliques.
 clefs: ondit carriere 
 
-Contrairement à ce qui est communément affirmé, lorsqu'il est arrêté le 15 septembre 1440, il n'est pas accusé d'avoir violé, torturé et assassiné 140 enfants, notamment dans le cadre de rites sataniques, durant les huit années précédentes, mais d'être entré armé dans une église et d'avoir, pendant l'office, molesté et arrêté un homme lige du duc de Bretagne.
+Contrairement à ce qui est communément affirmé, lorsqu'<il:pronom_masculin> est arrêté le 15 septembre 1440, il n'est pas accusé d'avoir violé, torturé et assassiné 140 enfants, notamment dans le cadre de rites sataniques, durant les huit années précédentes, mais d'être entré armé dans une église et d'avoir, pendant l'office, molesté et arrêté un homme lige du duc de Bretagne.
 clefs: ondit carriere 
 
 Sa confession, prononcée dans sa prison puis répétée à l'audience du 22 octobre, horrifie l'assistance tant les détails de la cruauté décrite dépassent l'entendement.
@@ -1056,8 +1147,11 @@ clefs: carriere
 http://fr.wikipedia.org/wiki/Gilles_de_rais
 ------
 
-Née à Maronée, en Thrace, elle s'éprend de Cratès, refuse les prétendants les plus riches et menace de se suicider si ses parents ne lui permettent pas de se marier avec lui. Comme les cyniques, elle vit dans la rue — et fait l'amour avec son mari aux yeux des passants —, participant à des banquets habituellement réservés aux hommes et bravant les règles sociales de pudeur et de réserve alors imposées aux femmes.
-clefs: naissance style
+Née à Maronée, en Thrace, <elle:pronom_feminin> s'éprend de <Cratès:nom_masculin_2>, refuse les prétendants les plus riches et menace de se suicider si ses parents ne lui permettent pas de se marier avec lui. 
+clefs: presentation
+
+Comme les cyniques, <elle:pronom_feminin> vit dans la rue — et fait l'amour avec son mari aux yeux des passants —, participant à des banquets habituellement réservés aux hommes et bravant les règles sociales de pudeur et de réserve alors imposées aux femmes.
+clefs: style
 
 
 <Hipparchia:nom_feminin> est donc bel et bien, et de loin, la philosophe la plus libre de l'Antiquité. Sa vie, en accord parfait avec son caractère et sa pensée, aura largement participé à la mauvaise réputation de l'école cynique auprès des philosophes plus "conventionnels" : la liberté de la femme doit être absolue, et la parité parfaite.
@@ -1066,7 +1160,7 @@ clefs: carriere opinions
 http://fr.wikipedia.org/wiki/Hipparchia
 ------
 
-Plusieurs anecdotes témoignent de son mépris des richesses et des conventions sociales. Il n'hésite pas à mendier auprès des statues afin de « s'habituer au refus ». Il abandonne même son écuelle après avoir vu un enfant buvant à la fontaine dans ses mains. 
+Plusieurs anecdotes témoignent de son mépris des richesses et des conventions sociales. <Il:pronom_masculin> n'hésite pas à mendier auprès des statues afin de « s'habituer au refus ». Il abandonne même son écuelle après avoir vu un enfant buvant à la fontaine dans ses mains. 
 clefs: opinions style
 
 Lorsqu'il est interrogé sur la manière d'éviter la tentation de la chair, <Diogène:nom_masculin_1> répond que c'est en se masturbant (« Ah si on pouvait faire disparaître la faim en se frottant le ventre »). 
@@ -1075,16 +1169,16 @@ clefs: opinions
 On l'aurait également vu parcourir les rues d'Athènes en plein jour, une lanterne à la main, déclarant « Je cherche un humain » à ceux qui lui demandaient ce qu'il faisait. Cet humain est celui théorisé par <Platon:nom_masculin_2>, l'idéal de l'humain. <Diogène:nom_masculin_1> réfute son existence, ne voyant que des hommes concrets. Une anecdote rapporte que, <Platon:nom_masculin_2> ayant défini l'homme comme un « bipède sans cornes et sans plumes », le jour suivant, <Diogène:nom_masculin_1> se promena dans la ville, tenant à la main un coq plumé aux ergots coupés et déclarant : « Voici l'homme de <Platon:nom_masculin_2> ! ».
 clefs: carriere
 
-À la fin de sa vie, il se dirige vers Égine en bateau quand celui-ci est pris par des pirates. Mis en vente comme esclave à Corinthe, il déclare au marchand qu'il sait gouverner les hommes, et qu'il faut donc le vendre à quelqu'un qui cherche un maître. Il est acheté par un riche Corinthien qui admire son indépendance d'esprit, et lui rend la liberté. 
+À la fin de sa vie, <il:pronom_masculin> se dirige vers Égine en bateau quand celui-ci est pris par des pirates. Mis en vente comme esclave à Corinthe, il déclare au marchand qu'il sait gouverner les hommes, et qu'il faut donc le vendre à quelqu'un qui cherche un maître. Il est acheté par un riche Corinthien qui admire son indépendance d'esprit, et lui rend la liberté. 
 clefs: carriere
 
-C'est à Corinthe que se situe sa fameuse rencontre avec Alexandre le Grand. Le conquérant lui ayant demandé ce qu'il désirait, <Diogène:nom_masculin_1>, dans l'ombre, lui répond : « Ôte-toi de mon soleil».
+C'est à Corinthe que se situe sa fameuse rencontre avec Alexandre le Grand. Le conquérant lui ayant demandé ce qu'<il:pronom_masculin> désirait, <Diogène:nom_masculin_1>, dans l'ombre, lui répond : « Ôte-toi de mon soleil».
 clefs: carriere citations
 
 La mythologie a eu raison de la vérité concernant la mort de <Diogène de Sinope:nom_masculin>, et il subsiste de nos jours plusieurs versions différentes de la cause de son trépas: il serait mort à cause d'une infection causée par la morsure d'un chien auquel il essayait de dérober son os, pour se nourrir. D'autres sources affirment qu'il serait décédé des suites de l'ingestion d'un poulpe cru, ou même qu'il aurait volontairement arrêté de respirer !
 clefs: mort
 
-Il avait demandé qu'on jetât son corps à la voirie mais ses amis lui firent des funérailles magnifiques. 
+<Il:pronom_masculin> avait demandé qu'on jetât son corps à la voirie mais ses amis lui firent des funérailles magnifiques. 
 clefs: mort
 
 On plaça sur son tombeau une colonne surmontée d'un chien en marbre de Paros sur laquelle on peut lire les vers suivants : "Même le bronze subit le vieillissement du temps, mais ta renommée, <Diogène:nom_masculin>, l'éternité ne la détruira point. Car toi seul as montré aux mortels la gloire d'une vie indépendante et le sentier de l'existence le plus facile à parcourir."
@@ -1093,7 +1187,7 @@ clefs: mort legacy
 http://fr.wikipedia.org/wiki/Diogene
 ------
 
-Il meurt à Géla en 456, selon la légende en recevant une tortue sur la tête, lancée par un aigle qui aurait pris son crâne chauve pour un caillou.
+<Il:pronom_masculin> meurt à Géla en 456, selon la légende en recevant une tortue sur la tête, lancée par un aigle qui aurait pris son crâne chauve pour un caillou.
 clefs: mort
 
 http://fr.wikipedia.org/wiki/Eschyle
@@ -1141,33 +1235,33 @@ http://fr.wikipedia.org/wiki/Jeanne_d%27Arc
 
 --------------------
 
-La jeune fille, au physique agréable quoique pas complètement développé, est assez petite et ne possède pas encore la « gorge » si appréciée en France. La jeune dauphine a néanmoins beaucoup de grâce et une légèreté presque dansante dans sa façon de se mouvoir. 
+La jeune fille, au physique agréable quoique pas complètement développé, est assez petite et ne possède pas encore la « gorge » si appréciée en France. La jeune dauphine a néanmoins beaucoup de grâce et une légèreté presque dansante dans sa façon de se mouvoir.<:pronom_feminin>
 clefs: physique adolescence
 
-La jeune dauphine a du mal à s’habituer à sa nouvelle vie, son esprit se plie mal à la complexité et à la rouerie de la « vieille cour », au libertinage du roi Louis XV et de sa maîtresse la comtesse du Barry. Son mari l’aime mais l’évite, partant très tôt chasser, elle peine à s’habituer au cérémonial français, au manque d’intimité et subit péniblement « l’étiquette », rigide mode d’emploi de la cour.
+La jeune dauphine a du mal à s’habituer à sa nouvelle vie, son esprit se plie mal à la complexité et à la rouerie de la « vieille cour », au libertinage du roi Louis XV et de sa maîtresse la comtesse du Barry. Son mari l’aime mais l’évite, partant très tôt chasser, <elle:pronom_feminin> peine à s’habituer au cérémonial français, au manque d’intimité et subit péniblement « l’étiquette », rigide mode d’emploi de la cour.
 clefs: carriere debuts
 
-<Le baron Pichler:nom_masculin_2>, secrétaire de <Marie-Thérèse Ire:nom_feminin_2>, résume poliment l’opinion générale en écrivant : « Elle ne veut être ni gouvernée ni dirigée, ni même guidée par qui que ce soit. C’est le point sur lequel toutes ses réflexions paraissent jusqu’à présent s’être concentrées. Hors de là, elle ne réfléchit encore guère, et l’usage qu’elle a fait jusqu’ici de son indépendance le prouve assez, puisqu’il n’a porté que sur des objets d’amusement et de frivolité. »
+<Le baron Pichler:nom_masculin_2>, secrétaire de <Marie-Thérèse Ire:nom_feminin_2>, résume poliment l’opinion générale en écrivant : « <Elle:pronom_feminin> ne veut être ni gouvernée ni dirigée, ni même guidée par qui que ce soit. C’est le point sur lequel toutes ses réflexions paraissent jusqu’à présent s’être concentrées. Hors de là, elle ne réfléchit encore guère, et l’usage qu’elle a fait jusqu’ici de son indépendance le prouve assez, puisqu’il n’a porté que sur des objets d’amusement et de frivolité. »
 clefs: ondit
 
 http://fr.wikipedia.org/wiki/Marie-Antoinette_d%27Autriche
 
 ---------------------
 
-Elle s'installe aux États-Unis, devient bouddhiste, voit des OVNIS multicolores et, le 17 mai 1981, donne naissance à une fille prénommée Cosma Shiva Hagen. En 1982, sort NunSexMonkRock, son premier album solo en anglais qui est un curieux mélange de punk, funk et opéra.
+<Elle:pronom_feminin> s'installe aux États-Unis, devient bouddhiste, voit des OVNIS multicolores et, le 17 mai 1981, donne naissance à une fille prénommée Cosma Shiva Hagen. En 1982, sort NunSexMonkRock, son premier album solo en anglais qui est un curieux mélange de punk, funk et opéra.
 clefs: carriere
 
-Ses apparitions en public sont pour elle de plus en plus l'occasion d'exposer ses idées au sujet de Dieu, des extraterrestres, des droits des animaux et de la politique.
+Ses apparitions en public sont pour <elle:pronom_feminin> de plus en plus l'occasion d'exposer ses idées au sujet de Dieu, des extraterrestres, des droits des animaux et de la politique.
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Nina_Hagen
 
 ---------------
 
-Ses positions politiques étaient réactionnaires. Son respect de l'ordre établi, son horreur du désordre et de la nouveauté, son dégoût du peuple, son mépris pour le patriotisme, la violence, la guerre, l'esprit de sacrifice et l'esprit grégaire le conduisirent toujours à adopter les opinions qui lui semblaient le mieux garantir sa tranquillité. 
+Ses positions politiques étaient réactionnaires. Son respect de l'ordre établi, son horreur du désordre et de la nouveauté, son dégoût du peuple, son mépris pour le patriotisme, la violence, la guerre, l'esprit de sacrifice et l'esprit grégaire le conduisirent toujours à adopter les opinions qui <lui:pronom_masculin> semblaient le mieux garantir sa tranquillité. 
 clefs: opinions
 
-Dans son journal d'après-guerre, il regrette l'occupation et se montre antisémite alors qu'il raillait dans sa jeunesse les antisémites et les anti-dreyfusards, il vitupère contre les ouvriers, jugés fainéants, les allocations familiales (car il déteste les enfants), les syndicats et les partis, surtout de gauche. 
+Dans son journal d'après-guerre, <il:pronom_masculin> regrette l'occupation et se montre antisémite alors qu'il raillait dans sa jeunesse les antisémites et les anti-dreyfusards, il vitupère contre les ouvriers, jugés fainéants, les allocations familiales (car il déteste les enfants), les syndicats et les partis, surtout de gauche. 
 clefs: opinions
 
 
@@ -1182,7 +1276,7 @@ clefs: carriere
 <François-Joseph:nom_masculin_2>  payait toutes ses dépenses sans jamais lui en faire le reproche. En 1875, à la mort de l'empereur Ferdinand Ier, qui avait abdiqué en sa faveur en 1848, <François-Joseph:nom_masculin_2> remit à <Élisabeth:nom_feminin_1> des sommes importantes prélevées sur cet héritage considérable car il avait conservé la possession de tous les apanages du défunt. <Élisabeth:nom_feminin_1> plaça lesdites sommes en Suisse.
 clefs: carriere
 
-Si sa beauté, qu'elle entretint excessivement une fois qu'elle eut compris qu'elle lui conférait un certain pouvoir, était unanimement admirée et célébrée, ses aptitudes équestres étaient également plus que remarquables. Elle fut considérée comme la meilleure, voire la plus intrépide cavalière de son temps.
+Si sa beauté, qu'<elle:pronom_feminin> entretint excessivement une fois qu'elle eut compris qu'elle lui conférait un certain pouvoir, était unanimement admirée et célébrée, ses aptitudes équestres étaient également plus que remarquables. Elle fut considérée comme la meilleure, voire la plus intrépide cavalière de son temps.
 clefs: carriere physique
 
 http://fr.wikipedia.org/wiki/%C3%89lisabeth_de_Wittelsbach
@@ -1199,10 +1293,10 @@ http://fr.wikipedia.org/wiki/Audrey_Hepburn
 À la recherche de célébrité et d'argent s'ajoutait la motivation impérieuse de changer de physionomie. <Ève Vallois:nom_feminin>, encouragée par son mari — qui devint bientôt son manager et sembla, dès lors, abuser de la vulnérabilité de sa femme —, ne subit pas moins de 25 opérations de chirurgie esthétique pour devenir <Lolo Ferrari:litt:celle que nous connaissons>.
 clefs: physique carriere
 
-Elle subit un lifting du visage ; ses yeux furent redessinés par trois fois ; ses lèvres furent gonflées, son nez retouché, mais elle tint surtout à augmenter la taille de son tour de poitrine. Après de nombreuses opérations, ce tour de poitrine fut porté à 180 cm, entraînant visiblement une importante tension du tissu mammaire épidermique. Selon le Guinness Book des records (éd. 2003), chacun de ses seins pesait 2,8 kg et contenait 3 litres de sérum. Elle fut élue « femme à la plus grosse poitrine du monde ».
+<Elle:pronom_feminin> subit un lifting du visage ; ses yeux furent redessinés par trois fois ; ses lèvres furent gonflées, son nez retouché, mais elle tint surtout à augmenter la taille de son tour de poitrine. Après de nombreuses opérations, ce tour de poitrine fut porté à 180 cm, entraînant visiblement une importante tension du tissu mammaire épidermique. Selon le Guinness Book des records (éd. 2003), chacun de ses seins pesait 2,8 kg et contenait 3 litres de sérum. Elle fut élue « femme à la plus grosse poitrine du monde ».
 clefs: physique
 
-Une brassière fut conçue pour soutenir sa poitrine, car les multiples opérations qu'elles avaient subies entraînaient chez elle de nombreuses souffrances physiques — ses seins l'empêchaient de dormir sur le ventre ou sur le dos — et psychologiques — elle ne parvenait plus à prendre l'avion, de peur que sa poitrine n'éclate en plein vol. 
+Une brassière fut conçue pour soutenir sa poitrine, car les multiples opérations qu'<elle:pronom_feminin> avait subies entraînaient chez elle de nombreuses souffrances physiques — ses seins l'empêchaient de dormir sur le ventre ou sur le dos — et psychologiques — elle ne parvenait plus à prendre l'avion, de peur que sa poitrine n'éclate en plein vol.
 clefs: physique
 
 http://fr.wikipedia.org/wiki/Lolo_Ferrari
@@ -1222,7 +1316,7 @@ Le récit de sa naissance donne lieu à une légende célèbre : il serait né d
 clefs: naissance
 
 
-Sitôt né, l'enfant se serait mis debout et aurait « pris possession » de l'Univers en se tournant vers les quatre points cardinaux, puis aurait fait sept pas vers le nord. 
+Sitôt né, l'enfant se serait mis debout et aurait « pris possession » de l'Univers en se tournant vers les quatre points cardinaux, puis aurait fait sept pas vers le nord.<:pronom_masculin>
 clefs:naissance
 
 http://fr.wikipedia.org/wiki/Siddhartha_Gautama
@@ -1238,10 +1332,10 @@ clefs: physique
 http://fr.wikipedia.org/wiki/Gilgamesh
 -------------------------
 
-Avec une forte personnalité, son franc-parler choque, en particulier quand elle critique le cinéma français. Sa réputation d'avoir un caractère « difficile » la fait délaisser par les producteurs français. Surtout, son manque de mystère et de désir artistique absolu, l'ont empêchée de devenir une véritable "star". Elle s'expatrie à Hollywood.
+Avec une forte personnalité, son franc-parler choque, en particulier quand <elle:pronom_feminin> critique le cinéma français. Sa réputation d'avoir un caractère « difficile » la fait délaisser par les producteurs français. Surtout, son manque de mystère et de désir artistique absolu, l'ont empêchée de devenir une véritable "star". Elle s'expatrie à Hollywood.
 clefs: carriere
 
-En 2005, alors qu'elle pose devant les photographes au bas des marches du palais, la bretelle de sa robe tombe et laisse apparaître son sein gauche.
+En 2005, alors qu'<elle:pronom_feminin> pose devant les photographes au bas des marches du palais, la bretelle de sa robe tombe et laisse apparaître son sein gauche.
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Sophie_Marceau
@@ -1290,7 +1384,7 @@ clefs: legacy ondit
 Le caractère intraitable de <Torquemada:nom_masculin> et la brutalité de son action suscitèrent beaucoup d'incompréhensions et de protestations, y compris de son vivant. Au point que, par trois fois, il dut envoyer un émissaire pour se justifier auprès du pape.
 clefs: style
 
-En 1836, les libéraux espagnols brisèrent sa tombe dans la chapelle du couvent d'Ávila, et dispersèrent les ossements de celui qu'ils estimaient être l'une des pires incarnations de l'intolérance et du fanatisme.
+En 1836, les libéraux espagnols brisèrent sa tombe dans la chapelle du couvent d'Ávila, et dispersèrent les ossements de celui qu'ils estimaient être l'une des pires incarnations de l'intolérance et du fanatisme.<:pronom_masculin>
 clefs: legacy
 
 http://fr.wikipedia.org/wiki/Tom%C3%A1s_de_Torquemada
@@ -1299,7 +1393,7 @@ http://fr.wikipedia.org/wiki/Tom%C3%A1s_de_Torquemada
 Durant toute l'année 1537, <Calvin:nom_masculin> mène avec d'autres intolérants une pression continue sur les hésitants et les tièdes.
 clefs: carriere
 
-À partir de cette époque, il devient très influent dans la ville : aussi ses adversaires le surnomment-ils le pape de Genève.
+À partir de cette époque, <il:pronom_masculin> devient très influent dans la ville : aussi ses adversaires le surnomment-ils le pape de Genève.
 clefs: ondit
 
 Durant les seules cinq premières années de son règne, treize personnes seront pendues, dix décapitées, et trente-cinq périront sur le bûcher.
@@ -1318,10 +1412,10 @@ Selon ses propres dires, des photos, de nombreux témoignages, et un courrier po
 clefs: debuts 
 
 
-De retour en France, et après une retraite solitaire dans une grotte du Vaucluse, il fonde en 1967 l'« Association des chevaliers du lotus d'or » et s'installe dans les gorges du Verdon, au-dessus du village de Castellane, où sera bâti le Mandarom - « Mandarom Shambhasalem » - Shambha de "Shambha-llah et Salem, signifiant "paix", comme Jéru-salem, soit la nouvelle Jérusalem.
+De retour en France, et après une retraite solitaire dans une grotte du Vaucluse, <il:pronom_masculin> fonde en 1967 l'« Association des chevaliers du lotus d'or » et s'installe dans les gorges du Verdon, au-dessus du village de Castellane, où sera bâti le Mandarom - « Mandarom Shambhasalem » - Shambha de "Shambha-llah et Salem, signifiant "paix", comme Jéru-salem, soit la nouvelle Jérusalem.
 clefs: carriere
 
-En 1990, après avoir reçu le nom d'« Hamsah Manarah » il se couronne « Messie cosmo planétaire ». Il devient un personnage médiatique, faisant plusieurs passages sur des télévisions nationales. C'est au moment de cette apparition médiatique, 1990-1991, que son mouvement compte le plus d'adeptes, et sa « cité sainte » attire de nombreux curieux. 
+En 1990, après avoir reçu le nom d'« Hamsah Manarah » <il:pronom_masculin> se couronne « Messie cosmo planétaire ». Il devient un personnage médiatique, faisant plusieurs passages sur des télévisions nationales. C'est au moment de cette apparition médiatique, 1990-1991, que son mouvement compte le plus d'adeptes, et sa « cité sainte » attire de nombreux curieux. 
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Gilbert_Bourdin_%28mandarom%29
@@ -1331,16 +1425,16 @@ http://fr.wikipedia.org/wiki/Gilbert_Bourdin_%28mandarom%29
 Après en avoir réussi l'examen d'entrée, <Dostoïevski:nom_masculin> entre à l'École supérieure des Ingénieurs militaires de Saint-Pétersbourg en 1838. Il effectue sa scolarité dans l'indigence, n'ayant parfois pas de quoi se nourrir, car son père refuse de lui envoyer suffisamment d'argent. 
 clefs: adolescence 
 
-C'est un élève taciturne, au regard mystérieusement mélancolique, qui ne s'intègre pas bien à l'école. Il méprise le matérialisme et le carriérisme de ses camarades. En 1842, il est nommé sous-lieutenant et entre en tant que dessinateur à la direction du Génie.
+C'est un élève taciturne, au regard mystérieusement mélancolique, qui ne s'intègre pas bien à l'école. <Il:pronom_masculin> méprise le matérialisme et le carriérisme de ses camarades. En 1842, il est nommé sous-lieutenant et entre en tant que dessinateur à la direction du Génie.
 clefs: adolescence 
 
-Il se retrouve alors immédiatement propulsé au rang de "nouveau Gogol" et parade dans les cercles mondains de Saint Pétersbourg. Il ne se sent pas du tout à l'aise dans ce milieu où règnent la superficialité et l'hypocrisie. Bientôt, l'élite commence à railler son manque de tenue, son air abattu.
+<Il:pronom_masculin> se retrouve alors immédiatement propulsé au rang de "nouveau Gogol" et parade dans les cercles mondains de Saint Pétersbourg. Il ne se sent pas du tout à l'aise dans ce milieu où règnent la superficialité et l'hypocrisie. Bientôt, l'élite commence à railler son manque de tenue, son air abattu.
 clefs: debuts
 
 Ces années d'errances et de troubles marquent profondément <Dostoïevski:nom_masculin>. Son aversion pour l'Europe et la démocratie grandit.
 clefs: opinions
 
-Ses dernières années restent marquées par des discours enflammés sur l'âme et le peuple russe ainsi que la supériorité du "génie russe" sur les autres nations. Il attribue un rôle messianique au peuple russe, seul peuple capable de comprendre tous les autres peuples et d'avoir ses propres spécificités nationales. Selon lui, le peuple russe a intrinsèquement pour mission d'apporter le bonheur à l'humanité.
+Ses dernières années restent marquées par des discours enflammés sur l'âme et le peuple russe ainsi que la supériorité du "génie russe" sur les autres nations. <Il:pronom_masculin> attribue un rôle messianique au peuple russe, seul peuple capable de comprendre tous les autres peuples et d'avoir ses propres spécificités nationales. Selon lui, le peuple russe a intrinsèquement pour mission d'apporter le bonheur à l'humanité.
 clefs: opinions
 
 http://fr.wikipedia.org/wiki/Dosto%C3%AFevski
@@ -1361,17 +1455,17 @@ http://fr.wikipedia.org/wiki/Horacio_Quiroga
 En mars 1832, <Galois:nom_masculin_1> fut transféré dans une clinique privée à cause d'une épidémie de choléra. Il semble y avoir rencontré une jeune femme, qui pourrait être Stéphanie Poterin du Motel, et dont il s'éprit d'un amour apparemment malheureux. Elle lui demanda de rompre le 14 mai. 
 clefs: carriere
 
-Quelques semaines plus tard, le 30 mai 1832 il affronta en duel <Pescheux d'Herbinville:nom_masculin_2>. Blessé à l'abdomen, <Galois:nom_masculin_1> fut transporté à l'hôpital Cochin et mourut le 31 mai 1832, à l'âge de 20 ans et 7 mois, probablement d'une péritonite, après avoir refusé les offices d'un prêtre.
+Quelques semaines plus tard, le 30 mai 1832 il affronta en duel Pescheux d'Herbinville (ou Ernest Duchâtelet). Blessé à l'abdomen, <Galois:nom_masculin> fut transporté à l'hôpital Cochin et mourut le 31 mai 1832, à l'âge de 20 ans et 7 mois, probablement d'une péritonite, après avoir refusé les offices d'un prêtre.
 clefs: mort
 
 http://fr.wikipedia.org/wiki/%C3%89variste_Galois
 ----------
 
 
-En 1982, il est victime de deux accidents. Le plus grave, une chute de quinze mètres la tête la première, lors d'une descente en rappel, à cause d'un noeud mal réalisé, lui vaut cinq jours de coma et des fractures multiples aux crâne, nez, poignets, coude, bassin et talons. Le pronostic des médecins est alors peu optimiste : « ce garçon ne pourra plus jamais grimper ».
+En 1982, <il:pronom_masculin> est victime de deux accidents. Le plus grave, une chute de quinze mètres la tête la première, lors d'une descente en rappel, à cause d'un noeud mal réalisé, lui vaut cinq jours de coma et des fractures multiples aux crâne, nez, poignets, coude, bassin et talons. Le pronostic des médecins est alors peu optimiste : « ce garçon ne pourra plus jamais grimper ».
 clefs: debuts
 
-La sécurité sociale le considère comme invalide à 60%.
+La sécurité sociale le considère comme invalide à 60%.<:pronom_masculin>
 clefs: physique
 
 http://fr.wikipedia.org/wiki/Alain_Robert
@@ -1402,16 +1496,16 @@ clefs: carriere
 http://fr.wikipedia.org/wiki/Henri_IV_du_Saint-Empire
 -------
 
-<Il:litt:Ce dessinateur> est à l'origine de la destruction des villes de Pompéi, Herculanum, Oplontis et Stabies, ensevelies le 24 août 79 sous une pluie de cendres et de boue qui, ainsi, les a conservées jusqu'à nos jours dans leur état antique. Il est entré en éruption de nombreuses autres fois au cours des derniers millénaires et est considéré comme un des <volcans:litt:dessinateurs> les plus dangereux du monde en raison de sa tendance explosive et surtout de la population importante qui vit à ses abords.
+<Il:pronom_masculin> est à l'origine de la destruction des villes de Pompéi, Herculanum, Oplontis et Stabies, ensevelies le 24 août 79 sous une pluie de cendres et de boue qui, ainsi, les a conservées jusqu'à nos jours dans leur état antique. Il est entré en éruption de nombreuses autres fois au cours des derniers millénaires et est considéré comme un des <volcans:litt:dessinateurs> les plus dangereux du monde en raison de sa tendance explosive et surtout de la population importante qui vit à ses abords.
 clefs: carriere ondit
 
 http://fr.wikipedia.org/wiki/Le_v%C3%A9suve
 -----------
 
-On discerne des thèmes rémanents dans son œuvre, tels que la folie - dont étaient touchés ses parents, la futilité des croyances, la dégénérescence, les unions contre nature, la xénophobie, l'impression générale que le monde dans lequel il vivait n'était qu'un leurre désagréable et immonde. 
+On discerne des thèmes rémanents dans son œuvre, tels que la folie - dont étaient touchés ses parents, la futilité des croyances, la dégénérescence, les unions contre nature, la xénophobie, l'impression générale que le monde dans lequel <il:pronom_masculin> vivait n'était qu'un leurre désagréable et immonde. 
 clefs: oeuvre
 
-Hanté par de nombreuses phobies, il ne pouvait supporter la proximité de la mer, ni même les objets en provenant, tant était grande son aversion pour l'élément primordial de la vie. Le froid le rendait malade et les seuls êtres vivants qui semblent ne pas lui avoir déplu étaient les chats, il en avait toujours plusieurs chez lui pour seule compagnie. Il avouait souvent qu'il aurait préféré vivre au XVIIIe siècle.
+Hanté par de nombreuses phobies, <il:pronom_masculin> ne pouvait supporter la proximité de la mer, ni même les objets en provenant, tant était grande son aversion pour l'élément primordial de la vie. Le froid le rendait malade et les seuls êtres vivants qui semblent ne pas lui avoir déplu étaient les chats, il en avait toujours plusieurs chez lui pour seule compagnie. Il avouait souvent qu'il aurait préféré vivre au XVIIIe siècle.
 clefs: vie
 
 http://fr.wikipedia.org/wiki/Lovecraft
@@ -1420,7 +1514,7 @@ http://fr.wikipedia.org/wiki/Lovecraft
 <Yog-Sothoth:nom_masculin>, « le tout en un et un en tout, » demeure dans les interstices séparant les plans de l'existence composant notre univers, où il apparait comme un conglomérat de globes iridescents toujours fluctuants, s'interpénétrant et se brisant.
 clefs: physique
 
-Son diamètre peut atteindre cent mètres. Il est le maître de l'espace-temps et il est surtout le dieu des magiciens et des sorciers. Il demande en échange de ses faveurs que la voie de notre planète lui soit ouverte afin de pouvoir la piller et la ravager. 
+Son diamètre peut atteindre cent mètres. <Il:pronom_masculin> est le maître de l'espace-temps et il est surtout le dieu des magiciens et des sorciers. Il demande en échange de ses faveurs que la voie de notre planète lui soit ouverte afin de pouvoir la piller et la ravager. 
 clefs: physique
 
 <Yog-Sothoth:nom_masculin> est la clé et la porte vers d'autres dimensions.
@@ -1432,14 +1526,15 @@ http://fr.wikipedia.org/wiki/Yog-Sothoth
 <Le volcan:litt:Ce dessinateur> est surtout connu pour son explosion du 27 août 1883, une des plus violentes de mémoire d'homme, qui tua plusieurs dizaines de milliers de personnes et engendra un tsunami dont les vagues furent alors perceptibles jusqu'en Europe. Cette catastrophe a grandement inspiré la littérature, le cinéma, la télévision et la musique.
 clefs: carriere
 
-(Le Krakatoa)
+http://fr.wikipedia.org/wiki/Krakatoa
 
 ----
 
 <Le yéti:nom_masculin> serait un primate velu, ayant un visage ressemblant à celui de l'homme. Sa taille se situerait entre 1,50 et 3,75 mètres. Selon certains témoins, la démarche bipède ressemblerait plus à celle d'un ursidé qu'à celle d'un primate. Ceci est en contradiction avec le fait que les traces supposées ont pu être suivies sur de très longues distances ; un ours ne peut en effet marcher debout que sur quelques mètres.
 clefs: physique
 
-http://fr.wikipedia.org/wiki/Krakatoa
+http://fr.wikipedia.org/wiki/Y%C3%A9ti
+
 ----
 
 En 1926, elle met un terme à sa carrière amateur, suite à un incident à Wimbledon. Elle refuse de jouer deux matchs de suite (simple et double) et les organisateurs la menacent de disqualification. <Suzanne:nom_feminin> se braque et refuse de se présenter sur le court, faisant un affront à la reine présente en tribune. 
@@ -1449,7 +1544,7 @@ http://fr.wikipedia.org/wiki/Suzanne_Lenglen
 
 -----
 
-<Bernard-Henri Lévy:nom_masculin_1> a été, comme d'autres personnalités publiques, victime d'entartages en Belgique et en France. Lors de l'un d'eux en 1985, il a renversé son agresseur, <Noël Godin:nom_masculin_2>, pour lui intimer ensuite : « /Lève-toi vite, ou je t'écrase la gueule à coups de talon !/ »
+<Bernard-Henri Lévy:nom_masculin_1> a été, comme d'autres personnalités publiques, victime d'entartages en Belgique et en France. Lors de l'un d'eux en 1985, il a renversé son agresseur, <Noël Godin:nom_masculin_2>, pour lui intimer ensuite : « Lève-toi vite, ou je t'écrase la gueule à coups de talon ! »
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Bernard-Henri_L%C3%A9vy
@@ -1468,7 +1563,7 @@ clefs: carriere
 En 1929, <Wittgenstein:nom_masculin_1> décida, sur les conseils de <Frank Ramsey:nom_masculin_2>  et d'autres de ses amis, de retourner à Cambridge. Il fut accueilli à la gare par une foule composée de quelques-uns des plus grands intellectuels d'Angleterre et réalisa avec horreur qu'il était l'un des philosophes les plus célèbres au monde.
 clefs: carriere
 
-Après ses cours ou des périodes d'intenses réflexions philosophiques, <Wittgenstein:nom_masculin_1> aimait aller voir des westerns ou lire des polars, il les considéraient comme des douches de l'esprit.
+Après ses cours ou des périodes d'intenses réflexions philosophiques, <Wittgenstein:nom_masculin_1> aimait aller voir des westerns ou lire des polars, il les considérait comme des douches de l'esprit.
 clefs: opinions
 
 http://fr.wikipedia.org/wiki/Wittgenstein
@@ -1498,7 +1593,7 @@ http://fr.wikipedia.org/wiki/Carl_Gustav_Jung
 
 ----
 
-Son humeur changeante, son tempérament devenu grossier et capricieux lui font changer souvent de travail, il essaye d'élever des chevaux mais sans succès et devient ensuite conducteur de diligence au Chili entre Santiago et Valparaiso  de 1852 à 1859, il passe même comme attraction au cirque Barnum à New-York vers fin 1849.
+Son humeur changeante, son tempérament devenu grossier et capricieux lui font changer souvent de travail, <il:pronom_masculin> essaye d'élever des chevaux mais sans succès et devient ensuite conducteur de diligence au Chili entre Santiago et Valparaiso  de 1852 à 1859, il passe même comme attraction au cirque Barnum à New-York vers fin 1849.
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Phineas_Gage
@@ -1534,7 +1629,7 @@ clefs: legacy
 http://fr.wikipedia.org/wiki/Zoroastre_%28proph%C3%A8te%29
 
 -------
-L'année suivante, il retourne chez celle qu'il appelait « Maman » alors que cette dernière n'était que de 13 ans plus vieille que lui, dans « une petite maison au penchant d'un vallon », près de Chambéry, que Les Confessions ont rendue célèbre : « les Charmettes. »
+L'année suivante, <il:pronom_masculin> retourne chez celle qu'il appelait « Maman » alors que cette dernière n'était que de 13 ans plus vieille que lui, dans « une petite maison au penchant d'un vallon », près de Chambéry, que Les Confessions ont rendue célèbre : « les Charmettes. »
 clefs: adolescence
 
 http://fr.wikipedia.org/wiki/Jean-Jacques_Rousseau
@@ -1596,8 +1691,4 @@ clefs: legacy
 
 http://fr.wikipedia.org/wiki/Von_Neumann
 
-STOP------
-
-Kundig had kept silent, after some initial remarks, but when finally he was asked for his opinion, jokingly he said: "Well, I'd say that also our friend Ibn al Rabin has got a religion and the first commandment of this religion is 'God does not exist and Ibn al Rabin is his prophet.'" Everybody burst into laughter, including Ibn al Rabin.
-
-(Pauli parle, Dirac prophète) (Il était incrédible apparemment ce Dirac)
+STOP

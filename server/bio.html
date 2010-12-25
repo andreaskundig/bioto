@@ -6,19 +6,22 @@
  <script type="text/javascript" src="data.js"></script>
  <script type="text/javascript" src="jquery-1.4.4.min.js"></script>
  <script type="text/javascript" src="bio.js"> </script>
+ <link rel="stylesheet" type="text/css" href="reset.css" />
  <link rel="stylesheet" type="text/css" href="bio.css" />
  <script type="text/javascript" >
-
- $(document).ready(function(){
-   keys = Math.random() > 0.5 ? keys_f : keys_m;
+ var deja_utilise = [];
+ $(window).load(function(){
    $("#titre").append('<h1>'+ protagonistes[0] +'</h1>');
+   $("#fin").append('<a onclick="deja_utilise = bio(deja_utilise)">'
+                       + '  mais encore...</a>');
    bio();
  });
  </script>
- <title >Biographie</title>
+ <title>Biographie</title>
  </header>
  <body>
- <div id="titre" ></div>
+ <div id="titre"></div>
  <div id="bio"></div>
+ <div id="fin"></div>
  </body>
 </html>

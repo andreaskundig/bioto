@@ -1,4 +1,3 @@
-#! C:/ruby/bin/ruby
 # -*- coding: iso-8859-1 -*-
 require 'rubygems'
 require 'open-uri'
@@ -30,7 +29,7 @@ def read_para(elements)
   text += "<br>" + elements.next while ! para_end elements
   keys = elements.next
   elements.next while elements.current.strip.size == 0
-  placeholders = text.scan(/<([^>]+?):([^>]+?)>/)
+  placeholders = text.scan(/<([^>]*?):([^>]+?)>/)
   sex = placeholders.select{|e| e[1] =~ /(masculin|feminin|unisexe)(_1)?$/}.map{|e| $1 if e[1]=~ /([^_]+)(_1)?$/}[0]
   {:text => text,
    :placeholders => Set.new(placeholders),

@@ -34,7 +34,7 @@ def read_para(elements)
   elements.next while elements.current.children.size==0
   text = element.children[0..-2].select{|ch| 
          ch.text.strip.size>0 }.map{|ch| ch.text}.join("<br>")
-  placeholders = text.scan(/<([^>]+?):([^>]+?)>/)
+  placeholders = text.scan(/<([^>]*?):([^>]+?)>/)
   sex = placeholders.select{|e|
           e[1] =~ /(masculin|feminin|unisexe)(_1)?$/
         }.map{|e| $1 if e[1]=~ /([^_]+)(_1)?$/}[0]

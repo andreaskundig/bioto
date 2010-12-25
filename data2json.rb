@@ -1,10 +1,10 @@
-#! C:/ruby/bin/ruby
+#! /usr/bin/ruby
 # -*- coding: iso-8859-1 -*-
-require 'XmlDataReader'
-filepath = 'wiki/data.htm' 
+#require 'XmlDataReader'
+#filepath = 'wiki/data.htm' 
 #filepath = 'http://biotomatique.wikidot.com/'
-#require 'MarkupReader'
-#filepath = 'wiki/asmarkup.txt'
+require 'MarkupReader'
+filepath = 'wiki/asmarkup.txt'
 
 def get_elements(filepath)
  elements = make_generator filepath
