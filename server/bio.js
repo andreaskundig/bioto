@@ -50,6 +50,7 @@ function unused_topics(){
     remove_all(tops, ordre[i]);
   }
   return tops;
+
 }
 function show_all(){
   var i, replaced, original;
@@ -58,8 +59,8 @@ function show_all(){
     display(i+": "+replaced);
   }
   polish_display();
-}
 
+}
 function bio(deja_utilise,indexes) {
   var paragraph;
   $("#bio").children().detach();
@@ -72,8 +73,8 @@ function bio(deja_utilise,indexes) {
   polish_display();
   //write_to_hash(indexes);
   return deja_utilise.concat(indexes);
-}
 
+}
 function pick_indexes(keys,exclude){
   var  i,  j, sujet, indexes, index, topic_indexes, topic_index;
   indexes = [];
@@ -88,8 +89,8 @@ function pick_indexes(keys,exclude){
     }
   }
   return indexes;
-}
 
+}
 function text_indexes_for_topics(topics,keys){
     var indexes, topic, j;
     indexes = [];
@@ -98,12 +99,12 @@ function text_indexes_for_topics(topics,keys){
       if (keys[topic]) { indexes = indexes.concat(keys[topic]); }
     }
     return indexes;
-}
 
+}
 function male_or_female_keys(){
   return Math.random() > 0.5 ? keys_f : keys_m;  
-}
 
+}
 function build_paragraph(text_object, names) {
   var ph_to_name, result, placeholder, toreplace, replacing_name,
   replacement, i;
@@ -116,8 +117,8 @@ function build_paragraph(text_object, names) {
     result = replace_placeholder(result,placeholder,replacing_name);
   }
   return result;
-}
 
+}
 function map_placeholders(placeholders,names){
   var map, name_index, remaining_names, phname, ph, 
       match, i;
@@ -147,55 +148,54 @@ function map_placeholders(placeholders,names){
     }
   }
   return map;
-}
 
+}
 function fix_apostrophe(text, original, replacement){
   var re, orig_paren;
   orig_paren = original.replace("(","\\(").replace(")","\\)");
   if (string_util.starts_with_vowel(replacement)){
     re =  "\\b(d|qu|l)(e|a)\\s+(<"+orig_paren+":(pre)?(nom))";
     text = text.replace(new RegExp(re ,"gi"),
-			span("$1'",'r') + span("$1$2 ",'o') + "$3");
+			span("$1'",'r') + span("$1$2&nbsp;",'o') + "$3");
   }else{
     re = "\\bl'\\s*(<"+orig_paren+":(pre)?(nom_feminin))";
     text = text.replace( new RegExp(re,"gi"), 
-			 span("la ",'r') + span("l'",'o') + "$1");
+			 span("la&nbsp;",'r') + span("l'",'o') + "$1");
     re = "\\bl'\\s*(<"+orig_paren+":(pre)?(nom_masculin))";
     text = text.replace( new RegExp(re, "gi"),
-			 span("le ",'r') + span("l'",'o') + "$1");
+			 span("le&nbsp;",'r') + span("l'",'o') + "$1");
     re = "\\b(d|qu)'\\s*(<"+orig_paren+":(pre)?(nom))";
     text = text.replace( new RegExp(re, "gi"), 
-			 span("$1e ",'r') + span("$1'",'o') + "$2");
+			 span("$1e&nbsp;",'r') + span("$1'",'o') + "$2");
   }
   return text;
-}
 
+}
 function replace_placeholder(text,placeholder,replacing_name){
   var to_replace, replacement; 
   to_replace = make_placeholder_regex(placeholder);
   replacement = make_replacement(placeholder, replacing_name);
   return text.replace(to_replace, replacement);
-}
 
+}
 function make_placeholder_regex(placeholder) {
     var exp = '<' + placeholder.join(':') + '>';
     exp = exp.replace(/\(/,'\\(').replace(/\)/,'\\)');
     return new RegExp(exp,"g");
-}
 
+}
 function make_replacement(placeholder, replacing_name){
   if(replacing_name.toLowerCase() === placeholder[0].toLowerCase()){
     return replacing_name;
   }
   return  span(replacing_name, 'r') + span(placeholder[0], 'o') ;
-}
 
+}
 function span(to_wrap, claz){
   var clazz = claz ? ' class="'+claz+'"' : '';
-  return '<span'+clazz+'>'+to_wrap+'</span>';
-  //return '<span'+clazz+' style="display:inline-block;">'+to_wrap+'</span>';
-}
+  return '<span'+clazz+' style="display:inline-block;">'+to_wrap+'</span>';
 
+}
 function span_words(text){
   var tokens, token, spl, result, i, inspan;
   spl = string_util.split;
@@ -214,8 +214,8 @@ function span_words(text){
     if(token === "</span>"){ inspan = false;  }
   }
   return result;
-}
 
+}
 string_util = {
   starts_with: function(start, a_string){
     return a_string && a_string.substring(0, start.length) === start;
@@ -247,12 +247,12 @@ string_util = {
   }  
   return result;
  }
-};
 
+};
 function random(max){
   return Math.floor(Math.random() * max);
-}
 
+}
 function flatten(array){
   var newarr, i, j, element;
   newarr = [];
@@ -265,8 +265,8 @@ function flatten(array){
     }else{ if(element){ newarr.push(element); } }
   }
   return newarr;
-}
 
+}
 function remove_all(array,elements){
   var index, i, element;
   for (i=0 ; i < elements.length ; i += 1){
@@ -274,52 +274,51 @@ function remove_all(array,elements){
    index = $.inArray(element,array);
    if(index>=0) { array.splice(index,1); }
   }
-}
 
+}
 function display(text){
-  $("#bio").append('<p class="paragraph">'+text+'</p>');
-}
+  $("#bio").append('<div class="paragraph"><p>'+text+'</p>'+
+     '<p class="detail" style="display:none">en savoir plus</p></div>');
 
+}
 function polish_display(){
   //console.time(1);
-  $("#bio>p>span.r,#bio>p>span.o").each(function(){
+  $("#bio>div>p>span.r,#bio>div>p>span.o").each(function(){
       $(this).data('original_width',$(this).width());
   });
+  $("#bio>div>p>span.o").css({width: '0px'});
+  $(".detail").mouseenter(make_parent_hiding_function('r','o')
+	     ).mouseleave(make_parent_hiding_function('o','r'));
+  $(".paragraph").mouseenter(make_detail_slide_function(true)
+	        ).mouseleave(make_detail_slide_function(false));
   //console.timeEnd(1);
-  //$("#bio>p>span.o").css({width: '0px'});
-  $("#bio>p>span.o").css({width: '0px', display: 'inline-block'});
-  $("#bio>p>span").css({ display: 'inline-block'});
-  /*
-  */
-  $(".paragraph").mouseenter(make_hiding_function('r','o'));
-  $(".paragraph").mouseleave(make_hiding_function('o','r'));
+
 }
+function make_detail_slide_function(down){
+    if(down){
+      return function(){$(".detail",this).slideDown();};
+    }
+    return function(){$(".detail",this).slideUp();};
 
-function make_hiding_function(tohide, toshow){
+}
+function make_parent_hiding_function(tohide, toshow){
    return function(){
-     $(this).children("."+tohide).animate({width: '0px'}, 
+     $(this).parent().find("."+tohide).animate({width: '0px'}, 
 					  {queue: false});
-
-     $(this).children("."+toshow).each(function(){
+     $(this).parent().find("."+toshow).each(function(){
         var o_width = $(this).data('original_width');
 	$(this).animate({width: o_width});
       });
-      
-      if(toshow === 'o'){ 
-	$(this).addClass("grey");
-      }else{ 
-	$(this).removeClass("grey");
-      }
    };
-}
 
+}
 function get_protagonist_from_url(){
   var match = new RegExp('(\\?|&)([^=]+?)($|&)').exec(location.search);
   if(match){
     protagonistes.unshift(unescape(match[2]));
   }
-}
 
+}
 function get_indexes_from_url(){
   var match, regex;
   regex = '_escaped_fragment_=([\\d-]+)($|&)';
@@ -329,20 +328,21 @@ function get_indexes_from_url(){
 		 function(el){return parseInt(el,10);});
   }
   return null;
-}
 
+}
 function get_indexes_from_hash(){
     if(string_util.starts_with("#",location.hash)){
        return $.map(location.hash.substr(1).split('-'),
 		    function(el){return parseInt(el,10);});
     }
     return null;
-}
 
+}
 function write_to_hash(indexes){
   location.hash = "#"+indexes.join("-");
-}
 
+}
 function reassemble_original(text_object){
   return text_object.text.replace(/<([^:]+):[^>]+>/g, "$1");
+
 }

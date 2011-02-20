@@ -20,14 +20,14 @@
 	    placeholders:[["Loana", "nom_feminin_1"]] };
     replaced = build_paragraph (text,["aaa","bb"]);
 
-    equal(replaced,"En 2001, <span class=\"r\">aaa</span><span class=\"o\">Loana</span> vient.");
+    equal(replaced,"En 2001, <span class=\"r\" style=\"display:inline-block;\">aaa</span><span class=\"o\" style=\"display:inline-block;\">Loana</span> vient.");
    
  });
 
  test("span_words",function(){
    var text = span_words("En 01, <span class='o'>Loa na</span> vient sf<span> ah ah </span>bof. <br>hop");
    equal(text,
-"<span>En&nbsp;</span><span>01,&nbsp;</span><span class='o'>Loa na</span><span>&nbsp;</span><span>vient&nbsp;</span><span>sf</span><span> ah ah </span><span>bof.&nbsp;</span><br><span>hop</span>");
+"<span style=\"display:inline-block;\">En&nbsp;</span><span style=\"display:inline-block;\">01,&nbsp;</span><span class='o'>Loa na</span><span style=\"display:inline-block;\">&nbsp;</span><span style=\"display:inline-block;\">vient&nbsp;</span><span style=\"display:inline-block;\">sf</span><span> ah ah </span><span style=\"display:inline-block;\">bof.&nbsp;</span><br><span style=\"display:inline-block;\">hop</span>");
  });
    
  test("map_placeholders", function() {
@@ -49,17 +49,20 @@
 test(" fix_apostrophe", function(){
  var fixed = fix_apostrophe("le <raton:nom_masculin_3> mange", "raton", 
 	    "animal");
- equal(fixed,"<span class=\"r\">l'</span><span class=\"o\">le </span>"
-	    +"<raton:nom_masculin_3> mange");
+ equal(fixed,"<span class=\"r\" style=\"display:inline-block;\">l'</span>"
+       +"<span class=\"o\" style=\"display:inline-block;\">le&nbsp;</span>"
+       +"<raton:nom_masculin_3> mange");
 
  fixed=fix_apostrophe("le <raton:nom_masculin> mange", "raton", "animal");
- equal(fixed, "<span class=\"r\">l'</span><span class=\"o\">le </span>"
-		+"<raton:nom_masculin> mange");
+ equal(fixed, "<span class=\"r\" style=\"display:inline-block;\">l'</span>"
+       +"<span class=\"o\" style=\"display:inline-block;\">le&nbsp;</span>"
+       +"<raton:nom_masculin> mange");
 
  fixed=fix_apostrophe("le <raton (o):nom_masculin> mange", "raton (o)",
 		    "animal");
- equal(fixed, "<span class=\"r\">l'</span><span class=\"o\">le </span>"
-		    +"<raton (o):nom_masculin> mange");
+ equal(fixed, "<span class=\"r\" style=\"display:inline-block;\">l'</span>"
+       +"<span class=\"o\" style=\"display:inline-block;\">le&nbsp;"
+       +"</span><raton (o):nom_masculin> mange");
 
  fixed=fix_apostrophe("du <raton:nom_masculin>", "raton", "animal");
  equal(fixed, "du <raton:nom_masculin>");
@@ -67,8 +70,9 @@ test(" fix_apostrophe", function(){
 
  fixed = fix_apostrophe("l'<animal:nom_masculin_3> mange", "animal",
 			"raton");
- equal(fixed, "<span class=\"r\">le </span><span class=\"o\">l'</span>"
-		    +"<animal:nom_masculin_3> mange");
+ equal(fixed, "<span class=\"r\" style=\"display:inline-block;\">le&nbsp;"
+       +"</span><span class=\"o\" style=\"display:inline-block;\">l'"
+       +"</span><animal:nom_masculin_3> mange");
 
  fixed = fix_apostrophe("vénérable <animal:nom_masculin_3> me", "animal",
 			    "raton");
@@ -76,13 +80,15 @@ test(" fix_apostrophe", function(){
 
   fixed = fix_apostrophe("l'<animal:nom_feminin> mange", "animal",
 				"raton");
-  equal(fixed, "<span class=\"r\">la </span><span class=\"o\">l'</span>"
-		+"<animal:nom_feminin> mange");
+  equal(fixed, "<span class=\"r\" style=\"display:inline-block;\">la&nbsp;"
+        +"</span><span class=\"o\" style=\"display:inline-block;\">l'"
+        +"</span><animal:nom_feminin> mange");
 
   fixed = fix_apostrophe("qu'<animal:nom_feminin> mange", "animal",
 				    "raton");
-  equal(fixed, "<span class=\"r\">que </span><span class=\"o\">qu'</span>"
-		+"<animal:nom_feminin> mange");
+  equal(fixed,"<span class=\"r\" style=\"display:inline-block;\">que&nbsp;"
+        +"</span><span class=\"o\" style=\"display:inline-block;\">qu'"
+        +"</span><animal:nom_feminin> mange");
 });
 
 });
