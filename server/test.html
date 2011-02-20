@@ -9,11 +9,27 @@
 
   <script>
   $(document).ready(function(){
-/*
-  var text = {text:"En 2001, <elle:pronom_feminin> se fait connaître lors de l'émission de télé réalité française Loft Story, d'où elle sort gagnante avec le candidat <Christophe:nom_masculin_2>, et obtient une maison d'une valeur de 460 000 € à Saint-Tropez. L'émission est suivie par plusieurs millions de téléspectateurs chaque semaine. Le point d'orgue de la prestation de <Loana:nom_feminin_1> est le moment où elle aurait eu un rapport sexuel dans la piscine du loft avec Jean-Edouard, le tout filmé par les caméras de la production.",
- placeholders:[["Loana", "nom_feminin_1"], ["Christophe", "nom_masculin_2"], ["elle", "pronom_feminin"]] };
+
+  var text = {text: "En 2001, <elle:pronom_feminin> vient avec <Christophe:nom_masculin_2>. La prestation de <Loana:nom_feminin_1> est pas mal.",
+ placeholders:[["Loana", "nom_feminin_1"], 
+	  ["Christophe", "nom_masculin_2"], ["elle", "pronom_feminin"]] };
   
-*/    
+
+ test("build_paragraph",function() {
+    var text = {text: "En 2001, <Loana:nom_feminin_1> vient.",
+	    placeholders:[["Loana", "nom_feminin_1"]] };
+    replaced = build_paragraph (text,["aaa","bb"]);
+
+    equal(replaced,"En 2001, <span class=\"r\">aaa</span><span class=\"o\">Loana</span> vient.");
+   
+ });
+
+ test("span_words",function(){
+   var text = span_words("En 01, <span class='o'>Loa na</span> vient sf<span> ah ah </span>bof. <br>hop");
+   equal(text,
+"<span>En&nbsp;</span><span>01,&nbsp;</span><span class='o'>Loa na</span><span>&nbsp;</span><span>vient&nbsp;</span><span>sf</span><span> ah ah </span><span>bof.&nbsp;</span><br><span>hop</span>");
+ });
+   
  test("map_placeholders", function() {
    var ph, map, nom_m;
    ph = [["Loana", "nom_feminin_1"], ["Christophe", "nom_masculin_2"], 
@@ -46,8 +62,6 @@ test(" fix_apostrophe", function(){
 		    +"<raton (o):nom_masculin> mange");
 
  fixed=fix_apostrophe("du <raton:nom_masculin>", "raton", "animal");
-// equal(fixed, "<span class=\"r\">d'</span><span class=\"o\">du </span>"
-//		+"<raton:nom_masculin>");
  equal(fixed, "du <raton:nom_masculin>");
 
 

@@ -652,7 +652,7 @@ clefs: reputation
 Très handicapée par un terrible accent du terroir, <Ava:nom_feminin_1> doit se contenter pour commencer, de séries de photos de pin-up et de petits rôles dans des films mineurs où elle apprend son métier.
 clefs: debuts
 
-Elle rencontre par la suite le multimilliardaire Howard Hughes qui la courtise et la poursuivra de ses assiduités pendant de longues années. Allant même jusqu' à l’espionner en la faisant suivre par ses sbires et mettre sur écoutes. <Ava:nom_feminin_1> ne se préoccupe guère de ces « filatures » et refusera toujours ses avances et demandes en mariage tout en conservant son amitié.
+Elle rencontre par la suite le multimilliardaire Howard Hughes qui la courtise et la poursuivra de ses assiduités pendant de longues années. Allant même jusqu'à l’espionner en la faisant suivre par ses sbires et mettre sur écoutes. <Ava:nom_feminin_1> ne se préoccupe guère de ces « filatures » et refusera toujours ses avances et demandes en mariage tout en conservant son amitié.
 clefs: carriere ?
 
 http://fr.wikipedia.org/wiki/Ava_Gardner
@@ -1125,7 +1125,7 @@ http://fr.wikipedia.org/wiki/Commodore_64
 <C':litt:Ce dessinateur> est un métal de transition gris-acier blanc, très dur, et lourd qui est reconnu pour ses propriétés physiques. On trouve du <tungstène:nom_masculin> dans de nombreux minerais comme le wolframite et le scheelite.
 clefs: physique
 
-<Cet élément:litt:Ce dessinateur> a le plus haut point de fusion (3 422 °C) de tous les métaux, la plus faible pression de vapeur et la plus grande force de traction de tous les métaux à une température supérieure à 1 650 °C.
+<Cet élément:litt:Ce dessinateur> a le plus haut point de fusion (3 422 °C) de tous les métaux, la plus faible pression de vapeur et la plus grande force de traction de tous les métaux à une température supérieure à 1 650 °C.<:pronom_masculin>
 clefs: physique
 
 http://fr.wikipedia.org/wiki/Tungst%C3%A8ne
