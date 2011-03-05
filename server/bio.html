@@ -4,7 +4,7 @@
  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
  <script type="text/javascript" src="data.js"></script>
- <script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+ <script type="text/javascript" src="jquery-1.5.1.js"></script>
  <script type="text/javascript" src="bio.js"> </script>
  <link rel="stylesheet" type="text/css" href="reset.css" />
  <link rel="stylesheet" type="text/css" href="bio.css" />
@@ -14,7 +14,7 @@
    get_protagonist_from_url();
    $("#titre").append('<h1>'+ protagonistes[0] +'</h1>');
    $("#fin").append('<a onclick="deja_utilise = bio(deja_utilise)">'
-                       + '  mais encore...</a>');
+                       + 'mais encore</a>');
    //console.profile();
    bio([], get_indexes_from_hash() );
    //console.profileEnd();

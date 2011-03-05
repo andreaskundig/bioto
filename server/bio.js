@@ -10,7 +10,8 @@ var remove_all, replace, display, map_placeholders,
   male_or_female_keys,  build_paragraph, pick_indexes,
   make_hiding_function, text_indexes_for_topics, flatten,
   get_protagonist_from_url, string_util, replace_placeholder,
-  get_indexes_from_url, get_indexes_from_hash, write_to_hash;
+  get_indexes_from_url, get_indexes_from_hash, write_to_hash,
+  make_parent_hiding_function, make_detail_slide_function;
 
 var ordre = [
   ["nom","presentation", "vie",  "introduction"],
@@ -31,6 +32,7 @@ var protagonistes = ["Ibn Al Rabin", "Andréas Kündig",
 var livres =["'l'autre fin du monde'", "la bible", "'Martine à la plage'",
  "'Cot cot'", "'Figaro Madame'"];
 
+//TODO http://stackoverflow.com/questions/1326570/how-to-disable-browser-or-element-scrollbar-but-let-scrolling-with-weel-or-arrow
 function stats() {
   var sujet, sujets, i, j, tot;
   for (i = 0; i < ordre.length ; i += 1) {
@@ -53,10 +55,10 @@ function unused_topics(){
 
 }
 function show_all(){
-  var i, replaced, original;
+  var i, paragraph;
   for ( i=0; i < texts.length ; i += 1){
-    replaced = build_paragraph(texts[i], protagonistes);
-    display(i+": "+replaced);
+    paragraph = build_paragraph(texts[i], protagonistes);
+    display(i+": "+paragraph);
   }
   polish_display();
 
@@ -296,18 +298,39 @@ function polish_display(){
 }
 function make_detail_slide_function(down){
     if(down){
-      return function(){$(".detail",this).slideDown();};
+      return function(){
+	var elem = $(".detail",this).slideDown();
+        elem.queue(elem.queue().slice(0,2));
+      };
     }
-    return function(){$(".detail",this).slideUp();};
+    return function(){
+      var elem = $(".detail", this).slideUp();
+      $("p",this).first().delay(100).animate({minHeight:0},{queue: true});
+    };
 
 }
 function make_parent_hiding_function(tohide, toshow){
    return function(){
-     $(this).parent().find("."+tohide).animate({width: '0px'}, 
-					  {queue: false});
-     $(this).parent().find("."+toshow).each(function(){
+     var p, delayms, hide, show;
+     p = $(this).prev();
+     p.data('minheight',p.height());
+     delayms = 200;
+     hide = $(this).parent().find("."+tohide).stop(true,true);
+     $(hide.get().reverse()).each(function(i,e){
+		$(this).delay(delayms*(i+1)).animate({width: '0px'});
+     });
+     show = $(this).parent().find("."+toshow).stop(true,true);
+     $(show.get().reverse()).each(function(i,e){
         var o_width = $(this).data('original_width');
-	$(this).animate({width: o_width});
+	$(this).delay(delayms*(i+1)).animate({width: o_width},
+			{complete: function(){
+			   var minheight, p;
+			   p = $(this).parent();
+			   minheight = Math.max(p.data('minheight'),p.height());
+			   p.data('minheight',minheight);
+			   p.css('min-height',minheight);
+			 }
+			});//; ??
       });
    };
 

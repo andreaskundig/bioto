@@ -1,5 +1,6 @@
 body{
- font-family: Arial, Helvetica, sans-serif; 
+ //font-family: Arial, Helvetica, sans-serif; 
+ font-family: 'Palatino Linotype','Book Antiqua',Palatino,serif;
  font-style:normal;
  font-size:14px;
  line-height: 150%;
@@ -20,15 +21,20 @@ span {
 a{ text-decoration: underline; }
 .grey { background-color:#dddddd; }
 p {
- font:15px/30px Helvetica;
+// font:15px/30px Helvetica;
+ font-family: 'Palatino Linotype','Book Antiqua',Palatino,serif;
+ font-size: 15px;
  color: #000;
  text-align: left;
- line-height: 150%;
- margin: 10px 0 0 0;
+ line-height: 140%;
+ margin: 13px 0 3px 0;
 }
 .detail{
   margin: 0;
-  background-color:#dddddd;
+  padding: 0 0 3 5;
+  line-height: 150%;
+  //background-color:#dddddd;
+  background-color:#cccccc;
 }
 .row {
  width: 90%;
