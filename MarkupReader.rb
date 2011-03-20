@@ -44,7 +44,7 @@ def extract_keys(key_text)
 end
 
 def read_url(elements)
-  return elements.next if is_url elements.current
+  return elements.next.chomp if is_url elements.current
   nil
 end
 

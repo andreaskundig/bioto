@@ -1,3 +1,4 @@
+html {overflow-y: scroll;}
 body{
  //font-family: Arial, Helvetica, sans-serif; 
  font-family: 'Palatino Linotype','Book Antiqua',Palatino,serif;
@@ -11,7 +12,7 @@ h1{
 }
 div.container{ 
  margin: 15%;
- margin-top: 30; 
+ margin-top: 30px; 
  margin-bottom: 0;
 }
 span {
@@ -31,9 +32,9 @@ p {
 }
 .detail{
   margin: 0;
-  padding: 0 0 3 5;
+  padding: 0 5 3 5;
+  text-align: right;
   line-height: 150%;
-  //background-color:#dddddd;
   background-color:#cccccc;
 }
 .row {

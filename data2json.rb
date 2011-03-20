@@ -27,11 +27,15 @@ def read_person(elements)
 end
 
 def text2json(t)
-  placeholders = t[:placeholders].map{|p| "[\"#{p.join("\", \"").gsub(/\s+/," ")}\"]"}.join(", ")
-  text = t[:text].gsub(/\s+/," ").gsub('"','\"')
-  "{text:\"#{text}\",\n placeholders:[#{placeholders}] }"
+  placeholders = t[0][:placeholders].map{|p| "[\"#{p.join("\", \"").gsub(/\s+/," ")}\"]"}.join(", ")
+  text = t[0][:text].gsub(/\s+/," ").gsub('"','\"')
+  "{text:\"#{text}\",\n placeholders:[#{placeholders}],\n url:\"#{t[1]}\" }"
 end
 
+# Fills texts keys and pronouns  passed as arguments
+# texts = [[{:text :placeholders :keys},url}],[...],...]
+# keys_m =  {key => text_index}
+# keys_f =  {key => text_index}
 def extract_from_person(person, texts, keys_m, keys_f, pronouns)
   person[:texts].each{|text|
     texts << [text,person[:url]]
@@ -67,11 +71,11 @@ puts "/*jslint white: false */"
 puts "var topics = [\"" + keys_m.merge(keys_f).keys.join("\", \"") + "\"];"
 puts "var keys_m = {" 
 puts keys_m.to_a.map{|pair| "#{pair[0]}: [#{pair[1].join(", ")}]" }.join(", ") 
-puts "}"
+puts "}\n"
 puts "var keys_f = {" 
 puts keys_f.to_a.map{|pair| "#{pair[0]}: [#{pair[1].join(", ")}]" }.join(", ") 
-puts "}"
-puts "var texts = [\n" + texts.map{|t| text2json(t[0])}.join(",\n") + "\n];"
+puts "}\n"
+puts "var texts = [\n" + texts.map{|t| text2json(t)}.join(",\n") + "\n];"
 
 
 

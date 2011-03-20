@@ -32,7 +32,6 @@ var protagonistes = ["Ibn Al Rabin", "Andréas Kündig",
 var livres =["'l'autre fin du monde'", "la bible", "'Martine à la plage'",
  "'Cot cot'", "'Figaro Madame'"];
 
-//TODO http://stackoverflow.com/questions/1326570/how-to-disable-browser-or-element-scrollbar-but-let-scrolling-with-weel-or-arrow
 function stats() {
   var sujet, sujets, i, j, tot;
   for (i = 0; i < ordre.length ; i += 1) {
@@ -58,7 +57,7 @@ function show_all(){
   var i, paragraph;
   for ( i=0; i < texts.length ; i += 1){
     paragraph = build_paragraph(texts[i], protagonistes);
-    display(i+": "+paragraph);
+    display(i+": "+paragraph,texts[i].url);
   }
   polish_display();
 
@@ -70,7 +69,7 @@ function bio(deja_utilise,indexes) {
   indexes = indexes || pick_indexes(keys,deja_utilise);
   $.each(indexes, function(i,index){
       paragraph = build_paragraph(texts[index], protagonistes);
-      display(span_words(paragraph));
+      display(span_words(paragraph), texts[index].url);
   });
   polish_display();
   //write_to_hash(indexes);
@@ -86,7 +85,7 @@ function pick_indexes(keys,exclude){
     remove_all(topic_indexes, indexes);
     if(topic_indexes.length > 0){
       topic_index = 
-          topic_indexes[Math.floor(Math.random() * topic_indexes.length)];
+        topic_indexes[Math.floor(Math.random() * topic_indexes.length)];
       indexes.push(topic_index);
     }
   }
@@ -158,17 +157,17 @@ function fix_apostrophe(text, original, replacement){
   if (string_util.starts_with_vowel(replacement)){
     re =  "\\b(d|qu|l)(e|a)\\s+(<"+orig_paren+":(pre)?(nom))";
     text = text.replace(new RegExp(re ,"gi"),
-			span("$1'",'r') + span("$1$2&nbsp;",'o') + "$3");
+		span("$1'",'r') + span("$1$2&nbsp;",'o') + "$3");
   }else{
     re = "\\bl'\\s*(<"+orig_paren+":(pre)?(nom_feminin))";
     text = text.replace( new RegExp(re,"gi"), 
-			 span("la&nbsp;",'r') + span("l'",'o') + "$1");
+        	span("la&nbsp;",'r') + span("l'",'o') + "$1");
     re = "\\bl'\\s*(<"+orig_paren+":(pre)?(nom_masculin))";
     text = text.replace( new RegExp(re, "gi"),
-			 span("le&nbsp;",'r') + span("l'",'o') + "$1");
+		span("le&nbsp;",'r') + span("l'",'o') + "$1");
     re = "\\b(d|qu)'\\s*(<"+orig_paren+":(pre)?(nom))";
     text = text.replace( new RegExp(re, "gi"), 
-			 span("$1e&nbsp;",'r') + span("$1'",'o') + "$2");
+		span("$1e&nbsp;",'r') + span("$1'",'o') + "$2");
   }
   return text;
 
@@ -231,7 +230,6 @@ string_util = {
     return l==='a' || l==='e' || l==='i' || l==='o' || l==='u';
   },
   split: function(str, del, before){
-//split(split(split("asfasdf<span> as df</span>b asdfa asdf as","<",1)," "),">")
   var result, i;
   result = [];
   if(typeof str === 'string'){
@@ -278,9 +276,10 @@ function remove_all(array,elements){
   }
 
 }
-function display(text){
+function display(text, url){
   $("#bio").append('<div class="paragraph"><p>'+text+'</p>'+
-     '<p class="detail" style="display:none">en savoir plus</p></div>');
+//     '<p class="detail" style="display:none">en savoir plus</p></div>');
+     '<p class="detail" style="display:none"><a href="'+url+'">en savoir plus</a></p></div>');
 
 }
 function polish_display(){
@@ -296,11 +295,29 @@ function polish_display(){
   //console.timeEnd(1);
 
 }
+function make_detail_slide_function0(down){
+    if(down){
+      return function(){$(".detail",this).slideDown();};
+    }
+    return function(){$(".detail",this).slideUp();};
+
+}
+function make_parent_hiding_function0(tohide, toshow){
+   return function(){
+     $(this).parent().find("."+tohide).animate({width: '0px'}, 
+					  {queue: false});
+     $(this).parent().find("."+toshow).each(function(){
+        var o_width = $(this).data('original_width');
+	$(this).animate({width: o_width});
+      });
+   };
+
+}
 function make_detail_slide_function(down){
     if(down){
       return function(){
-	var elem = $(".detail",this).slideDown();
-        elem.queue(elem.queue().slice(0,2));
+	var elem = $(".detail",this);
+	if(elem.queue().length<2) elem.slideDown();
       };
     }
     return function(){
@@ -311,26 +328,26 @@ function make_detail_slide_function(down){
 }
 function make_parent_hiding_function(tohide, toshow){
    return function(){
-     var p, delayms, hide, show;
+      var p, delayms, hide, show;
      p = $(this).prev();
      p.data('minheight',p.height());
      delayms = 200;
-     hide = $(this).parent().find("."+tohide).stop(true,true);
+     hide = $(this).parent().find("."+tohide).stop(true); //clear queue
+     //reverse to avoid back of text moving too fast
      $(hide.get().reverse()).each(function(i,e){
-		$(this).delay(delayms*(i+1)).animate({width: '0px'});
+		$(this).delay(delayms*(i)).animate({width: '0px'});
      });
-     show = $(this).parent().find("."+toshow).stop(true,true);
+     show = $(this).parent().find("."+toshow).stop(true); //clear queue
+     //reverse to avoid back of text moving too fast
      $(show.get().reverse()).each(function(i,e){
         var o_width = $(this).data('original_width');
-	$(this).delay(delayms*(i+1)).animate({width: o_width},
-			{complete: function(){
-			   var minheight, p;
-			   p = $(this).parent();
-			   minheight = Math.max(p.data('minheight'),p.height());
-			   p.data('minheight',minheight);
-			   p.css('min-height',minheight);
-			 }
-			});//; ??
+	$(this).delay(delayms*(i)).animate(
+             {width: o_width},
+             {step: function(){
+	       var minheight = Math.max(p.data('minheight'),p.height());
+	       p.data('minheight',minheight);
+	       p.css({minHeight: minheight});}
+	     });
       });
    };
 
