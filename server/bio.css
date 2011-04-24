@@ -11,7 +11,7 @@ h1{
  display: inline;
 }
 div.container{ 
- margin: 15%;
+ margin: 10%;
  margin-top: 30px; 
  margin-bottom: 0;
 }
@@ -19,7 +19,8 @@ span {
  overflow: hidden; 
  white-space: nowrap;
 }
-a{ text-decoration: underline; }
+a { text-decoration:none }
+a:hover { text-decoration:underline }
 .grey { background-color:#dddddd; }
 p {
 // font:15px/30px Helvetica;
@@ -29,6 +30,7 @@ p {
  text-align: left;
  line-height: 140%;
  margin: 13px 0 3px 0;
+ clear: both;
 }
 .detail{
   margin: 0;

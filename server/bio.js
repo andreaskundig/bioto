@@ -4,9 +4,9 @@
 /*global addEventListener: false, blur: false, clearInterval: false, clearTimeout: false, close: false, closed: false, defaultStatus: false, document: false, event: false, focus: false, frames: false, getComputedStyle: false, history: false, Image: false, length: false, location: false, moveBy: false, moveTo: false, name: false, navigator: false, onblur: true, onerror: true, onfocus: true, onload: true, onresize: true, onunload: true, open: false, opener: false, Option: false, parent: false, print: false, resizeBy: false, resizeTo: false, screen: false, scroll: false, scrollBy: false, scrollTo: false, setInterval: false, setTimeout: false, status: false, top: false, XMLHttpRequest: false */
 /*global keys_m, keys_f, texts, topics, window, unescape, $ */
 var remove_all, replace, display, map_placeholders, 
-  make_placeholder_regex, keys, random, show_all,
-  fix_apostrophe, reassemble_original, wrap_words_in_span,
-  polish_display, make_replacement, span, span_words,
+  make_placeholder_regex, keys, random, show_all, plain_substitution,
+  apostrophe_substitutions,reassemble_original, wrap_words_in_span,
+  polish_display, span, span_words, apply_spanned_substitutions,
   male_or_female_keys,  build_paragraph, pick_indexes,
   make_hiding_function, text_indexes_for_topics, flatten,
   get_protagonist_from_url, string_util, replace_placeholder,
@@ -28,7 +28,7 @@ var ordre = [
 ];
 
 var protagonistes = ["Ibn Al Rabin", "Andréas Kündig", 
-  "Bob le lapin", "un certain Gérard", "Lambert-garou"];
+  "Bob le lapin", "Un certain Gérard", "Fanfan"];
 var livres =["'l'autre fin du monde'", "la bible", "'Martine à la plage'",
  "'Cot cot'", "'Figaro Madame'"];
 
@@ -69,6 +69,7 @@ function bio(deja_utilise,indexes) {
   indexes = indexes || pick_indexes(keys,deja_utilise);
   $.each(indexes, function(i,index){
       paragraph = build_paragraph(texts[index], protagonistes);
+      //display(paragraph, texts[index].url);
       display(span_words(paragraph), texts[index].url);
   });
   polish_display();
@@ -106,16 +107,18 @@ function male_or_female_keys(){
   return Math.random() > 0.5 ? keys_f : keys_m;  
 
 }
+//TODO remove commented code
 function build_paragraph(text_object, names) {
   var ph_to_name, result, placeholder, toreplace, replacing_name,
-  replacement, i;
+  replacement, i,substitutions;
   ph_to_name = map_placeholders(text_object.placeholders, names);
   result = text_object.text;
   for (i=0 ; i<text_object.placeholders.length ; i += 1){
     placeholder  = text_object.placeholders[i];
     replacing_name = ph_to_name[placeholder[1]];
-    result = fix_apostrophe(result, placeholder[0],replacing_name);
-    result = replace_placeholder(result,placeholder,replacing_name);
+    substitutions = apostrophe_substitutions(result,placeholder[0],replacing_name," ");
+    substitutions.push(plain_substitution(placeholder, replacing_name));
+    result = apply_spanned_substitutions(result,substitutions);
   }
   return result;
 
@@ -151,32 +154,50 @@ function map_placeholders(placeholders,names){
   return map;
 
 }
-function fix_apostrophe(text, original, replacement){
-  var re, orig_paren;
-  orig_paren = original.replace("(","\\(").replace(")","\\)");
-  if (string_util.starts_with_vowel(replacement)){
-    re =  "\\b(d|qu|l)(e|a)\\s+(<"+orig_paren+":(pre)?(nom))";
-    text = text.replace(new RegExp(re ,"gi"),
-		span("$1'",'r') + span("$1$2&nbsp;",'o') + "$3");
-  }else{
-    re = "\\bl'\\s*(<"+orig_paren+":(pre)?(nom_feminin))";
-    text = text.replace( new RegExp(re,"gi"), 
-        	span("la&nbsp;",'r') + span("l'",'o') + "$1");
-    re = "\\bl'\\s*(<"+orig_paren+":(pre)?(nom_masculin))";
-    text = text.replace( new RegExp(re, "gi"),
-		span("le&nbsp;",'r') + span("l'",'o') + "$1");
-    re = "\\b(d|qu)'\\s*(<"+orig_paren+":(pre)?(nom))";
-    text = text.replace( new RegExp(re, "gi"), 
-		span("$1e&nbsp;",'r') + span("$1'",'o') + "$2");
-  }
-  return text;
+function apply_spanned_substitutions(text, substitutions){
+ var i, substitution, replacement;
+ for(i=0; i<substitutions.length; i+=1 ){
+   substitution = substitutions[i];
+   if(substitution[1].toLowerCase() === substitution[2].toLowerCase()){
+     replacement = substitution[2];
+   }else{
+     replacement = span(substitution[1],'r')+span(substitution[2],'o');
+   }
+   text = text.replace(substitution[0],replacement);
+ }  
+ return text;
 
 }
-function replace_placeholder(text,placeholder,replacing_name){
-  var to_replace, replacement; 
-  to_replace = make_placeholder_regex(placeholder);
-  replacement = make_replacement(placeholder, replacing_name);
-  return text.replace(to_replace, replacement);
+function apostrophe_substitutions(text, original, replacement){
+  //returns an array of substitutions [regex, replacement, original]
+  var re1,re2,re3, orig_paren, regexes, match;
+  regexes = [];
+  orig_paren = original.replace("(","\\(").replace(")","\\)");
+  if (string_util.starts_with_vowel(replacement)){
+    re1 =  new RegExp("\\b(d|qu|l)(e|a)\\s+<"+orig_paren+":(pre)?nom[^>]*>","gi");
+    while((match = re1.exec(text))!==null){
+      regexes.push([re1, match[1]+"'"+replacement, match[1]+match[2]+" "+original]);
+    }
+  }else{
+    re1 = new RegExp("\\bl'\\s*<"+orig_paren+":(pre)?nom_feminin[^>]*>","gi");
+    while((match = re1.exec(text))!==null){
+      regexes.push([re1, "la "+replacement, "l'"+original]);
+    }
+    re2 = new RegExp("\\bl'\\s*<"+orig_paren+":(pre)?nom_masculin[^>]*>","gi");
+    while((match = re2.exec(text))!==null){
+      regexes.push([re2, "le "+replacement, "l'"+original]);
+    }
+    re3 = new RegExp("\\b(d|qu)'\\s*(<"+orig_paren+":(pre)?nom[^>]*>)","gi");
+    while((match = re3.exec(text))!==null){
+      regexes.push([re3, match[1]+"e "+replacement, match[1]+"'"+original]);
+    }
+  }
+  return regexes;
+
+}
+function plain_substitution(placeholder, replacement){
+  //returns a substitution [regex, replacement, original]
+  return [make_placeholder_regex(placeholder), replacement, placeholder[0]];
 
 }
 function make_placeholder_regex(placeholder) {
@@ -185,19 +206,12 @@ function make_placeholder_regex(placeholder) {
     return new RegExp(exp,"g");
 
 }
-function make_replacement(placeholder, replacing_name){
-  if(replacing_name.toLowerCase() === placeholder[0].toLowerCase()){
-    return replacing_name;
-  }
-  return  span(replacing_name, 'r') + span(placeholder[0], 'o') ;
-
-}
 function span(to_wrap, claz){
   var clazz = claz ? ' class="'+claz+'"' : '';
   return '<span'+clazz+' style="display:inline-block;">'+to_wrap+'</span>';
 
 }
-function span_words(text){
+function span_words(text, claz){
   var tokens, token, spl, result, i, inspan;
   spl = string_util.split;
   tokens = spl(spl(spl(text,"<",1)," "),">");
@@ -210,7 +224,7 @@ function span_words(text){
     if(inspan || token === '<br>'){
       result += token;
     }else{
-      result += span(token.replace(" ","&nbsp;"));
+      result += span(token.replace(" ","&nbsp;"), claz);
     }
     if(token === "</span>"){ inspan = false;  }
   }
@@ -317,7 +331,7 @@ function make_detail_slide_function(down){
     if(down){
       return function(){
 	var elem = $(".detail",this);
-	if(elem.queue().length<2) elem.slideDown();
+	if(elem.queue().length<2){ elem.slideDown();}
       };
     }
     return function(){
@@ -346,7 +360,8 @@ function make_parent_hiding_function(tohide, toshow){
              {step: function(){
 	       var minheight = Math.max(p.data('minheight'),p.height());
 	       p.data('minheight',minheight);
-	       p.css({minHeight: minheight});}
+	       p.css({minHeight: minheight});
+	      }
 	     });
       });
    };
@@ -386,3 +401,13 @@ function reassemble_original(text_object){
   return text_object.text.replace(/<([^:]+):[^>]+>/g, "$1");
 
 }
+function overlap(below,above,chars,cover){
+   var maxlength = Math.max(below.length,above.length);
+   if(cover){
+     return  below.substring(0, Math.max(Math.min(below.length,maxlength-chars),0)) +
+             above.substring(0, Math.min(above.length,chars));
+   }
+   return below.substring(0, Math.min(below.length,chars)) + 
+          above.substring(0, Math.max(Math.min(above.length,maxlength-chars),0));
+
+ }

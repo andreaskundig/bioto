@@ -24,6 +24,36 @@
    
  });
 
+ test("overlap", function(){
+    var text = {text: "En 2001, <Loana:nom_feminin_1> vient.",
+	    placeholders:[["Loana", "nom_feminin_1"]] };
+    var pholder = text.placeholders[0];
+    var torep = "<"+pholder[0]+":"+pholder[1]+">";
+    equal(torep,"<Loana:nom_feminin_1>");
+    var from = pholder[0];
+    var to = "Bobo";
+    equal(overlap("Loana","Bobo",0,true),"Loana");
+    equal(overlap("Loana","Bobo",1,true),"LoanB");
+    equal(overlap("Loana","Bobo",2,true),"LoaBo");
+    equal(overlap("Loana","Bobo",3,true),"LoBob");
+    equal(overlap("Loana","Bobo",4,true),"LBobo");
+    equal(overlap("Loana","Bobo",5,true),"Bobo");
+
+    equal(overlap("Lo","Bobo",0,true),"Lo");
+    equal(overlap("Lo","Bobo",1,true),"LoB");
+    equal(overlap("Lo","Bobo",2,true),"LoBo");
+    equal(overlap("Lo","Bobo",3,true),"LBob");
+    equal(overlap("Lo","Bobo",4,true),"Bobo");
+
+    equal(overlap("Loana","Bobo",0,false),"Bobo");
+    equal(overlap("Loana","Bobo",1,false),"LBobo");
+    equal(overlap("Loana","Bobo",2,false),"LoBob");
+    equal(overlap("Loana","Bobo",3,false),"LoaBo");
+    equal(overlap("Loana","Bobo",4,false),"LoanB");
+    equal(overlap("Loana","Bobo",5,false),"Loana");
+
+ });
+ 
  test("span_words",function(){
    var text = span_words("En 01, <span class='o'>Loa na</span> vient sf<span> ah ah </span>bof. <br>hop");
    equal(text,
@@ -46,49 +76,51 @@
    deepEqual( map["pronom_feminin"], "elle", "");
  });
 
-test(" fix_apostrophe", function(){
- var fixed = fix_apostrophe("le <raton:nom_masculin_3> mange", "raton", 
-	    "animal");
- equal(fixed,"<span class=\"r\" style=\"display:inline-block;\">l'</span>"
-       +"<span class=\"o\" style=\"display:inline-block;\">le&nbsp;</span>"
-       +"<raton:nom_masculin_3> mange");
+test("apostrophe_substitutions", function(){
+ fixed = apostrophe_substitutions("le <raton:nom_masculin_3> mange", 
+ "raton", "animal");
+ equal(1,fixed.length);
+ equal(fixed[0][1], "l'animal");
+ equal(fixed[0][2], "le raton");
 
- fixed=fix_apostrophe("le <raton:nom_masculin> mange", "raton", "animal");
- equal(fixed, "<span class=\"r\" style=\"display:inline-block;\">l'</span>"
-       +"<span class=\"o\" style=\"display:inline-block;\">le&nbsp;</span>"
-       +"<raton:nom_masculin> mange");
+ fixed = apostrophe_substitutions("le <raton:nom_masculin> mange", 
+ "raton", "animal");
+ equal(1,fixed.length);
+ equal(fixed[0][1], "l'animal");
+ equal(fixed[0][2], "le raton");
 
- fixed=fix_apostrophe("le <raton (o):nom_masculin> mange", "raton (o)",
-		    "animal");
- equal(fixed, "<span class=\"r\" style=\"display:inline-block;\">l'</span>"
-       +"<span class=\"o\" style=\"display:inline-block;\">le&nbsp;"
-       +"</span><raton (o):nom_masculin> mange");
+ fixed = apostrophe_substitutions("le <raton (o):nom_masculin> mange", 
+ "raton (o)", "animal");
+ equal(1,fixed.length);
+ equal(fixed[0][1], "l'animal");
+ equal(fixed[0][2], "le raton (o)");
 
- fixed=fix_apostrophe("du <raton:nom_masculin>", "raton", "animal");
- equal(fixed, "du <raton:nom_masculin>");
+ fixed = apostrophe_substitutions("du <raton:nom_masculin>",
+ "raton", "animal");
+ equal(0,fixed.length);
 
+ fixed = apostrophe_substitutions("l'<animal:nom_masculin_3> mange", 
+                        "animal", "raton");
+ equal(1,fixed.length);
+ equal(fixed[0][1], "le raton");
+ equal(fixed[0][2], "l'animal");
 
- fixed = fix_apostrophe("l'<animal:nom_masculin_3> mange", "animal",
-			"raton");
- equal(fixed, "<span class=\"r\" style=\"display:inline-block;\">le&nbsp;"
-       +"</span><span class=\"o\" style=\"display:inline-block;\">l'"
-       +"</span><animal:nom_masculin_3> mange");
+ fixed = apostrophe_substitutions("vénérable <animal:nom_masculin_3> me",
+                        "animal", "raton");
+ equal(0,fixed.length);
 
- fixed = fix_apostrophe("vénérable <animal:nom_masculin_3> me", "animal",
-			    "raton");
-  equal(fixed, "vénérable <animal:nom_masculin_3> me");
+ fixed = apostrophe_substitutions("l'<animale:nom_feminin> mange", "animale",
+				"ratonne");
+ equal(1,fixed.length);
+ equal(fixed[0][1], "la ratonne");
+ equal(fixed[0][2], "l'animale");
 
-  fixed = fix_apostrophe("l'<animal:nom_feminin> mange", "animal",
-				"raton");
-  equal(fixed, "<span class=\"r\" style=\"display:inline-block;\">la&nbsp;"
-        +"</span><span class=\"o\" style=\"display:inline-block;\">l'"
-        +"</span><animal:nom_feminin> mange");
+ fixed = apostrophe_substitutions("qu'<animale:nom_feminin> mange", "animale",
+				    "ratonne");
+ equal(1,fixed.length);
+ equal(fixed[0][1], "que ratonne");
+ equal(fixed[0][2], "qu'animale");
 
-  fixed = fix_apostrophe("qu'<animal:nom_feminin> mange", "animal",
-				    "raton");
-  equal(fixed,"<span class=\"r\" style=\"display:inline-block;\">que&nbsp;"
-        +"</span><span class=\"o\" style=\"display:inline-block;\">qu'"
-        +"</span><animal:nom_feminin> mange");
 });
 
 });
