@@ -34,7 +34,7 @@ p {
 }
 .detail{
   margin: 0;
-  padding: 0 5 3 5;
+  padding: 0px 5px 3px 5px;
   text-align: right;
   line-height: 150%;
   background-color:#cccccc;

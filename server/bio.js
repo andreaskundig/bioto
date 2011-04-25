@@ -54,23 +54,23 @@ function unused_topics(){
 
 }
 function show_all(){
-  var i, paragraph;
+  var i, subs;
   for ( i=0; i < texts.length ; i += 1){
-    paragraph = build_paragraph(texts[i], protagonistes);
-    display(i+": "+paragraph,texts[i].url);
+    subs = all_substitutions(texts[i], protagonistes);
+    texts[i].text = i+": "+texts[i].text;
+    display_text(texts[i],subs);
   }
   polish_display();
 
 }
 function bio(deja_utilise,indexes) {
-  var paragraph;
+  var subs;
   $("#bio").children().detach();
   keys = male_or_female_keys();
   indexes = indexes || pick_indexes(keys,deja_utilise);
   $.each(indexes, function(i,index){
-      paragraph = build_paragraph(texts[index], protagonistes);
-      //display(paragraph, texts[index].url);
-      display(span_words(paragraph), texts[index].url);
+      subs = all_substitutions(texts[index], protagonistes);
+      display_text(texts[index], subs);
   });
   polish_display();
   //write_to_hash(indexes);
@@ -107,20 +107,18 @@ function male_or_female_keys(){
   return Math.random() > 0.5 ? keys_f : keys_m;  
 
 }
-//TODO remove commented code
-function build_paragraph(text_object, names) {
-  var ph_to_name, result, placeholder, toreplace, replacing_name,
-  replacement, i,substitutions;
+function all_substitutions(text_object, names) {
+  var ph_to_name, placeholder, replacing_name, i, subs, allsubs;
+  allsubs = [];
   ph_to_name = map_placeholders(text_object.placeholders, names);
-  result = text_object.text;
   for (i=0 ; i<text_object.placeholders.length ; i += 1){
     placeholder  = text_object.placeholders[i];
     replacing_name = ph_to_name[placeholder[1]];
-    substitutions = apostrophe_substitutions(result,placeholder[0],replacing_name," ");
-    substitutions.push(plain_substitution(placeholder, replacing_name));
-    result = apply_spanned_substitutions(result,substitutions);
+    subs = all_substitutions_for_placeholder(
+      text_object.text, placeholder, replacing_name);
+    allsubs = allsubs.concat(subs);
   }
-  return result;
+  return allsubs;
 
 }
 function map_placeholders(placeholders,names){
@@ -154,18 +152,13 @@ function map_placeholders(placeholders,names){
   return map;
 
 }
-function apply_spanned_substitutions(text, substitutions){
- var i, substitution, replacement;
- for(i=0; i<substitutions.length; i+=1 ){
-   substitution = substitutions[i];
-   if(substitution[1].toLowerCase() === substitution[2].toLowerCase()){
-     replacement = substitution[2];
-   }else{
-     replacement = span(substitution[1],'r')+span(substitution[2],'o');
-   }
-   text = text.replace(substitution[0],replacement);
- }  
- return text;
+function all_substitutions_for_placeholder(text, placeholder, replacement){
+  //returns an array of substitutions [regex, replacement, original]
+  var subs, plain_sub;
+  subs = apostrophe_substitutions(text, placeholder[0],replacement);
+  plain_sub = [make_placeholder_regex(placeholder), replacement, placeholder[0]];
+  subs.push(plain_sub);
+  return subs;
 
 }
 function apostrophe_substitutions(text, original, replacement){
@@ -195,15 +188,24 @@ function apostrophe_substitutions(text, original, replacement){
   return regexes;
 
 }
-function plain_substitution(placeholder, replacement){
-  //returns a substitution [regex, replacement, original]
-  return [make_placeholder_regex(placeholder), replacement, placeholder[0]];
-
-}
 function make_placeholder_regex(placeholder) {
     var exp = '<' + placeholder.join(':') + '>';
     exp = exp.replace(/\(/,'\\(').replace(/\)/,'\\)');
     return new RegExp(exp,"g");
+
+}
+function apply_spanned_substitutions(text, substitutions){
+ var i, substitution, replacement;
+ for(i=0; i<substitutions.length; i+=1 ){
+   substitution = substitutions[i];
+   if(substitution[1].toLowerCase() === substitution[2].toLowerCase()){
+     replacement = substitution[2];
+   }else{
+     replacement = span(substitution[1],'r')+span(substitution[2],'o');
+   }
+   text = text.replace(substitution[0],replacement);
+ }  
+ return text;
 
 }
 function span(to_wrap, claz){
@@ -290,10 +292,17 @@ function remove_all(array,elements){
   }
 
 }
-function display(text, url){
-  $("#bio").append('<div class="paragraph"><p>'+text+'</p>'+
-//     '<p class="detail" style="display:none">en savoir plus</p></div>');
-     '<p class="detail" style="display:none"><a href="'+url+'">en savoir plus</a></p></div>');
+function display_text(text_object, substitutions){
+  var text, paragraph, p;
+  text = apply_spanned_substitutions(text_object.text, substitutions);
+  text = span_words(text);
+  paragraph = $('<div class="paragraph"><p>'+text+'</p>'+
+     '<p class="detail" style="display:none"><a href="'+text_object.url+
+     '">en savoir plus</a></p></div>');
+  p = paragraph.find('p').first();
+  p.data('text', text_object);
+  p.data('subs', substitutions);
+  $("#bio").append(paragraph);
 
 }
 function polish_display(){
@@ -302,8 +311,8 @@ function polish_display(){
       $(this).data('original_width',$(this).width());
   });
   $("#bio>div>p>span.o").css({width: '0px'});
-  $(".detail").mouseenter(make_parent_hiding_function('r','o')
-	     ).mouseleave(make_parent_hiding_function('o','r'));
+  $(".detail").mouseenter(make_parent_hiding_function2('r','o')
+	     ).mouseleave(make_parent_hiding_function2('o','r'));
   $(".paragraph").mouseenter(make_detail_slide_function(true)
 	        ).mouseleave(make_detail_slide_function(false));
   //console.timeEnd(1);
@@ -346,12 +355,12 @@ function make_parent_hiding_function(tohide, toshow){
      p = $(this).prev();
      p.data('minheight',p.height());
      delayms = 200;
-     hide = $(this).parent().find("."+tohide).stop(true); //clear queue
+     hide = p.find("."+tohide).stop(true); //clear queue
      //reverse to avoid back of text moving too fast
      $(hide.get().reverse()).each(function(i,e){
 		$(this).delay(delayms*(i)).animate({width: '0px'});
      });
-     show = $(this).parent().find("."+toshow).stop(true); //clear queue
+     show = p.find("."+toshow).stop(true); //clear queue
      //reverse to avoid back of text moving too fast
      $(show.get().reverse()).each(function(i,e){
         var o_width = $(this).data('original_width');
@@ -364,6 +373,21 @@ function make_parent_hiding_function(tohide, toshow){
 	      }
 	     });
       });
+   };
+
+}
+//TODO animate with step and overlap
+function make_parent_hiding_function2(tohide, toshow){
+   return function(){
+      var p, text, subs, i, subindex;
+     p = $(this).prev();
+     text = p.data('text').text;
+     subs = p.data('subs');
+     subindex = toshow === 'r'? 1 : 2;
+     for( i=0; i<subs.length; i+=1){
+       text = text.replace(subs[i][0],subs[i][subindex]);
+     }
+     p.html(text);
    };
 
 }

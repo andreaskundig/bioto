@@ -16,10 +16,11 @@
   
 
  test("build_paragraph",function() {
-    var text = {text: "En 2001, <Loana:nom_feminin_1> vient.",
+    var text,subs,replaced;
+    text = {text: "En 2001, <Loana:nom_feminin_1> vient.",
 	    placeholders:[["Loana", "nom_feminin_1"]] };
-    replaced = build_paragraph (text,["aaa","bb"]);
-
+    subs = all_substitutions(text,["aaa","bb"]);
+    replaced = apply_spanned_substitutions(text.text, subs);
     equal(replaced,"En 2001, <span class=\"r\" style=\"display:inline-block;\">aaa</span><span class=\"o\" style=\"display:inline-block;\">Loana</span> vient.");
    
  });
