@@ -1,17 +1,20 @@
-//for jslint
+//for jslint 
 /*jslint white: false */
 /*global alert: false, confirm: false, console: false, Debug: false, opera: false, prompt: false */
 /*global addEventListener: false, blur: false, clearInterval: false, clearTimeout: false, close: false, closed: false, defaultStatus: false, document: false, event: false, focus: false, frames: false, getComputedStyle: false, history: false, Image: false, length: false, location: false, moveBy: false, moveTo: false, name: false, navigator: false, onblur: true, onerror: true, onfocus: true, onload: true, onresize: true, onunload: true, open: false, opener: false, Option: false, parent: false, print: false, resizeBy: false, resizeTo: false, screen: false, scroll: false, scrollBy: false, scrollTo: false, setInterval: false, setTimeout: false, status: false, top: false, XMLHttpRequest: false */
 /*global keys_m, keys_f, texts, topics, window, unescape, $ */
-var remove_all, replace, display, map_placeholders, 
+var remove_all, replace, display, display_text, map_placeholders, 
   make_placeholder_regex, keys, random, show_all, plain_substitution,
+  all_substitutions_for_placeholder,
   apostrophe_substitutions,reassemble_original, wrap_words_in_span,
   polish_display, span, span_words, apply_spanned_substitutions,
   male_or_female_keys,  build_paragraph, pick_indexes,
   make_hiding_function, text_indexes_for_topics, flatten,
   get_protagonist_from_url, string_util, replace_placeholder,
   get_indexes_from_url, get_indexes_from_hash, write_to_hash,
-  make_parent_hiding_function, make_detail_slide_function;
+  make_parent_hiding_function, make_detail_slide_function,
+  all_substitutions,
+  make_parent_hiding_function2;
 
 var ordre = [
   ["nom","presentation", "vie",  "introduction"],
@@ -376,7 +379,7 @@ function make_parent_hiding_function(tohide, toshow){
    };
 
 }
-//TODO animate with step and overlap
+//TODO animate with morpher
 function make_parent_hiding_function2(tohide, toshow){
    return function(){
       var p, text, subs, i, subindex;
@@ -428,10 +431,60 @@ function reassemble_original(text_object){
 function overlap(below,above,chars,cover){
    var maxlength = Math.max(below.length,above.length);
    if(cover){
-     return  below.substring(0, Math.max(Math.min(below.length,maxlength-chars),0)) +
+     return  below.substring(0, Math.max(below.length-chars,0)) +
              above.substring(0, Math.min(above.length,chars));
    }
    return below.substring(0, Math.min(below.length,chars)) + 
-          above.substring(0, Math.max(Math.min(above.length,maxlength-chars),0));
+          above.substring(0, Math.max(above.length-chars),0);
 
  }
+function safe_index(length,index){
+  return Math.min(length-1 , Math.max(0,index));
+
+}
+function Morpher(text_object,names){
+  var offset_cumul, morpher;
+  if(this instanceof Morpher){
+    this.text_object = text_object;
+    this.subs = all_substitutions(text_object,names);
+    morpher = this;
+    this.morphs = $.map(this.subs, 
+                        function(sub,i){return [morpher.stages(sub,true)];});
+    offset_cumul = 0;
+    this.offsets = $.map(this.morphs,
+                        function(morph){ offset_cumul += morph.length-1;
+                                         return offset_cumul;} );
+    this.offsets.unshift(0);
+    this.nb_steps = this.offsets[this.offsets.length-1] +1 ;
+  }else{
+    return new Morpher(text_object,names); //create an instance without new
+  }
+
+}
+Morpher.prototype.stages = function(sub, cover){
+  var nb_steps, i, stages;
+  stages = [];
+  nb_steps = Math.max(sub[1].length,sub[2].length);
+  for(i=0 ; i<= nb_steps; i+=1){
+   stages.push(overlap(sub[2],sub[1], i, cover));
+  }
+  return stages;
+
+};
+Morpher.prototype.step_replacements = function(step_nb){
+  var m = this;
+  return $.map(this.morphs,function(morph,i){
+               return morph[safe_index(morph.length, step_nb - m.offsets[i])];
+   });
+
+};
+Morpher.prototype.step = function(step_nb){
+  var i, replacements, text;
+  text = this.text_object.text;
+  replacements = this.step_replacements(step_nb);
+  for( i=0; i<this.subs.length; i+=1){
+       text = text.replace(this.subs[i][0],replacements[i]);
+  }
+  return text;
+
+};
