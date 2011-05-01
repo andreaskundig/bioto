@@ -295,6 +295,10 @@ function remove_all(array,elements){
   }
 
 }
+function safe_index(length,index){
+  return Math.min(length-1 , Math.max(0,index));
+
+}
 function display_text(text_object, substitutions){
   var text, paragraph, p;
   text = apply_spanned_substitutions(text_object.text, substitutions);
@@ -438,10 +442,6 @@ function overlap(below,above,chars,cover){
           above.substring(0, Math.max(above.length-chars),0);
 
  }
-function safe_index(length,index){
-  return Math.min(length-1 , Math.max(0,index));
-
-}
 function Morpher(text_object,names){
   var offset_cumul, morpher;
   if(this instanceof Morpher){
@@ -449,7 +449,7 @@ function Morpher(text_object,names){
     this.subs = all_substitutions(text_object,names);
     morpher = this;
     this.morphs = $.map(this.subs, 
-                        function(sub,i){return [morpher.stages(sub,true)];});
+                        function(sub,i){return [morpher.morph_stages(sub,true)];});
     offset_cumul = 0;
     this.offsets = $.map(this.morphs,
                         function(morph){ offset_cumul += morph.length-1;
@@ -461,7 +461,7 @@ function Morpher(text_object,names){
   }
 
 }
-Morpher.prototype.stages = function(sub, cover){
+Morpher.prototype.morph_stages = function(sub, cover){
   var nb_steps, i, stages;
   stages = [];
   nb_steps = Math.max(sub[1].length,sub[2].length);
@@ -471,7 +471,7 @@ Morpher.prototype.stages = function(sub, cover){
   return stages;
 
 };
-Morpher.prototype.step_replacements = function(step_nb){
+Morpher.prototype.replacements_for_step = function(step_nb){
   var m = this;
   return $.map(this.morphs,function(morph,i){
                return morph[safe_index(morph.length, step_nb - m.offsets[i])];
@@ -481,7 +481,7 @@ Morpher.prototype.step_replacements = function(step_nb){
 Morpher.prototype.step = function(step_nb){
   var i, replacements, text;
   text = this.text_object.text;
-  replacements = this.step_replacements(step_nb);
+  replacements = this.replacements_for_step(step_nb);
   for( i=0; i<this.subs.length; i+=1){
        text = text.replace(this.subs[i][0],replacements[i]);
   }

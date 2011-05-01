@@ -80,7 +80,7 @@ test("morpher", function(){
     equal(morpher.subs[1][1],"centipede");
     equal(morpher.subs[1][2],"Fred");
 
-    stages = morpher.stages(morpher.subs[0],true);
+    stages = morpher.morph_stages(morpher.subs[0],true);
     deepEqual(stages, ["Loana","LoanB","LoaBo","LoBoz","LBozo","Bozo"]);
     
     equal(morpher.morphs.length,2);
@@ -94,18 +94,18 @@ test("morpher", function(){
     equal(morpher.offsets[1],5);
     equal(morpher.offsets[2],14);
     
-    deepEqual(morpher.step_replacements(0),["Loana", "Fred"]);
-    deepEqual(morpher.step_replacements(1),["LoanB", "Fred"]);
-    deepEqual(morpher.step_replacements(5),["Bozo", "Fred"]);
-    deepEqual(morpher.step_replacements(6),["Bozo", "Frec"]);
-    deepEqual(morpher.step_replacements(7)["Bozo","Fredce"]);
-    deepEqual(morpher.step_replacements(8)["Bozo","Fredcen"]);
-    deepEqual(morpher.step_replacements(9)["Bozo","Fredcent"]);
-    deepEqual(morpher.step_replacements(10)["Bozo","Fredcenti"]);
-    deepEqual(morpher.step_replacements(11)["Bozo","Frecentip"]);
-    deepEqual(morpher.step_replacements(12)["Bozo","Frcentipe"]);
-    deepEqual(morpher.step_replacements(13)["Bozo","Fcentiped"]);
-    deepEqual(morpher.step_replacements(14)["Bozo","centipede"]);
+    deepEqual(morpher.replacements_for_step(0),["Loana", "Fred"]);
+    deepEqual(morpher.replacements_for_step(1),["LoanB", "Fred"]);
+    deepEqual(morpher.replacements_for_step(5),["Bozo", "Fred"]);
+    deepEqual(morpher.replacements_for_step(6),["Bozo", "Frec"]);
+    deepEqual(morpher.replacements_for_step(7)["Bozo","Fredce"]);
+    deepEqual(morpher.replacements_for_step(8)["Bozo","Fredcen"]);
+    deepEqual(morpher.replacements_for_step(9)["Bozo","Fredcent"]);
+    deepEqual(morpher.replacements_for_step(10)["Bozo","Fredcenti"]);
+    deepEqual(morpher.replacements_for_step(11)["Bozo","Frecentip"]);
+    deepEqual(morpher.replacements_for_step(12)["Bozo","Frcentipe"]);
+    deepEqual(morpher.replacements_for_step(13)["Bozo","Fcentiped"]);
+    deepEqual(morpher.replacements_for_step(14)["Bozo","centipede"]);
 
     equal(morpher.step(2),'En 2001, LoaBo vient chez Fred.');
     equal(morpher.step(7),'En 2001, Bozo vient chez Frce.');
