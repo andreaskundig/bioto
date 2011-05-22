@@ -1042,7 +1042,7 @@ clefs: existence
 http://fr.wikipedia.org/wiki/Sasquatch
 ------
 
-Il reçoit plus de 25 blessures dont 5 par balles au cours d'une lutte devenue célèbre avant de mourir et d'être décapité par <Maynard:nom_masculin_2>. Sa tête sera placée en guise de trophée sur le beaupré du Pearl. Une légende raconte que son corps après avoir été jeté à la mer, aurait fait 2 fois le tour du bateau à la nage avant de couler.
+Il reçoit plus de 25 blessures dont 5 par balles au cours d'une lutte devenue célèbre avant de mourir et d'être décapité par <Maynard:nom_masculin_2>. Sa tête sera placée en guise de trophée sur le beaupré du Pearl. Une légende raconte que son corps après avoir été jeté à la mer, aurait fait 2 fois le tour du bateau à la nage avant de couler.<:pronom_masculin>
 clefs: mort
 
 http://fr.wikipedia.org/wiki/Barbe_Noire

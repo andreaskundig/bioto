@@ -3,18 +3,10 @@
 /*global alert: false, confirm: false, console: false, Debug: false, opera: false, prompt: false */
 /*global addEventListener: false, blur: false, clearInterval: false, clearTimeout: false, close: false, closed: false, defaultStatus: false, document: false, event: false, focus: false, frames: false, getComputedStyle: false, history: false, Image: false, length: false, location: false, moveBy: false, moveTo: false, name: false, navigator: false, onblur: true, onerror: true, onfocus: true, onload: true, onresize: true, onunload: true, open: false, opener: false, Option: false, parent: false, print: false, resizeBy: false, resizeTo: false, screen: false, scroll: false, scrollBy: false, scrollTo: false, setInterval: false, setTimeout: false, status: false, top: false, XMLHttpRequest: false */
 /*global keys_m, keys_f, texts, topics, window, unescape, $ */
-var remove_all, replace, display, display_text, map_placeholders, 
-  make_placeholder_regex, keys, random, show_all, plain_substitution,
-  all_substitutions_for_placeholder,
-  apostrophe_substitutions,reassemble_original, wrap_words_in_span,
-  polish_display, span, span_words, apply_spanned_substitutions,
-  male_or_female_keys,  build_paragraph, pick_indexes,
-  make_hiding_function, text_indexes_for_topics, flatten,
-  get_protagonist_from_url, string_util, replace_placeholder,
-  get_indexes_from_url, get_indexes_from_hash, write_to_hash,
-  make_parent_hiding_function, make_detail_slide_function,
-  all_substitutions,
-  make_parent_hiding_function2;
+var displayer, span_displayer, morph_displayer, keys, show_all,
+  male_or_female_keys, pick_indexes, make_detail_slide_function,
+  make_simple_detail_slide_function, text_indexes_for_topics, 
+  string_util, array_util, url_helper,  Morpher,substituter;
 
 var ordre = [
   ["nom","presentation", "vie",  "introduction"],
@@ -51,7 +43,7 @@ function unused_topics(){
   var tops, i ;
   tops = topics.slice(0);
   for (i=0 ; i < ordre.length ; i += 1){
-    remove_all(tops, ordre[i]);
+    array_util.remove_all(tops, ordre[i]);
   }
   return tops;
 
@@ -59,11 +51,10 @@ function unused_topics(){
 function show_all(){
   var i, subs;
   for ( i=0; i < texts.length ; i += 1){
-    subs = all_substitutions(texts[i], protagonistes);
     texts[i].text = i+": "+texts[i].text;
-    display_text(texts[i],subs);
+    displayer.display_text(texts[i],protagonistes);
   }
-  polish_display();
+  displayer.polish_display();
 
 }
 function bio(deja_utilise,indexes) {
@@ -72,10 +63,9 @@ function bio(deja_utilise,indexes) {
   keys = male_or_female_keys();
   indexes = indexes || pick_indexes(keys,deja_utilise);
   $.each(indexes, function(i,index){
-      subs = all_substitutions(texts[index], protagonistes);
-      display_text(texts[index], subs);
+      displayer.display_text(texts[index], protagonistes);
   });
-  polish_display();
+  displayer.polish_display();
   //write_to_hash(indexes);
   return deja_utilise.concat(indexes);
 
@@ -85,8 +75,8 @@ function pick_indexes(keys,exclude){
   indexes = [];
   for (i=0 ; i<ordre.length ; i+=1) {
     topic_indexes = text_indexes_for_topics(ordre[i],keys);
-    remove_all(topic_indexes, exclude);
-    remove_all(topic_indexes, indexes);
+    array_util.remove_all(topic_indexes, exclude);
+    array_util.remove_all(topic_indexes, indexes);
     if(topic_indexes.length > 0){
       topic_index = 
         topic_indexes[Math.floor(Math.random() * topic_indexes.length)];
@@ -110,132 +100,366 @@ function male_or_female_keys(){
   return Math.random() > 0.5 ? keys_f : keys_m;  
 
 }
-function all_substitutions(text_object, names) {
-  var ph_to_name, placeholder, replacing_name, i, subs, allsubs;
-  allsubs = [];
-  ph_to_name = map_placeholders(text_object.placeholders, names);
-  for (i=0 ; i<text_object.placeholders.length ; i += 1){
-    placeholder  = text_object.placeholders[i];
-    replacing_name = ph_to_name[placeholder[1]];
-    subs = all_substitutions_for_placeholder(
-      text_object.text, placeholder, replacing_name);
-    allsubs = allsubs.concat(subs);
-  }
-  return allsubs;
+substituter = {
+  all_substitutions: function(text_object, names) {
+    var ph_to_name, placeholder, replacing_name, i, subs, subs_holder;
+    subs_holder = {text: text_object.text, subs:[]};
+    ph_to_name = this.map_placeholders(text_object.placeholders, names);
+    for (i=0 ; i<text_object.placeholders.length ; i += 1){
+      placeholder  = text_object.placeholders[i];
+      replacing_name = ph_to_name[placeholder[1]];
+      this.all_substitutions_for_placeholder(subs_holder, placeholder, replacing_name);
+    }
+    subs_holder.subs.sort(function(a,b){return a[3]>b[3];});
+    return subs_holder;
 
-}
-function map_placeholders(placeholders,names){
-  var map, name_index, remaining_names, phname, ph, 
-      match, i;
-  map = {};
-  name_index = 1;
-  remaining_names = [];
-  for (i = 0; i < placeholders.length ; i += 1) {
-    ph = placeholders[i];
-    phname = ph[1];
-    if(map[phname]){ //on l'a deja
-    }else if(string_util.starts_with("pronom", phname)){
-      map[phname] = ph[0]; //on remplace pas les pronoms...
-    }else if(string_util.starts_with("litt:",phname)){
-      map[phname] = phname.substring(5);
-    }else if(phname === "livre_ext"){
-      map[phname] = livres[random(livres.length)];
+  },
+  map_placeholders: function(placeholders,names){
+   var map, name_index, remaining_names, phname, ph, 
+       match, i;
+   map = {};
+   name_index = 1;
+   remaining_names = [];
+   for (i = 0; i < placeholders.length ; i += 1) {
+     ph = placeholders[i];
+     phname = ph[1];
+     if(map[phname]){ //on l'a deja
+     }else if(string_util.starts_with("pronom", phname)){
+       map[phname] = ph[0]; //on remplace pas les pronoms...
+     }else if(string_util.starts_with("litt:",phname)){
+       map[phname] = phname.substring(5);
+     }else if(phname === "livre_ext"){
+       map[phname] = livres[array_util.random_index(livres)];
+     }else{
+       match = /^(pre)?nom_[a-zA-Z]+(_1)?$/.exec(phname);
+       if (match){
+ 	map[phname] = names[0];
+       }else{
+         if(remaining_names.length ===0){ 
+           remaining_names = names.slice(1); }
+         name_index = array_util.random_index(remaining_names);
+         map[phname] = remaining_names.splice(name_index, 1)[0];
+       }
+     }
+   }
+   return map;
+
+  },
+  all_substitutions_for_placeholder: function(substitution_holder, placeholder, replacement){
+    //returns {text:..., subs: [regex, replacement, original, offset]
+    var re1,re2,re3, orig_paren, original, subs, text;
+    text = substitution_holder.text;
+    subs = substitution_holder.subs;
+    original = placeholder[0];
+    if(original === replacement){
+      substitution_holder.text = text.replace(this.make_placeholder_regex(placeholder),original);
+      return substitution_holder;
+    }
+    orig_paren = original.replace("(","\\(").replace(")","\\)");
+    if (string_util.starts_with_vowel(replacement)){
+      re1 =  new RegExp("\\b(d|qu|l)(e\\s+|a\\s+)<"+orig_paren+":(?:pre)?nom[^>]*>","gi");
+      text = text.replace(re1, this.subs_function(subs,"'",replacement,original));
     }else{
-      match = /^(pre)?nom_[a-zA-Z]+(_1)?$/.exec(phname);
-      if (match){
-	map[phname] = names[0];
-      }else{
-        if(remaining_names.length ===0){ 
-          remaining_names = names.slice(1); }
-        name_index = random(remaining_names.length);
-        map[phname] = remaining_names.splice(name_index, 1)[0];
-      }
+      re1 = new RegExp("\\b(l)('\\s*)<"+orig_paren+":(?:pre)?nom_feminin[^>]*>","gi");
+      text = text.replace(re1, this.subs_function(subs,"a ",replacement,original));
+      re2 = new RegExp("\\b(l)('\\s*)<"+orig_paren+":(':pre)?nom_masculin[^>]*>","gi");
+      text = text.replace(re2, this.subs_function(subs,"e ",replacement,original));
+      re3 = new RegExp("\\b(d|qu)('\\s*)(<"+orig_paren+":(?:pre)?nom[^>]*>)","gi");
+      text = text.replace(re3, this.subs_function(subs,"e ",replacement,original));
     }
-  }
-  return map;
+    re1 = this.make_placeholder_regex(placeholder);
+    text = text.replace(re1, this.subs_function(subs,"",replacement,original));
+    substitution_holder.text = text;
+    substitution_holder.subs = subs;
+    return substitution_holder;
 
-}
-function all_substitutions_for_placeholder(text, placeholder, replacement){
-  //returns an array of substitutions [regex, replacement, original]
-  var subs, plain_sub;
-  subs = apostrophe_substitutions(text, placeholder[0],replacement);
-  plain_sub = [make_placeholder_regex(placeholder), replacement, placeholder[0]];
-  subs.push(plain_sub);
-  return subs;
+  },
+  subs_function : function(subs, apo_replacement, replacement, original){
+     var pad_number = this.pad_number;
+     return function(str){
+       var replacement_number,p1,p2,offset,s;
+       //args
+       p1 = arguments.length > 3 ? arguments[1] : "";
+       p2 = arguments.length > 4 ? arguments[2] : "";
+       offset = arguments[arguments.length - 2];
+       s = arguments[arguments.length - 1];
+       //create the substitution array
+       replacement_number = pad_number(subs.length, str.length);
+       subs.push([replacement_number, p1+apo_replacement+replacement, p1+p2+original, offset]);
+       return replacement_number;
+     };
 
-}
-function apostrophe_substitutions(text, original, replacement){
-  //returns an array of substitutions [regex, replacement, original]
-  var re1,re2,re3, orig_paren, regexes, match;
-  regexes = [];
-  orig_paren = original.replace("(","\\(").replace(")","\\)");
-  if (string_util.starts_with_vowel(replacement)){
-    re1 =  new RegExp("\\b(d|qu|l)(e|a)\\s+<"+orig_paren+":(pre)?nom[^>]*>","gi");
-    while((match = re1.exec(text))!==null){
-      regexes.push([re1, match[1]+"'"+replacement, match[1]+match[2]+" "+original]);
-    }
-  }else{
-    re1 = new RegExp("\\bl'\\s*<"+orig_paren+":(pre)?nom_feminin[^>]*>","gi");
-    while((match = re1.exec(text))!==null){
-      regexes.push([re1, "la "+replacement, "l'"+original]);
-    }
-    re2 = new RegExp("\\bl'\\s*<"+orig_paren+":(pre)?nom_masculin[^>]*>","gi");
-    while((match = re2.exec(text))!==null){
-      regexes.push([re2, "le "+replacement, "l'"+original]);
-    }
-    re3 = new RegExp("\\b(d|qu)'\\s*(<"+orig_paren+":(pre)?nom[^>]*>)","gi");
-    while((match = re3.exec(text))!==null){
-      regexes.push([re3, match[1]+"e "+replacement, match[1]+"'"+original]);
-    }
-  }
-  return regexes;
+  },
+  pad_number :  function(number, length){
+     var string = '#'+number;
+     while(string.length<length){
+       string = '#'+string;
+     }
+     return string;
 
-}
-function make_placeholder_regex(placeholder) {
+  },
+  make_placeholder_regex: function(placeholder) {
     var exp = '<' + placeholder.join(':') + '>';
     exp = exp.replace(/\(/,'\\(').replace(/\)/,'\\)');
     return new RegExp(exp,"g");
 
-}
-function apply_spanned_substitutions(text, substitutions){
- var i, substitution, replacement;
- for(i=0; i<substitutions.length; i+=1 ){
-   substitution = substitutions[i];
-   if(substitution[1].toLowerCase() === substitution[2].toLowerCase()){
-     replacement = substitution[2];
-   }else{
-     replacement = span(substitution[1],'r')+span(substitution[2],'o');
-   }
-   text = text.replace(substitution[0],replacement);
- }  
- return text;
+  }};
+span_displayer = {
+  display_text: function(text_object, names){
+    var text, paragraph, p, substitutions;
+    substitutions = substituter.all_substitutions(text_object, protagonistes);
+    text = this.apply_spanned_substitutions(substitutions.text, substitutions.subs);
+    text = this.span_words(text);
+    paragraph = $('<div class="paragraph"><p>'+text+'</p>'+
+       '<p class="detail" style="display:none"><a href="'+text_object.url+
+       '">en savoir plus</a></p></div>');
+    p = paragraph.find('p').first();
+    p.data('morpher', new Morpher(text_object,names));
+    $("#bio").append(paragraph);
 
-}
-function span(to_wrap, claz){
-  var clazz = claz ? ' class="'+claz+'"' : '';
-  return '<span'+clazz+' style="display:inline-block;">'+to_wrap+'</span>';
+  },
+  polish_display: function(){
+    //console.time(1);
+    $("#bio>div>p>span.r,#bio>div>p>span.o").each(function(){
+        $(this).data('original_width',$(this).width());
+    });
+    $("#bio>div>p>span.o").css({width: '0px'});
+    $(".detail").mouseenter(this.make_parent_hiding_function('r','o')
+  	     ).mouseleave(this.make_parent_hiding_function('o','r'));
+    $(".paragraph").mouseenter(make_detail_slide_function(true)
+  	        ).mouseleave(make_detail_slide_function(false));
+    //console.timeEnd(1);
 
-}
-function span_words(text, claz){
-  var tokens, token, spl, result, i, inspan;
-  spl = string_util.split;
-  tokens = spl(spl(spl(text,"<",1)," "),">");
-  inspan = false;
-  result = "";
-  for(i=0; i<tokens.length;i+=1){
-    token = tokens[i];
-    if(string_util.starts_with("<span", token)){ inspan = true; }
-    //result += inspan ? token : span(token.replace(" ","&nbsp;"));
-    if(inspan || token === '<br>'){
-      result += token;
-    }else{
-      result += span(token.replace(" ","&nbsp;"), claz);
+  },
+  make_parent_hiding_function: function(tohide, toshow){
+    return function(){
+      var p, delayms, hide, show;
+      p = $(this).prev();
+      p.data('minheight',p.height());
+      delayms = 200;
+      hide = p.find("."+tohide).stop(true); //clear queue
+      //reverse to avoid back of text moving too fast
+      $(hide.get().reverse()).each(function(i,e){
+		$(this).delay(delayms*(i)).animate({width: '0px'});
+      });
+      show = p.find("."+toshow).stop(true); //clear queue
+      //reverse to avoid back of text moving too fast
+      $(show.get().reverse()).each(function(i,e){
+        var o_width = $(this).data('original_width');
+	$(this).delay(delayms*(i)).animate(
+             {width: o_width},
+             {step: function(){
+	       var minheight = Math.max(p.data('minheight'),p.height());
+	       p.data('minheight',minheight);
+	       p.css({minHeight: minheight});
+	      }
+	     });
+       });
+   };
+
+  },
+  make_simple_parent_hiding_function: function(tohide, toshow){
+    return function(){
+     $(this).parent().find("."+tohide).animate({width: '0px'}, 
+					  {queue: false});
+     $(this).parent().find("."+toshow).each(function(){
+        var o_width = $(this).data('original_width');
+	$(this).animate({width: o_width});
+      });
+    };
+
+  },
+  apply_spanned_substitutions: function(text, substitutions){
+    var i, substitution, replacement;
+    for(i=0; i<substitutions.length; i+=1 ){
+      substitution = substitutions[i];
+      if(substitution[1].toLowerCase() === substitution[2].toLowerCase()){
+        replacement = substitution[2];
+      }else{
+        replacement = this.span(substitution[1],'r')+this.span(substitution[2],'o');
+      }
+      text = text.replace(substitution[0],replacement);
+    }  
+    return text;
+  
+  },
+  span: function(to_wrap, claz){
+    var clazz = claz ? ' class="'+claz+'"' : '';
+    return '<span'+clazz+' style="display:inline-block;">'+to_wrap+'</span>';
+  
+  },
+  span_words: function(text, claz){
+    var tokens, token, spl, result, i, inspan;
+    spl = string_util.split;
+    tokens = spl(spl(spl(text,"<",1)," "),">");
+    inspan = false;
+    result = "";
+    for(i=0; i<tokens.length;i+=1){
+      token = tokens[i];
+      if(string_util.starts_with("<span", token)){ inspan = true; }
+      //result += inspan ? token : this.span(token.replace(" ","&nbsp;"));
+      if(inspan || token === '<br>'){
+        result += token;
+      }else{
+        result += this.span(token.replace(" ","&nbsp;"), claz);
+      }
+      if(token === "</span>"){ inspan = false;  }
     }
-    if(token === "</span>"){ inspan = false;  }
+    return result;
+
+  }};
+//TODO: du dahu
+morph_displayer = {
+  display_text: function(text_object, names){
+    var text, paragraph, p, sub_holder, morpher;
+    sub_holder = substituter.all_substitutions(text_object, protagonistes);
+    morpher = new Morpher(text_object,names);
+    text = morpher.step(0);
+    paragraph = $('<div class="paragraph"><p>'+text+'</p>'+
+       '<p class="detail" style="display:none"><a href="'+text_object.url+
+       '">en savoir plus</a></p></div>');
+    p = paragraph.find('p').first();
+    p.data('morpher', morpher);
+    $("#bio").append(paragraph);
+
+  },
+  polish_display: function(){
+    //console.time(1);
+    $("#bio>div>p>span.r,#bio>div>p>span.o").each(function(){
+        $(this).data('original_width',$(this).width());
+    });
+    $("#bio>div>p>span.o").css({width: '0px'});
+    $(".detail").mouseenter(this.make_parent_hiding_function(true)
+  	     ).mouseleave(this.make_parent_hiding_function(false));
+    $(".paragraph").mouseenter(make_detail_slide_function(true)
+  	        ).mouseleave(make_detail_slide_function(false));
+    //console.timeEnd(1);
+
+  },
+  make_parent_hiding_function: function(show_original){
+   var this_displayer = this;
+   return function(){
+     var p, i, morpher, display_step, steps, qname;
+     p = $(this).prev();
+     p.data('minheight',p.height());
+     qname = 'morph';
+     p.clearQueue(qname);
+     morpher = p.data('morpher');
+     steps = this_displayer.make_steps(show_original, morpher.last_step_nb, morpher.nb_steps);
+     $.each(steps,function(i,step){
+        p.queue(qname, this_displayer.make_step_display_function(step, p, morpher));
+        p.delay(25, qname);
+     });
+     p.dequeue(qname);
+   };
+
+  },
+  make_steps: function(show_original, last_step_nb, nb_steps){
+     var i, steps = [];
+     if(show_original){
+       for(i=last_step_nb; i<nb_steps; i+=1 ){steps.push(i); }
+       return steps;
+     }else{
+       for(i=0; i<last_step_nb; i+=1 ){steps.push(i); }
+       return steps.reverse();
+     }
+  
+  },
+  make_step_display_function: function(i, p, morpher){ 
+   return function(next){
+     p.html(morpher.step(i));
+     var minheight = Math.max(p.data('minheight'),p.height());
+     p.data('minheight',minheight);
+     p.css({minHeight: minheight});
+     next();
+   }; 
+
+  }};
+function Morpher(text_object,names){
+  var offset_cumul, morpher;
+  if(this instanceof Morpher){
+    this.sub_holder = substituter.all_substitutions(text_object,names);
+    this.morphs = $.map(this.sub_holder.subs, 
+                        function(sub,i){return [Morpher.morph_stages(sub,false)];});
+    offset_cumul = 0;
+    this.offsets = $.map(this.morphs,
+                        function(morph){ offset_cumul += morph.length-1;
+                                         return offset_cumul;} );
+    this.offsets.unshift(0);
+    this.nb_steps = this.offsets[this.offsets.length-1] +1 ;
+    //replace white spaces
+    $.each(this.morphs, function(i,morph){
+       $.each(morph,function(j,step){
+           morph[j] = step.replace(/\s+/g,'&ensp;');
+       });
+     });
+    this.last_step_nb = 0;
+    return this;
+  }else{
+    return new Morpher(text_object,names); //new even if called without new
   }
-  return result;
 
 }
+Morpher.overlap = function(below,above,chars,cover){
+   var maxlength = Math.max(below.length,above.length);
+   if(cover){
+     return  below.substring(0, Math.max(below.length-chars,0)) +
+             above.substring(0, Math.min(above.length,chars));
+   }
+   return below.substring(0, Math.min(below.length,chars)) + 
+          above.substring(0, Math.max(above.length-chars),0);
+
+ };
+Morpher.morph_stages = function(sub, cover){
+  var nb_steps, i, stages;
+  stages = [];
+  nb_steps = Math.max(sub[1].length,sub[2].length);
+  for(i=0 ; i<= nb_steps; i+=1){
+   stages.push(Morpher.overlap(sub[2],sub[1], i, cover));
+  }
+  return stages;
+
+};
+Morpher.prototype.replacements_for_step = function(step_nb){
+  var m = this;
+  return $.map(this.morphs,function(morph,i){
+               return morph[array_util.safe_index(morph.length, step_nb - m.offsets[i])];
+   });
+
+};
+Morpher.prototype.step = function(step_nb){
+  var i, replacements, text, subs;
+  text = this.sub_holder.text;
+  subs = this.sub_holder.subs;
+  replacements = this.replacements_for_step(step_nb);
+  for( i=0; i<subs.length; i+=1){
+       text = text.replace(subs[i][0],replacements[i]);
+  }
+  this.last_step_nb = step_nb;
+  return text;
+
+};
+function make_simple_detail_slide_function(down){
+    if(down){
+      return function(){$(".detail",this).slideDown();};
+    }
+    return function(){$(".detail",this).slideUp();};
+
+}
+function make_detail_slide_function(down){
+    if(down){
+      return function(){
+	var elem = $(".detail",this);
+	if(elem.queue().length<2){ elem.slideDown();}
+      };
+    }
+    return function(){
+      var elem = $(".detail", this).slideUp();
+      $("p",this).first().delay(100).animate({minHeight:0},{queue: true});
+    };
+
+}
+displayer = morph_displayer;
 string_util = {
   starts_with: function(start, a_string){
     return a_string && a_string.substring(0, start.length) === start;
@@ -262,229 +486,70 @@ string_util = {
     for(i=0;i<str.length;i+=1){ 
       result.push(string_util.split(str[i],del)); 
     }
-    result = flatten(result);
+    result = array_util.flatten(result);
   }  
   return result;
- }
+  }};
+array_util = {
+  random_index: function(array){
+    return Math.floor(Math.random() * array.length);
 
-};
-function random(max){
-  return Math.floor(Math.random() * max);
-
-}
-function flatten(array){
-  var newarr, i, j, element;
-  newarr = [];
-  for(i=0;i<array.length;i+=1){
-    element = array[i];
-    if((typeof element)!=='string' && element.length){
-      for(j=0;j<element.length;j+=1){ 
-	if(element[j]){ newarr.push(element[j]); } 
-      }
-    }else{ if(element){ newarr.push(element); } }
-  }
-  return newarr;
-
-}
-function remove_all(array,elements){
-  var index, i, element;
-  for (i=0 ; i < elements.length ; i += 1){
-   element = elements[i];
-   index = $.inArray(element,array);
-   if(index>=0) { array.splice(index,1); }
-  }
-
-}
-function safe_index(length,index){
-  return Math.min(length-1 , Math.max(0,index));
-
-}
-function display_text(text_object, substitutions){
-  var text, paragraph, p;
-  text = apply_spanned_substitutions(text_object.text, substitutions);
-  text = span_words(text);
-  paragraph = $('<div class="paragraph"><p>'+text+'</p>'+
-     '<p class="detail" style="display:none"><a href="'+text_object.url+
-     '">en savoir plus</a></p></div>');
-  p = paragraph.find('p').first();
-  p.data('text', text_object);
-  p.data('subs', substitutions);
-  $("#bio").append(paragraph);
-
-}
-function polish_display(){
-  //console.time(1);
-  $("#bio>div>p>span.r,#bio>div>p>span.o").each(function(){
-      $(this).data('original_width',$(this).width());
-  });
-  $("#bio>div>p>span.o").css({width: '0px'});
-  $(".detail").mouseenter(make_parent_hiding_function2('r','o')
-	     ).mouseleave(make_parent_hiding_function2('o','r'));
-  $(".paragraph").mouseenter(make_detail_slide_function(true)
-	        ).mouseleave(make_detail_slide_function(false));
-  //console.timeEnd(1);
-
-}
-function make_detail_slide_function0(down){
-    if(down){
-      return function(){$(".detail",this).slideDown();};
+  },
+  flatten: function(array){
+    var newarr, i, j, element;
+    newarr = [];
+    for(i=0;i<array.length;i+=1){
+      element = array[i];
+      if((typeof element)!=='string' && element.length){
+        for(j=0;j<element.length;j+=1){ 
+  	if(element[j]){ newarr.push(element[j]); } 
+        }
+      }else{ if(element){ newarr.push(element); } }
     }
-    return function(){$(".detail",this).slideUp();};
+    return newarr;
 
-}
-function make_parent_hiding_function0(tohide, toshow){
-   return function(){
-     $(this).parent().find("."+tohide).animate({width: '0px'}, 
-					  {queue: false});
-     $(this).parent().find("."+toshow).each(function(){
-        var o_width = $(this).data('original_width');
-	$(this).animate({width: o_width});
-      });
-   };
+  },
+  remove_all: function(array,elements){
+   var index, i, element;
+   for (i=0 ; i < elements.length ; i += 1){
+    element = elements[i];
+    index = $.inArray(element,array);
+    if(index>=0) { array.splice(index,1); }
+   }
 
-}
-function make_detail_slide_function(down){
-    if(down){
-      return function(){
-	var elem = $(".detail",this);
-	if(elem.queue().length<2){ elem.slideDown();}
-      };
+  },
+  safe_index: function(length,index){
+   return Math.min(length-1 , Math.max(0,index));
+
+ }};
+url_helper = {
+  get_protagonist_from_url: function(){
+    var match = new RegExp('(\\?|&)([^=]+?)($|&)').exec(location.search);
+    if(match){
+      protagonistes.unshift(unescape(match[2]));
     }
-    return function(){
-      var elem = $(".detail", this).slideUp();
-      $("p",this).first().delay(100).animate({minHeight:0},{queue: true});
-    };
 
-}
-function make_parent_hiding_function(tohide, toshow){
-   return function(){
-      var p, delayms, hide, show;
-     p = $(this).prev();
-     p.data('minheight',p.height());
-     delayms = 200;
-     hide = p.find("."+tohide).stop(true); //clear queue
-     //reverse to avoid back of text moving too fast
-     $(hide.get().reverse()).each(function(i,e){
-		$(this).delay(delayms*(i)).animate({width: '0px'});
-     });
-     show = p.find("."+toshow).stop(true); //clear queue
-     //reverse to avoid back of text moving too fast
-     $(show.get().reverse()).each(function(i,e){
-        var o_width = $(this).data('original_width');
-	$(this).delay(delayms*(i)).animate(
-             {width: o_width},
-             {step: function(){
-	       var minheight = Math.max(p.data('minheight'),p.height());
-	       p.data('minheight',minheight);
-	       p.css({minHeight: minheight});
-	      }
-	     });
-      });
-   };
+  },
+  get_indexes_from_url: function(){
+    var match, regex;
+    regex = '_escaped_fragment_=([\\d-]+)($|&)';
+    match = new RegExp(regex).exec(location.search);
+    if(match){
+      return $.map(match[1].split('-'),
+  		 function(el){return parseInt(el,10);});
+    }
+    return null;
 
-}
-//TODO animate with morpher
-function make_parent_hiding_function2(tohide, toshow){
-   return function(){
-      var p, text, subs, i, subindex;
-     p = $(this).prev();
-     text = p.data('text').text;
-     subs = p.data('subs');
-     subindex = toshow === 'r'? 1 : 2;
-     for( i=0; i<subs.length; i+=1){
-       text = text.replace(subs[i][0],subs[i][subindex]);
-     }
-     p.html(text);
-   };
-
-}
-function get_protagonist_from_url(){
-  var match = new RegExp('(\\?|&)([^=]+?)($|&)').exec(location.search);
-  if(match){
-    protagonistes.unshift(unescape(match[2]));
-  }
-
-}
-function get_indexes_from_url(){
-  var match, regex;
-  regex = '_escaped_fragment_=([\\d-]+)($|&)';
-  match = new RegExp(regex).exec(location.search);
-  if(match){
-    return $.map(match[1].split('-'),
-		 function(el){return parseInt(el,10);});
-  }
-  return null;
-
-}
-function get_indexes_from_hash(){
+  },
+  get_indexes_from_hash: function(){
     if(string_util.starts_with("#",location.hash)){
        return $.map(location.hash.substr(1).split('-'),
 		    function(el){return parseInt(el,10);});
     }
     return null;
 
-}
-function write_to_hash(indexes){
-  location.hash = "#"+indexes.join("-");
+  },
+  write_to_hash: function(indexes){
+    location.hash = "#"+indexes.join("-");
 
-}
-function reassemble_original(text_object){
-  return text_object.text.replace(/<([^:]+):[^>]+>/g, "$1");
-
-}
-function overlap(below,above,chars,cover){
-   var maxlength = Math.max(below.length,above.length);
-   if(cover){
-     return  below.substring(0, Math.max(below.length-chars,0)) +
-             above.substring(0, Math.min(above.length,chars));
-   }
-   return below.substring(0, Math.min(below.length,chars)) + 
-          above.substring(0, Math.max(above.length-chars),0);
-
- }
-function Morpher(text_object,names){
-  var offset_cumul, morpher;
-  if(this instanceof Morpher){
-    this.text_object = text_object;
-    this.subs = all_substitutions(text_object,names);
-    morpher = this;
-    this.morphs = $.map(this.subs, 
-                        function(sub,i){return [morpher.morph_stages(sub,true)];});
-    offset_cumul = 0;
-    this.offsets = $.map(this.morphs,
-                        function(morph){ offset_cumul += morph.length-1;
-                                         return offset_cumul;} );
-    this.offsets.unshift(0);
-    this.nb_steps = this.offsets[this.offsets.length-1] +1 ;
-  }else{
-    return new Morpher(text_object,names); //create an instance without new
-  }
-
-}
-Morpher.prototype.morph_stages = function(sub, cover){
-  var nb_steps, i, stages;
-  stages = [];
-  nb_steps = Math.max(sub[1].length,sub[2].length);
-  for(i=0 ; i<= nb_steps; i+=1){
-   stages.push(overlap(sub[2],sub[1], i, cover));
-  }
-  return stages;
-
-};
-Morpher.prototype.replacements_for_step = function(step_nb){
-  var m = this;
-  return $.map(this.morphs,function(morph,i){
-               return morph[safe_index(morph.length, step_nb - m.offsets[i])];
-   });
-
-};
-Morpher.prototype.step = function(step_nb){
-  var i, replacements, text;
-  text = this.text_object.text;
-  replacements = this.replacements_for_step(step_nb);
-  for( i=0; i<this.subs.length; i+=1){
-       text = text.replace(this.subs[i][0],replacements[i]);
-  }
-  return text;
-
-};
+  }};

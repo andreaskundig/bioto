@@ -14,12 +14,12 @@
  <script type="text/javascript" >
  var deja_utilise = [];
  $(window).load(function(){
-   get_protagonist_from_url();
+   url_helper.get_protagonist_from_url();
    $("#titre").append('<h1>'+ protagonistes[0] +'</h1>');
    $("#fin").append('<a onclick="deja_utilise = bio(deja_utilise)">'
                        + 'mais encore</a>');
    //console.profile();
-   bio([], get_indexes_from_hash() );
+   bio([], url_helper.get_indexes_from_hash() );
    //console.profileEnd();
  });
  </script>
