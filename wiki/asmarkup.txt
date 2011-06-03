@@ -424,7 +424,7 @@ clefs: carriere
 http://fr.wikipedia.org/wiki/H%C3%A9l%C3%A8ne_(mythologie)
 ----
 
-En 1518, de retour de l’un de ses voyages, le navire sur lequel <il:pronom_masculin> se trouve est attaqué et <il:pronom_masculin> est fait prisonnier par des « marins siciliens ». <Il:pronom_masculin> est en fait capturé par des chevaliers de l’Ordre de Saint-Jean. Ces derniers, impressionnés par son savoir et sa culture, l’offrent en présent au pape Léon X, qui l’adopte comme fils, le fait catéchiser puis baptiser sous ses propres noms, <Jean Léon:prenom_masculin>. 
+En 1518, de retour de l’un de ses voyages, le navire sur lequel <il:pronom_masculin> se trouve est attaqué et il est fait prisonnier par des « marins siciliens ». Il est en fait capturé par des chevaliers de l’Ordre de Saint-Jean. Ces derniers, impressionnés par son savoir et sa culture, l’offrent en présent au pape Léon X, qui l’adopte comme fils, le fait catéchiser puis baptiser sous ses propres noms, <Jean Léon:prenom_masculin>. 
 clefs: debuts
 
 Sur demande du pape, <il:pronom_masculin> écrit sa fameuse Cosmographia de Affrica, publiée à Venise sous le titre Description de l'Afrique. Cet ouvrage de référence, qui évite soigneusement de donner des informations à caractère militaire, est la seule source de renseignement sur la vie, les mœurs, les us et coutumes dans l'Afrique du XVIe siècle. C’est en particulier grâce à ce livre que Tombouctou deviendra une ville mythique dans l’imaginaire européen; il sera l’inspirateur de <René Caillé:nom_masculin_2> parti à sa découverte. Il sera la Bible de tous les diplomates et explorateurs intéressés par l’Afrique.
@@ -442,7 +442,7 @@ http://fr.wikipedia.org/wiki/Bioman
 <Bernard Minet:nom_masculin> commence sa carrière en 1969 sur les scènes des bals de sa région. Il arrive à Paris dès l'année suivante, où il intègre différents groupes. Il se retrouve ainsi à animer les soirées du dancing « Mimi Pinson », sur les Champs-Élysées, en 1974. Cette année-là, il reçoit également le premier prix de percussion au Conservatoire national.
 clefs: debuts
 
-Par la suite, sa carrière de <chanteur:litt:dessinateur> est officiellement lancée et <il:pronom_masculin> est crédité sur ses disques en solo suivants. L'essentiel de sa production est d'abord constituée de génériques de dessins animés diffusés dans le Club Dorothée pour la plupart : Juliette, je t'aime, Jeu, set et match, Les attaquantes, Giraya, Le collège fou, fou, fou, etc. <Il:pronom_masculin> connaît ses principaux succès avec Bioman (n° 8 au Top 50 en 1988), Dis-moi Bioman (n°11 au TOP 50 en 1989) puis Les Chevaliers du Zodiaque (1990).
+Par la suite, sa carrière de <chanteur:litt:dessinateur> est officiellement lancée et <il:pronom_masculin> est crédité sur ses disques en solo suivants. L'essentiel de sa production est d'abord constituée de génériques de dessins animés diffusés dans le Club Dorothée pour la plupart : Juliette, je t'aime, Jeu, set et match, Les attaquantes, Giraya, Le collège fou, fou, fou, etc. Il connaît ses principaux succès avec Bioman (n° 8 au Top 50 en 1988), Dis-moi Bioman (n°11 au TOP 50 en 1989) puis Les Chevaliers du Zodiaque (1990).
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Bernard_Minet
@@ -588,7 +588,7 @@ clefs: pouvoirs
 http://fr.wikipedia.org/wiki/Red_Hulk
 ------
 
-En période de stress ou d'énervement sa force augmente : elle n'a alors plus de limites connues et <il:pronom_masculin> peut faire des bonds jusqu'à 5 kilomètres. <Il:pronom_masculin> est alors inépuisable, la hargne <le:pronom_masculin> rendant plus fort là où ses ennemis s'affaiblissent. <Il:pronom_masculin> n'y a jamais eu de limite à sa force. <Il:pronom_masculin> peut soulever des montagnes, provoquer des tremblements de terre en frappant sur le sol ou provoquer des ondes de choc très puissantes en claquant des mains (ce genre d'exploits le place à un niveau comparable à Superman, à qui on n'a jamais défini de limites précises à ses pouvoirs).
+En période de stress ou d'énervement sa force augmente : elle n'a alors plus de limites connues et <il:pronom_masculin> peut faire des bonds jusqu'à 5 kilomètres. Il est alors inépuisable, la hargne le rendant plus fort là où ses ennemis s'affaiblissent. Il n'y a jamais eu de limite à sa force. Il peut soulever des montagnes, provoquer des tremblements de terre en frappant sur le sol ou provoquer des ondes de choc très puissantes en claquant des mains (ce genre d'exploits le place à un niveau comparable à Superman, à qui on n'a jamais défini de limites précises à ses pouvoirs).
 clefs: pouvoirs 
 
 Dans World War <Hulk:nom_masculin>, Spider-Man qualifie <Hulk:nom_masculin> d'humain le plus puissant de la galaxie (avec une définition très large de l'humain) après Sentry, ajoutant qu'il a révisé son classement après la victoire d'<Hulk:nom_masculin> sur Flèche Noire. Il semble que même ce classement était trop défavorable à <Hulk:nom_masculin>, car finalement Sentry et <Hulk:nom_masculin> se neutralisent mutuellement. <Hulk:nom_masculin> s'est souvent battu avec la Chose (Groupe des 4 Fantastiques) qui a un avantage moral et physique sur lui, car Hulk est solitaire et toujours poursuivi par la violence et l'incompréhension

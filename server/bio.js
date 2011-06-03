@@ -6,7 +6,7 @@
 var displayer, span_displayer, morph_displayer, keys, show_all,
   male_or_female_keys, pick_indexes, make_detail_slide_function,
   make_simple_detail_slide_function, text_indexes_for_topics, 
-  string_util, array_util, url_helper,  Morpher,substituter;
+  string_util, array_util, url_helper,  Morpher,substituter, substituter1, substituter2;
 
 var ordre = [
   ["nom","presentation", "vie",  "introduction"],
@@ -155,9 +155,9 @@ substituter = {
       substitution_holder.text = text.replace(this.make_placeholder_regex(placeholder),original);
       return substitution_holder;
     }
-    orig_paren = original.replace("(","\\(").replace(")","\\)");
+    orig_paren = original.replace("(","\\(").replace(")","\\)").replace("|"," \\|");
     if (string_util.starts_with_vowel(replacement)){
-      re1 =  new RegExp("\\b(d|qu|l)(e\\s+|a\\s+)<"+orig_paren+":(?:pre)?nom[^>]*>","gi");
+      re1 =  new RegExp("\\b(d|qu|l)(u\\s+|e\\s+|a\\s+)<"+orig_paren+":(?:pre)?nom[^>]*>","gi");
       text = text.replace(re1, this.subs_function(subs,"'",replacement,original));
     }else{
       re1 = new RegExp("\\b(l)('\\s*)<"+orig_paren+":(?:pre)?nom_feminin[^>]*>","gi");
@@ -204,12 +204,180 @@ substituter = {
     return new RegExp(exp,"g");
 
   }};
+substituter2 = {
+  all_substitutions: function(text_object, names) {
+    var ph_to_name, placeholder, replacing_name, i, sub, subs_holder;
+    subs_holder = {text: text_object.text, subs:[]};
+    ph_to_name = this.map_placeholders(text_object.placeholders, names);
+    for (i=0 ; i<text_object.placeholders.length ; i += 1){
+      placeholder  = text_object.placeholders[i];
+      replacing_name = ph_to_name[placeholder[3]];
+      subs_holder.subs.push(this.make_sub(placeholder, replacing_name));
+    }
+    return subs_holder;
+
+  },
+  map_placeholders: function(placeholders,names){
+   var map, name_index, remaining_names, phname, ph, 
+       match, i;
+   map = {};
+   name_index = 1;
+   remaining_names = [];
+   for (i = 0; i < placeholders.length ; i += 1) {
+     ph = placeholders[i];
+     phname = ph[3];
+     if(map[phname]){ //on l'a deja
+     }else if(string_util.starts_with("pronom", phname)){
+       map[phname] = ph[2]; //on remplace pas les pronoms...
+     }else if(string_util.starts_with("litt:",phname)){
+       map[phname] = phname.substring(5);
+     }else if(phname === "livre_ext"){
+       map[phname] = livres[array_util.random_index(livres)];
+     }else{
+       match = /^(pre)?nom_[a-zA-Z]+(_1)?$/.exec(phname);
+       if (match){
+ 	map[phname] = names[0];
+       }else{
+         if(remaining_names.length ===0){ 
+           remaining_names = names.slice(1); }
+         name_index = array_util.random_index(remaining_names);
+         map[phname] = remaining_names.splice(name_index, 1)[0];
+       }
+     }
+   }
+   return map;
+
+  },
+  make_sub: function(ph, replacement){
+    //ph ["#0#", ["l'","la "],"Loana", "nom_feminin_1"]
+    //replacement "Oignon"
+    return [ph[0], this.add_article(ph[1],replacement), this.add_article(ph[1],ph[2])];
+
+  },
+  add_article: function(articles, name){
+    var i, article = '';
+    if(articles){
+      i = string_util.starts_with_vowel(name)? 0:1;
+      article = articles[i];
+    }
+    return article+name;
+
+  }
+};
+substituter1 = {
+  all_substitutions: function(text_object, names) {
+    var ph_to_name, placeholder, replacing_name, i, subs, subs_holder;
+    subs_holder = {text: text_object.text, subs:[]};
+    ph_to_name = this.map_placeholders(text_object.placeholders, names);
+    for (i=0 ; i<text_object.placeholders.length ; i += 1){
+      placeholder  = text_object.placeholders[i];
+      replacing_name = ph_to_name[placeholder[2]];
+      this.all_substitutions_for_placeholder(subs_holder, placeholder, replacing_name);
+    }
+    return subs_holder;
+
+  },
+  map_placeholders: function(placeholders,names){
+   var map, name_index, remaining_names, phname, ph, 
+       match, i;
+   map = {};
+   name_index = 1;
+   remaining_names = [];
+   for (i = 0; i < placeholders.length ; i += 1) {
+     ph = placeholders[i];
+     phname = ph[2];
+     if(map[phname]){ //on l'a deja
+     }else if(string_util.starts_with("pronom", phname)){
+       map[phname] = ph[1]; //on remplace pas les pronoms...
+     }else if(string_util.starts_with("litt:",phname)){
+       map[phname] = phname.substring(5);
+     }else if(phname === "livre_ext"){
+       map[phname] = livres[array_util.random_index(livres)];
+     }else{
+       match = /^(pre)?nom_[a-zA-Z]+(_1)?$/.exec(phname);
+       if (match){
+ 	map[phname] = names[0];
+       }else{
+         if(remaining_names.length ===0){ 
+           remaining_names = names.slice(1); }
+         name_index = array_util.random_index(remaining_names);
+         map[phname] = remaining_names.splice(name_index, 1)[0];
+       }
+     }
+   }
+   return map;
+
+  },
+  all_substitutions_for_placeholder: function(substitution_holder, placeholder, replacement){
+    //returns {text:..., subs: [regex, replacement, original]
+   /* original commence par voyelle
+        du de da quu que qua lu le la -> d' qu' l'
+      sinon
+        original féminin
+          l' -> la
+        original masculin
+          l' -> le
+        pour tous
+          d' qu' -> que
+      !! aucune de ces formes ne doit etre marquee comme unisexe */
+    var re1,re2,re3, orig_paren, original, subs, text;
+    text = substitution_holder.text;
+    subs = substitution_holder.subs;
+    original = placeholder[1];
+    if(original === replacement){
+      substitution_holder.text = text.replace(this.make_placeholder_regex(placeholder),original);
+      return substitution_holder;
+    }
+    orig_paren = original.replace("(","\\(").replace(")","\\)").replace("|"," \\|");
+    if (string_util.starts_with_vowel(replacement)){
+      if(placeholder[2].match(/nom/)){
+        re1 =  new RegExp("\\b(d|qu|l)(u\\s+|e\\s+|a\\s+)("+placeholder[0]+")","gi");
+        text = text.replace(re1, this.subs_function(subs,"'",replacement,original));
+      }
+    }else{//no vowel
+      if(placeholder[2].match(/nom_feminin/)){
+        re1 =  new RegExp("\\b(l)('\\s*)("+placeholder[0]+")","gi");
+        text = text.replace(re1, this.subs_function(subs,"a ",replacement,original));
+      }else if(placeholder[2].match(/nom_masculin/)){
+        re2 = new RegExp("\\b(l)('\\s*)("+placeholder[0]+")","gi");
+        text = text.replace(re2, this.subs_function(subs,"e ",replacement,original));
+      }
+      if(placeholder[2].match(/nom/)){
+        re3 = new RegExp("\\b(d|qu)('\\s*)("+placeholder[0]+")","gi");
+        text = text.replace(re3, this.subs_function(subs,"e ",replacement,original));
+      }
+    }
+    re1 = this.make_placeholder_regex(placeholder);
+    text = text.replace(re1, this.subs_function(subs,"",replacement,original));
+    substitution_holder.text = text;
+    substitution_holder.subs = subs;
+    return substitution_holder;
+
+  },
+  subs_function : function(subs, apo_replacement, replacement, original){
+     return function(str,p1,p2,p3,offset,the_whole_string){
+       var replacement_number = arguments.length > 5 ? p3 : str;
+       replacement_number = replacement_number.replace(/#/g,'~');
+       p1 = arguments.length > 3 ? p1 : "";
+       p2 = arguments.length > 4 ? p2 : "";
+       subs.push([replacement_number, p1+apo_replacement+replacement, p1+p2+original]);
+       return replacement_number;
+     };
+
+  },
+  make_placeholder_regex: function(placeholder) {
+    var exp = placeholder[0] ;
+    exp = exp.replace(/\(/,'\\(').replace(/\)/,'\\)');
+    return new RegExp(exp,"g");
+
+  }};
 span_displayer = {
   display_text: function(text_object, names){
     var text, paragraph, p, substitutions;
-    substitutions = substituter.all_substitutions(text_object, protagonistes);
+    substitutions = substituter1.all_substitutions(text_object, protagonistes);
     text = this.apply_spanned_substitutions(substitutions.text, substitutions.subs);
     text = this.span_words(text);
+    text = text.replace(/\|/g,''); //no point in using &shy; inside spans
     paragraph = $('<div class="paragraph"><p>'+text+'</p>'+
        '<p class="detail" style="display:none"><a href="'+text_object.url+
        '">en savoir plus</a></p></div>');
@@ -308,11 +476,9 @@ span_displayer = {
     return result;
 
   }};
-//TODO: du dahu
 morph_displayer = {
   display_text: function(text_object, names){
-    var text, paragraph, p, sub_holder, morpher;
-    sub_holder = substituter.all_substitutions(text_object, protagonistes);
+    var text, paragraph, p, morpher;
     morpher = new Morpher(text_object,names);
     text = morpher.step(0);
     paragraph = $('<div class="paragraph"><p>'+text+'</p>'+
@@ -348,7 +514,7 @@ morph_displayer = {
      steps = this_displayer.make_steps(show_original, morpher.last_step_nb, morpher.nb_steps);
      $.each(steps,function(i,step){
         p.queue(qname, this_displayer.make_step_display_function(step, p, morpher));
-        p.delay(25, qname);
+        p.delay(50, qname);
      });
      p.dequeue(qname);
    };
@@ -378,7 +544,7 @@ morph_displayer = {
 function Morpher(text_object,names){
   var offset_cumul, morpher;
   if(this instanceof Morpher){
-    this.sub_holder = substituter.all_substitutions(text_object,names);
+    this.sub_holder = substituter2.all_substitutions(text_object,names);
     this.morphs = $.map(this.sub_holder.subs, 
                         function(sub,i){return [Morpher.morph_stages(sub,false)];});
     offset_cumul = 0;
@@ -436,7 +602,7 @@ Morpher.prototype.step = function(step_nb){
        text = text.replace(subs[i][0],replacements[i]);
   }
   this.last_step_nb = step_nb;
-  return text;
+  return text.replace(/\|/g,'&shy;');
 
 };
 function make_simple_detail_slide_function(down){
