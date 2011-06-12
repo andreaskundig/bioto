@@ -6,7 +6,7 @@
 var displayer, span_displayer, morph_displayer, keys, show_all,
   male_or_female_keys, pick_indexes, make_detail_slide_function,
   make_simple_detail_slide_function, text_indexes_for_topics, 
-  string_util, array_util, url_helper,  Morpher,substituter, substituter2;
+  string_util, array_util, url_helper,  Morpher, substituter;
 
 var ordre = [
   ["nom","presentation", "vie",  "introduction"],
@@ -102,110 +102,6 @@ function male_or_female_keys(){
 }
 substituter = {
   all_substitutions: function(text_object, names) {
-    var ph_to_name, placeholder, replacing_name, i, subs, subs_holder;
-    subs_holder = {text: text_object.text, subs:[]};
-    ph_to_name = this.map_placeholders(text_object.placeholders, names);
-    for (i=0 ; i<text_object.placeholders.length ; i += 1){
-      placeholder  = text_object.placeholders[i];
-      replacing_name = ph_to_name[placeholder[1]];
-      this.all_substitutions_for_placeholder(subs_holder, placeholder, replacing_name);
-    }
-    subs_holder.subs.sort(function(a,b){return a[3]>b[3];});
-    return subs_holder;
-
-  },
-  map_placeholders: function(placeholders,names){
-   var map, name_index, remaining_names, phname, ph, 
-       match, i;
-   map = {};
-   name_index = 1;
-   remaining_names = [];
-   for (i = 0; i < placeholders.length ; i += 1) {
-     ph = placeholders[i];
-     phname = ph[1];
-     if(map[phname]){ //on l'a deja
-     }else if(string_util.starts_with("pronom", phname)){
-       map[phname] = ph[0]; //on remplace pas les pronoms...
-     }else if(string_util.starts_with("litt:",phname)){
-       map[phname] = phname.substring(5);
-     }else if(phname === "livre_ext"){
-       map[phname] = livres[array_util.random_index(livres)];
-     }else{
-       match = /^(pre)?nom_[a-zA-Z]+(_1)?$/.exec(phname);
-       if (match){
- 	map[phname] = names[0];
-       }else{
-         if(remaining_names.length ===0){ 
-           remaining_names = names.slice(1); }
-         name_index = array_util.random_index(remaining_names);
-         map[phname] = remaining_names.splice(name_index, 1)[0];
-       }
-     }
-   }
-   return map;
-
-  },
-  all_substitutions_for_placeholder: function(substitution_holder, placeholder, replacement){
-    //returns {text:..., subs: [regex, replacement, original, offset]
-    var re1,re2,re3, orig_paren, original, subs, text;
-    text = substitution_holder.text;
-    subs = substitution_holder.subs;
-    original = placeholder[0];
-    if(original === replacement){
-      substitution_holder.text = text.replace(this.make_placeholder_regex(placeholder),original);
-      return substitution_holder;
-    }
-    orig_paren = original.replace("(","\\(").replace(")","\\)").replace("|"," \\|");
-    if (string_util.starts_with_vowel(replacement)){
-      re1 =  new RegExp("\\b(d|qu|l)(u\\s+|e\\s+|a\\s+)<"+orig_paren+":(?:pre)?nom[^>]*>","gi");
-      text = text.replace(re1, this.subs_function(subs,"'",replacement,original));
-    }else{
-      re1 = new RegExp("\\b(l)('\\s*)<"+orig_paren+":(?:pre)?nom_feminin[^>]*>","gi");
-      text = text.replace(re1, this.subs_function(subs,"a ",replacement,original));
-      re2 = new RegExp("\\b(l)('\\s*)<"+orig_paren+":(':pre)?nom_masculin[^>]*>","gi");
-      text = text.replace(re2, this.subs_function(subs,"e ",replacement,original));
-      re3 = new RegExp("\\b(d|qu)('\\s*)(<"+orig_paren+":(?:pre)?nom[^>]*>)","gi");
-      text = text.replace(re3, this.subs_function(subs,"e ",replacement,original));
-    }
-    re1 = this.make_placeholder_regex(placeholder);
-    text = text.replace(re1, this.subs_function(subs,"",replacement,original));
-    substitution_holder.text = text;
-    substitution_holder.subs = subs;
-    return substitution_holder;
-
-  },
-  subs_function : function(subs, apo_replacement, replacement, original){
-     var pad_number = this.pad_number;
-     return function(str){
-       var replacement_number,p1,p2,offset,s;
-       //args
-       p1 = arguments.length > 3 ? arguments[1] : "";
-       p2 = arguments.length > 4 ? arguments[2] : "";
-       offset = arguments[arguments.length - 2];
-       s = arguments[arguments.length - 1];
-       //create the substitution array
-       replacement_number = pad_number(subs.length, str.length);
-       subs.push([replacement_number, p1+apo_replacement+replacement, p1+p2+original, offset]);
-       return replacement_number;
-     };
-
-  },
-  pad_number :  function(number, length){
-     var string = '#'+number;
-     while(string.length<length){
-       string = '#'+string;
-     }
-     return string;
-
-  },
-  make_placeholder_regex: function(placeholder) {
-    var exp = '<' + placeholder.join(':') + '>';
-    exp = exp.replace(/\(/,'\\(').replace(/\)/,'\\)');
-    return new RegExp(exp,"g");
-
-  }};
-substituter2 = {
-  all_substitutions: function(text_object, names) {
     var ph_to_name, placeholder, replacing_name, i, sub, subs_holder;
     subs_holder = {text: text_object.text, subs:[]};
     ph_to_name = this.map_placeholders(text_object.placeholders, names);
@@ -227,8 +123,6 @@ substituter2 = {
      ph = placeholders[i];
      phname = ph[3];
      if(map[phname]){ //on l'a deja
-     }else if(string_util.starts_with("pronom", phname)){
-       map[phname] = ph[2]; //on remplace pas les pronoms...
      }else if(string_util.starts_with("litt:",phname)){
        map[phname] = phname.substring(5);
      }else if(phname === "livre_ext"){
@@ -269,7 +163,7 @@ substituter2 = {
 span_displayer = {
   display_text: function(text_object, names){
     var text, paragraph, p, substitutions;
-    substitutions = substituter2.all_substitutions(text_object, protagonistes);
+    substitutions = substituter.all_substitutions(text_object, protagonistes);
     text = this.apply_spanned_substitutions(substitutions.text, substitutions.subs);
     text = this.span_words(text);
     text = text.replace(/\|/g,''); //no point in using &shy; inside spans
@@ -445,7 +339,7 @@ morph_displayer = {
 function Morpher(text_object,names){
   var offset_cumul, morpher;
   if(this instanceof Morpher){
-    this.sub_holder = substituter2.all_substitutions(text_object,names);
+    this.sub_holder = substituter.all_substitutions(text_object,names);
     this.morphs = $.map(this.sub_holder.subs, 
                         function(sub,i){return [Morpher.morph_stages(sub,false)];});
     offset_cumul = 0;
@@ -527,7 +421,6 @@ function make_detail_slide_function(down){
 
 }
 displayer = morph_displayer;
-displayer = span_displayer;
 string_util = {
   starts_with: function(start, a_string){
     return a_string && a_string.substring(0, start.length) === start;
