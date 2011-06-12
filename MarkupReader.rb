@@ -44,8 +44,4 @@ def read_url(elements)
   nil
 end
 
-def display_text(t)
-  "\n#{t[:text]}\n#{t[:placeholders]}\nclefs:#{t[:keys].join ' '}"
-end
-
 

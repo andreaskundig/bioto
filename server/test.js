@@ -150,26 +150,8 @@ function animate(morpher){
   };
 
 }
-function say_aaa(length){
-  var string = 'a';
-  while(string.length<length){
-    string += 'a';
-  }
-  return string;
 
-}
-function make_sub(ph, replacement){
-  return [ph[0], add_article(ph[1],replacement), add_article(ph[1],ph[2])];
-}
-function add_article(articles, name){
-  var i, article = '';
-  if(articles){
-    i = string_util.starts_with_vowel(name)? 0:1;
-    article = articles[i];
-  }
-  return article+name;
-}
-test("playground", function(){
+test("make_sub", function(){
     var text, ph, replacement, sub;
     text = {text: "En 2001, #0# vient chez #1#.",
 	    placeholders:[["#0#", ["l'","la "],"Loana", "nom_feminin_1"],
@@ -177,12 +159,12 @@ test("playground", function(){
 
     ph = text.placeholders[0];
     replacement = "Oignon";
-    equal(add_article(ph[1],replacement),"l'Oignon");
+    equal(substituter2.add_article(ph[1],replacement),"l'Oignon");
 
-    deepEqual(make_sub(ph,replacement),["#0#","l'Oignon","la Loana"]);
+    deepEqual(substituter2.make_sub(ph,replacement),["#0#","l'Oignon","la Loana"]);
     ph = text.placeholders[1];
     replacement = "Asphalte";
-    deepEqual(make_sub(ph,replacement),["#1#","Asphalte","Fred"]);
+    deepEqual(substituter2.make_sub(ph,replacement),["#1#","Asphalte","Fred"]);
 
 });
 test("morpher", function(){

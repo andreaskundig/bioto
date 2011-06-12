@@ -6,7 +6,7 @@
 var displayer, span_displayer, morph_displayer, keys, show_all,
   male_or_female_keys, pick_indexes, make_detail_slide_function,
   make_simple_detail_slide_function, text_indexes_for_topics, 
-  string_util, array_util, url_helper,  Morpher,substituter, substituter1, substituter2;
+  string_util, array_util, url_helper,  Morpher,substituter, substituter2;
 
 var ordre = [
   ["nom","presentation", "vie",  "introduction"],
@@ -249,8 +249,10 @@ substituter2 = {
 
   },
   make_sub: function(ph, replacement){
-    //ph ["#0#", ["l'","la "],"Loana", "nom_feminin_1"]
-    //replacement "Oignon"
+    //args
+    // ph ["#0#", ["l'","la "],"Loana", "nom_feminin_1"]
+    // replacement "Oignon"
+    //return ["#0#","l'Oignon","la Loana"]
     return [ph[0], this.add_article(ph[1],replacement), this.add_article(ph[1],ph[2])];
 
   },
@@ -264,117 +266,10 @@ substituter2 = {
 
   }
 };
-substituter1 = {
-  all_substitutions: function(text_object, names) {
-    var ph_to_name, placeholder, replacing_name, i, subs, subs_holder;
-    subs_holder = {text: text_object.text, subs:[]};
-    ph_to_name = this.map_placeholders(text_object.placeholders, names);
-    for (i=0 ; i<text_object.placeholders.length ; i += 1){
-      placeholder  = text_object.placeholders[i];
-      replacing_name = ph_to_name[placeholder[2]];
-      this.all_substitutions_for_placeholder(subs_holder, placeholder, replacing_name);
-    }
-    return subs_holder;
-
-  },
-  map_placeholders: function(placeholders,names){
-   var map, name_index, remaining_names, phname, ph, 
-       match, i;
-   map = {};
-   name_index = 1;
-   remaining_names = [];
-   for (i = 0; i < placeholders.length ; i += 1) {
-     ph = placeholders[i];
-     phname = ph[2];
-     if(map[phname]){ //on l'a deja
-     }else if(string_util.starts_with("pronom", phname)){
-       map[phname] = ph[1]; //on remplace pas les pronoms...
-     }else if(string_util.starts_with("litt:",phname)){
-       map[phname] = phname.substring(5);
-     }else if(phname === "livre_ext"){
-       map[phname] = livres[array_util.random_index(livres)];
-     }else{
-       match = /^(pre)?nom_[a-zA-Z]+(_1)?$/.exec(phname);
-       if (match){
- 	map[phname] = names[0];
-       }else{
-         if(remaining_names.length ===0){ 
-           remaining_names = names.slice(1); }
-         name_index = array_util.random_index(remaining_names);
-         map[phname] = remaining_names.splice(name_index, 1)[0];
-       }
-     }
-   }
-   return map;
-
-  },
-  all_substitutions_for_placeholder: function(substitution_holder, placeholder, replacement){
-    //returns {text:..., subs: [regex, replacement, original]
-   /* original commence par voyelle
-        du de da quu que qua lu le la -> d' qu' l'
-      sinon
-        original féminin
-          l' -> la
-        original masculin
-          l' -> le
-        pour tous
-          d' qu' -> que
-      !! aucune de ces formes ne doit etre marquee comme unisexe */
-    var re1,re2,re3, orig_paren, original, subs, text;
-    text = substitution_holder.text;
-    subs = substitution_holder.subs;
-    original = placeholder[1];
-    if(original === replacement){
-      substitution_holder.text = text.replace(this.make_placeholder_regex(placeholder),original);
-      return substitution_holder;
-    }
-    orig_paren = original.replace("(","\\(").replace(")","\\)").replace("|"," \\|");
-    if (string_util.starts_with_vowel(replacement)){
-      if(placeholder[2].match(/nom/)){
-        re1 =  new RegExp("\\b(d|qu|l)(u\\s+|e\\s+|a\\s+)("+placeholder[0]+")","gi");
-        text = text.replace(re1, this.subs_function(subs,"'",replacement,original));
-      }
-    }else{//no vowel
-      if(placeholder[2].match(/nom_feminin/)){
-        re1 =  new RegExp("\\b(l)('\\s*)("+placeholder[0]+")","gi");
-        text = text.replace(re1, this.subs_function(subs,"a ",replacement,original));
-      }else if(placeholder[2].match(/nom_masculin/)){
-        re2 = new RegExp("\\b(l)('\\s*)("+placeholder[0]+")","gi");
-        text = text.replace(re2, this.subs_function(subs,"e ",replacement,original));
-      }
-      if(placeholder[2].match(/nom/)){
-        re3 = new RegExp("\\b(d|qu)('\\s*)("+placeholder[0]+")","gi");
-        text = text.replace(re3, this.subs_function(subs,"e ",replacement,original));
-      }
-    }
-    re1 = this.make_placeholder_regex(placeholder);
-    text = text.replace(re1, this.subs_function(subs,"",replacement,original));
-    substitution_holder.text = text;
-    substitution_holder.subs = subs;
-    return substitution_holder;
-
-  },
-  subs_function : function(subs, apo_replacement, replacement, original){
-     return function(str,p1,p2,p3,offset,the_whole_string){
-       var replacement_number = arguments.length > 5 ? p3 : str;
-       replacement_number = replacement_number.replace(/#/g,'~');
-       p1 = arguments.length > 3 ? p1 : "";
-       p2 = arguments.length > 4 ? p2 : "";
-       subs.push([replacement_number, p1+apo_replacement+replacement, p1+p2+original]);
-       return replacement_number;
-     };
-
-  },
-  make_placeholder_regex: function(placeholder) {
-    var exp = placeholder[0] ;
-    exp = exp.replace(/\(/,'\\(').replace(/\)/,'\\)');
-    return new RegExp(exp,"g");
-
-  }};
 span_displayer = {
   display_text: function(text_object, names){
     var text, paragraph, p, substitutions;
-    substitutions = substituter1.all_substitutions(text_object, protagonistes);
+    substitutions = substituter2.all_substitutions(text_object, protagonistes);
     text = this.apply_spanned_substitutions(substitutions.text, substitutions.subs);
     text = this.span_words(text);
     text = text.replace(/\|/g,''); //no point in using &shy; inside spans
@@ -541,6 +436,12 @@ morph_displayer = {
    }; 
 
   }};
+//TODO handle texts like '#0# says #1# and #0# so there' to substitute also the second #0#
+//     transform text to '#0-1# says #1# and #0-2# so there'
+//     array of [#0-1#,#1#,#0-2#] (new_ph ?) map it to subs somehow (new_subs ?)
+//     use it to calculate offsets
+//     change replacements_for_step to use new_ph 
+//     and step to use new_subs
 function Morpher(text_object,names){
   var offset_cumul, morpher;
   if(this instanceof Morpher){
@@ -626,6 +527,7 @@ function make_detail_slide_function(down){
 
 }
 displayer = morph_displayer;
+displayer = span_displayer;
 string_util = {
   starts_with: function(start, a_string){
     return a_string && a_string.substring(0, start.length) === start;
