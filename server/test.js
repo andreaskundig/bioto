@@ -7,75 +7,6 @@ var text = {text: "En 2001, <elle:pronom_feminin> vient avec <Christophe:nom_mas
 
 test("build_paragraph",function() {
     var text,subs,sub_holder,replaced;
-/*   
-    text = {text: "En 2001, <Loana:nom_feminin_1> vient.",
-	    placeholders:[["Loana", "nom_feminin_1"]] };
-    sub_holder = substituter.all_substitutions(text,["aaa","bb"]);
-    equal(sub_holder.text,'En 2001, ####################0 vient.');
-    equal(sub_holder.subs.length,1);
-    equal(sub_holder.subs[0][0],'####################0');
-    equal(sub_holder.subs[0][1],'aaa');
-    equal(sub_holder.subs[0][2],'Loana');
-    replaced = span_displayer.apply_spanned_substitutions(sub_holder.text, sub_holder.subs);
-    equal(replaced,"En 2001, <span class=\"r\" style=\"display:inline-block;\">aaa</span><span class=\"o\" style=\"display:inline-block;\">Loana</span> vient.");
-*/
-    text = {text: "En 2001, #0# vient.",
-	    placeholders:[["#0#", null,"Loana", "nom_feminin_1"]] };
-    sub_holder = substituter.all_substitutions(text,["aaa","bb"]);
-    equal(sub_holder.text,'En 2001, #0# vient.');
-    equal(sub_holder.subs.length,1);
-    equal(sub_holder.subs[0][0],'#0#');
-    equal(sub_holder.subs[0][1],'aaa');
-    equal(sub_holder.subs[0][2],'Loana');
-    replaced = span_displayer.apply_spanned_substitutions(sub_holder.text, sub_holder.subs);
-    equal(replaced,"En 2001, <span class=\"r\" style=\"display:inline-block;\">aaa</span><span class=\"o\" style=\"display:inline-block;\">Loana</span> vient.");
-/*
-    text = {text: "En 2001, <Loana:nom_feminin_1> vient chez <Bozo:nom_masculin_2>.",
-	    placeholders:[["Loana", "nom_feminin_1"],["Bozo","nom_masculin_2"]] };
-    sub_holder = substituter.all_substitutions(text,["aaa","bb"]);
-    equal(sub_holder.text,'En 2001, ####################0 vient chez ####################1.');
-    equal(sub_holder.subs.length,2);
-    equal(sub_holder.subs[0][0],'####################0');
-    equal(sub_holder.subs[0][1],'aaa');
-    equal(sub_holder.subs[0][2],'Loana');
-    equal(sub_holder.subs[1][0],'####################1');
-    equal(sub_holder.subs[1][1],'bb');
-    equal(sub_holder.subs[1][2],'Bozo');
-   */
-    text = {text: "En 2001, #0# vient chez #1#.",
-	    placeholders:[["#0#", null, "Loana", "nom_feminin_1"],
-                          ["#1#", null, "Bozo", "nom_masculin_2"]] };
-    sub_holder = substituter.all_substitutions(text,["aaa","bb"]);
-    equal(sub_holder.text,'En 2001, #0# vient chez #1#.');
-    equal(sub_holder.subs.length,2);
-    equal(sub_holder.subs[0][0],'#0#');
-    equal(sub_holder.subs[0][1],'aaa');
-    equal(sub_holder.subs[0][2],'Loana');
-    equal(sub_holder.subs[1][0],'#1#');
-    equal(sub_holder.subs[1][1],'bb');
-    equal(sub_holder.subs[1][2],'Bozo');
-   /*
-    text = {text: "En 2001, <Loana:nom_feminin_1> radote. La <star:litt:dessinatrice> vient chez <Bozo:nom_masculin_2>. <Il:pronom_masculin> dort.",
-	    placeholders:[["Loana", "nom_feminin_1"],
-                          ["star", "litt:dessinatrice"],
-                          ["Bozo","nom_masculin_2"],
-			  ["Il","pronom_masculin"]] };
-    sub_holder = substituter.all_substitutions(text,["aaa","bb"]);
-    equal(sub_holder.text,'En 2001, ####################0 radote. La #######################1 vient chez ####################2. Il dort.');
-    equal(sub_holder.subs.length,3);
-    equal(sub_holder.subs[0][0],'####################0');
-    equal(sub_holder.subs[0][1],'aaa');
-    equal(sub_holder.subs[0][2],'Loana');
-    equal(sub_holder.subs[0][3],9);
-    equal(sub_holder.subs[1][0],'#######################1');
-    equal(sub_holder.subs[1][1],'dessinatrice');
-    equal(sub_holder.subs[1][2],'star');
-    equal(sub_holder.subs[1][3],42);
-    equal(sub_holder.subs[2][0],'####################2');
-    equal(sub_holder.subs[2][1],'bb');
-    equal(sub_holder.subs[2][2],'Bozo');
-    equal(sub_holder.subs[2][3],78);
-*/
     text = {text: "En 2001, #0# radote. La #1# vient chez #2#. Il dort.",
 	    placeholders:[["#0#", null, "Loana", "nom_feminin_1"],
                           ["#1#", null, "star", "litt:dessinatrice"],
@@ -107,7 +38,7 @@ test("build_paragraph",function() {
     equal(sub_holder.subs[1][2],'star');
 
 
-});
+ });
 
 test("Morpher.overlap", function(){
     equal(Morpher.overlap("Loana","Bobo",0,true),"Loana");
@@ -140,7 +71,7 @@ test("Morpher.overlap", function(){
     equal(Morpher.overlap("Loana","Bobo",3,false),"LoaB");
     equal(Morpher.overlap("Loana","Bobo",4,false),"Loan");
     equal(Morpher.overlap("Loana","Bobo",5,false),"Loana");
-});
+ });
 
 test("safe_index", function(){
   var a = [1,2,3];
@@ -151,7 +82,7 @@ test("safe_index", function(){
   equal(a[array_util.safe_index(a.length, 2)], 3);
   equal(a[array_util.safe_index(a.length, 3)], 3);
 
-});
+ });
 function animate(morpher){
   var display = function(i){ return function(){
      $('#show').html(morpher.step(i));}; };
@@ -162,7 +93,7 @@ function animate(morpher){
       setTimeout(display(morpher.nb_steps-j-1), (morpher.nb_steps+j)*50+1000);
   };
 
-}
+ }
 
 test("make_sub", function(){
     var text, ph, replacement, sub;
@@ -179,7 +110,7 @@ test("make_sub", function(){
     replacement = "Asphalte";
     deepEqual(substituter.make_sub(ph,replacement),["#1#","Asphalte","Fred"]);
 
-});
+ });
 test("morpher", function(){
     var  text, morpher, stages, i, subs;
     text = {text: "En 2001, #0# vient chez #1#.",
@@ -223,24 +154,16 @@ test("morpher", function(){
 
     animate(morpher);
 
-    text = {text: "En 2001, #0# se réveille. Rien ne peut calmer #0#.",
-	    placeholders:[["#0#", null,"Gégé", "nom_masculin"]] };
-
-    morpher = new Morpher(text,["Bozo","centipede"]);
-    equal(morpher.nb_steps,5);
-    equal(morpher.step(6),'En 2001, Gégé se réveille. Rien ne peut calmer Gégé.');
-
-
  });
  
- test("span_words",function(){
+test("span_words",function(){
    var text = span_displayer.span_words(
    "En 01, <span class='o'>Loa na</span> vient sf<span> ah ah </span>bof. <br>hop");
    equal(text,
-"<span style=\"display:inline-block;\">En&nbsp;</span><span style=\"display:inline-block;\">01,&nbsp;</span><span class='o'>Loa na</span><span style=\"display:inline-block;\">&nbsp;</span><span style=\"display:inline-block;\">vient&nbsp;</span><span style=\"display:inline-block;\">sf</span><span> ah ah </span><span style=\"display:inline-block;\">bof.&nbsp;</span><br><span style=\"display:inline-block;\">hop</span>");
+ "<span style=\"display:inline-block;\">En&nbsp;</span><span style=\"display:inline-block;\">01,&nbsp;</span><span class='o'>Loa na</span><span style=\"display:inline-block;\">&nbsp;</span><span style=\"display:inline-block;\">vient&nbsp;</span><span style=\"display:inline-block;\">sf</span><span> ah ah </span><span style=\"display:inline-block;\">bof.&nbsp;</span><br><span style=\"display:inline-block;\">hop</span>");
  });
    
- test("map_placeholders", function() {
+test("map_placeholders", function() {
    var ph, map, nom_m;
    ph = [["#0#", null,"Loana", "nom_feminin_1"], 
          ["#1#", null, "Christophe", "nom_masculin_2"]];
@@ -254,79 +177,6 @@ test("morpher", function(){
    ok( $.inArray(nom_m, ["b", "c", "d"])>-1, "");
 
  });
-
-test("apostrophe_substitutions", function(){
-
-//TODO this has moved to ruby code. Move these tests there
-/*
- var fixed = substituter.all_substitutions_for_placeholder({subs:[], text:"le <raton:nom_masculin_3> mange"}, 
- ["raton"], "animal");
- equal(1,fixed.subs.length);
- equal(fixed.subs[0][1], "l'animal");
- equal(fixed.subs[0][2], "le raton");
- equal(fixed.text,"########################0 mange");
-
- fixed = substituter.all_substitutions_for_placeholder({subs:[],text:"le <raton:nom_masculin> mange"}, 
- ["raton"], "animal");
- equal(1,fixed.subs.length);
- equal(fixed.subs[0][1], "l'animal");
- equal(fixed.subs[0][2], "le raton");
-
- fixed = substituter.all_substitutions_for_placeholder({subs:[],text:"le <raton (o):nom_masculin> mange"}, 
- ["raton (o)"], "animal");
- equal(1,fixed.subs.length);
- equal(fixed.subs[0][1], "l'animal");
- equal(fixed.subs[0][2], "le raton (o)");
-
- fixed = substituter.all_substitutions_for_placeholder({subs:[],text:"du <raton:nom_masculin>"},
- ["raton"], "animal");
- equal(1,fixed.subs.length);
- equal(fixed.subs[0][1], "d'animal");
- equal(fixed.subs[0][2], "du raton");
-
- fixed = substituter.all_substitutions_for_placeholder({subs:[], text:"l'<animal:nom_masculin_3> mange"}, 
- ["animal"], "raton");
- equal(1,fixed.subs.length);
- equal(fixed.subs[0][1], "le raton");
- equal(fixed.subs[0][2], "l'animal");
- equal(fixed.text,"########################0 mange");
-
- fixed = substituter.all_substitutions_for_placeholder({subs:[],text:"vÃ©nÃ©rable <animal:nom_masculin_3> me"},
-                        ["animal"], "raton");
- equal(0,fixed.subs.length);
-
- fixed = substituter.all_substitutions_for_placeholder({subs:[], text:"l'<animale:nom_feminin> mange"}, 
- ["animale"], "ratonne");
- equal(1,fixed.subs.length);
- equal(fixed.subs[0][1], "la ratonne");
- equal(fixed.subs[0][2], "l'animale");
-
- fixed = substituter.all_substitutions_for_placeholder({subs:[], text:"qu'<animale:nom_feminin> mange"}, 
- ["animale"], "ratonne");
- equal(1,fixed.subs.length);
- equal(fixed.subs[0][1], "que ratonne");
- equal(fixed.subs[0][2], "qu'animale");
- equal(fixed.text, "#######################0 mange");
-
- fixed = substituter.all_substitutions_for_placeholder({subs:[], text: "qu'<animale:nom_feminin> mange <animale:nom_feminin>"}, 
- ["animale","nom_feminin"], "ratonne");
- equal(2,fixed.subs.length);
- equal(fixed.subs[0][1], "que ratonne");
- equal(fixed.subs[0][2], "qu'animale");
- equal(fixed.subs[1][1], "ratonne");
- equal(fixed.subs[1][2], "animale");
- equal(fixed.text, "#######################0 mange ####################1");
-
- fixed = substituter.all_substitutions_for_placeholder({subs:[], text:"<animale:nom_feminin> mange <animale:nom_feminin>"}, 
- ["animale","nom_feminin"], "ratonne");
- equal(2,fixed.subs.length);
- equal(fixed.subs[0][1], "ratonne");
- equal(fixed.subs[0][2], "animale");
- equal(fixed.subs[1][1], "ratonne");
- equal(fixed.subs[1][2], "animale");
- equal(fixed.text, "####################0 mange ####################1");
-*/
-});
 
 });
 

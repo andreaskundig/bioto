@@ -23,7 +23,7 @@ var ordre = [
 ];
 
 var protagonistes = ["Ibn Al Rabin", "Andréas Kündig", 
-  "Bob le lapin", "Un certain Gérard", "Fanfan"];
+  "Bob le lapin", "Un certain Gérard", "Bourguiba"];
 var livres =["'l'autre fin du monde'", "la bible", "'Martine à la plage'",
  "'Cot cot'", "'Figaro Madame'"];
 
@@ -79,7 +79,7 @@ function pick_indexes(keys,exclude){
     array_util.remove_all(topic_indexes, indexes);
     if(topic_indexes.length > 0){
       topic_index = 
-        topic_indexes[Math.floor(Math.random() * topic_indexes.length)];
+        topic_indexes[array_util.random_index(topic_indexes)];
       indexes.push(topic_index);
     }
   }
@@ -165,8 +165,7 @@ span_displayer = {
     var text, paragraph, p, substitutions;
     substitutions = substituter.all_substitutions(text_object, protagonistes);
     text = this.apply_spanned_substitutions(substitutions.text, substitutions.subs);
-    text = this.span_words(text);
-    text = text.replace(/\|/g,''); //no point in using &shy; inside spans
+    text = text.replace(/\|/g,'&shy;');
     paragraph = $('<div class="paragraph"><p>'+text+'</p>'+
        '<p class="detail" style="display:none"><a href="'+text_object.url+
        '">en savoir plus</a></p></div>');
@@ -193,15 +192,13 @@ span_displayer = {
       var p, delayms, hide, show;
       p = $(this).prev();
       p.data('minheight',p.height());
-      delayms = 200;
+      delayms = 400;
       hide = p.find("."+tohide).stop(true); //clear queue
-      //reverse to avoid back of text moving too fast
-      $(hide.get().reverse()).each(function(i,e){
+      $(hide.get()).each(function(i,e){
 		$(this).delay(delayms*(i)).animate({width: '0px'});
       });
       show = p.find("."+toshow).stop(true); //clear queue
-      //reverse to avoid back of text moving too fast
-      $(show.get().reverse()).each(function(i,e){
+      $(show.get()).each(function(i,e){
         var o_width = $(this).data('original_width');
 	$(this).delay(delayms*(i)).animate(
              {width: o_width},
@@ -303,7 +300,7 @@ morph_displayer = {
      steps = this_displayer.make_steps(show_original, morpher.last_step_nb, morpher.nb_steps);
      $.each(steps,function(i,step){
         p.queue(qname, this_displayer.make_step_display_function(step, p, morpher));
-        p.delay(50, qname);
+        p.delay(30, qname);
      });
      p.dequeue(qname);
    };
@@ -330,12 +327,6 @@ morph_displayer = {
    }; 
 
   }};
-//TODO handle texts like '#0# says #1# and #0# so there' to substitute also the second #0#
-//     transform text to '#0-1# says #1# and #0-2# so there'
-//     array of [#0-1#,#1#,#0-2#] (new_ph ?) map it to subs somehow (new_subs ?)
-//     use it to calculate offsets
-//     change replacements_for_step to use new_ph 
-//     and step to use new_subs
 function Morpher(text_object,names){
   var offset_cumul, morpher;
   if(this instanceof Morpher){
@@ -420,7 +411,7 @@ function make_detail_slide_function(down){
     };
 
 }
-displayer = morph_displayer;
+displayer = span_displayer;
 string_util = {
   starts_with: function(start, a_string){
     return a_string && a_string.substring(0, start.length) === start;
