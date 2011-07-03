@@ -6,7 +6,7 @@
 var displayer, span_displayer, morph_displayer, keys, show_all,
   male_or_female_keys, pick_indexes, make_detail_slide_function,
   make_simple_detail_slide_function, text_indexes_for_topics, 
-  string_util, array_util, url_helper,  Morpher, substituter;
+  string_util, array_util, url_helper, substituter;
 
 var ordre = [
   ["nom","presentation", "vie",  "introduction"],
@@ -54,9 +54,10 @@ function show_all(){
     texts[i].text = i+": "+texts[i].text;
     displayer.display_text(texts[i],protagonistes);
   }
-  displayer.polish_display();
 
 }
+//TODO create a function to find a new paragraph
+// pass it as argument to display?
 function bio(deja_utilise,indexes) {
   var subs;
   $("#bio").children().detach();
@@ -65,9 +66,8 @@ function bio(deja_utilise,indexes) {
   $.each(indexes, function(i,index){
       displayer.display_text(texts[index], protagonistes);
   });
-  displayer.polish_display();
   //write_to_hash(indexes);
-  return deja_utilise.concat(indexes);
+  array_util.add_all(deja_utilise, indexes);
 
 }
 function pick_indexes(keys,exclude){
@@ -161,29 +161,38 @@ substituter = {
   }
 };
 span_displayer = {
-  display_text: function(text_object, names){
+  display_text: function(text_object, protagonistes){
+    var paragraph = this.make_paragraph(text_object, protagonistes);
+    $("#bio").append(paragraph);
+    this.show(paragraph);
+
+  },
+  make_paragraph: function(text_object, protagonistes){
     var text, paragraph, p, substitutions;
     substitutions = substituter.all_substitutions(text_object, protagonistes);
     text = this.apply_spanned_substitutions(substitutions.text, substitutions.subs);
     text = text.replace(/\|/g,'&shy;');
-    paragraph = $('<div class="paragraph"><p>'+text+'</p>'+
+    paragraph = $('<div class="paragraph" style="visibility:hidden"><p>'+text+'</p>'+
        '<p class="detail" style="display:none"><a href="'+text_object.url+
-       '">en savoir plus</a></p></div>');
-    p = paragraph.find('p').first();
-    $("#bio").append(paragraph);
+       '">en savoir plus</a> <a class="next">mais encore</a></p></div>');
+    paragraph.mouseenter(make_detail_slide_function(true)
+  	     ).mouseleave(make_detail_slide_function(false));
+    $(".detail",paragraph).mouseenter(this.make_parent_hiding_function('r','o')
+  	                 ).mouseleave(this.make_parent_hiding_function('o','r'));
+    $(".next",paragraph).click(function(){
+       var div = $(this).parent().parent();
+       div.slideUp();
+    });
+    return paragraph;
 
   },
-  polish_display: function(){
-    //console.time(1);
-    $("#bio>div>p>span.r,#bio>div>p>span.o").each(function(){
+  show: function(paragraph){
+    // this only works when paragraph is in the DOM
+    // otherwise widths == 0
+    $("span",paragraph).each(function(){
         $(this).data('original_width',$(this).width());
-    });
-    $("#bio>div>p>span.o").css({width: '0px'});
-    $(".detail").mouseenter(this.make_parent_hiding_function('r','o')
-  	     ).mouseleave(this.make_parent_hiding_function('o','r'));
-    $(".paragraph").mouseenter(make_detail_slide_function(true)
-  	        ).mouseleave(make_detail_slide_function(false));
-    //console.timeEnd(1);
+    }).filter(".o").css({width: '0px'});
+    paragraph.css("visibility","visible");
 
   },
   make_parent_hiding_function: function(tohide, toshow){
@@ -337,6 +346,13 @@ array_util = {
     element = elements[i];
     index = $.inArray(element,array);
     if(index>=0) { array.splice(index,1); }
+   }
+
+  },
+  add_all: function(array,elements){
+   var i;
+   for (i=0 ; i < elements.length ; i += 1){
+    array.push( elements[i]);
    }
 
   },

@@ -79,10 +79,10 @@ def display_text(t)
   "#{t[:text].chomp}\n#{t[:placeholders].join('|').chomp }\nclefs:#{t[:keys].join ' '}\n"
 end
 
-def text2json(t)
+def text2json(t,index)
   placeholders = t[0][:placeholders].map{|p| placeholder2json p }.join(", ")
   text = t[0][:text].gsub(/\s+/," ").gsub('"','\"')
-  "{text:\"#{text}\",\n placeholders:[#{placeholders}],\n url:\"#{t[1]}\" }"
+  "{i:#{index}, text:\"#{text}\",\n placeholders:[#{placeholders}],\n url:\"#{t[1]}\" }"
 end
 
 # arg ph ["#1#", "le <gros Hulk:nom_masculin1>", ["l'", "le "], "gros Hulk", "nom_masculin1"]
@@ -150,5 +150,5 @@ def puts_json(texts, keys_m, keys_f)
  puts "var keys_f = {" 
  puts keys_f.to_a.map{|pair| "#{pair[0]}: [#{pair[1].join(", ")}]" }.join(", ") 
  puts "}\n"
- puts "var texts = [\n" + texts.map{|t| text2json(t)}.join(",\n") + "\n];"
+ puts "var texts = [\n" + texts.enum_with_index.map{|t,i| text2json(t,i)}.join(",\n") + "\n];"
 end
