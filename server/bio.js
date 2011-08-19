@@ -56,14 +56,14 @@ function show_all(){
   }
 
 }
-//TODO fix deja_utilise
+//TODO put protagonistes, deja_utilise, keys in one object (context?)
 function bio(deja_utilise,indexes) {
   $("#bio").children().detach();
   keys = male_or_female_keys();
   indexes = indexes || pick_indexes(keys,deja_utilise);
   $.each(indexes, function(i,index){
       texts[index].ordre = i;
-      displayer.display_text(texts[index], protagonistes);
+      displayer.display_text(texts[index], protagonistes, deja_utilise, keys);
   });
   //write_to_hash(indexes);
   array_util.add_all(deja_utilise, indexes);
@@ -100,10 +100,13 @@ function male_or_female_keys(){
   return Math.random() > 0.5 ? keys_f : keys_m;  
 
 }
-function next_text(text_object){
-  var next_text_object, indexes;
-  indexes = text_indexes_for_topics(text_object.ordre,keys);
-  next_text_object = texts[indexes[array_util.random_index(indexes)]];
+function next_text(text_object, deja_utilise,keys){
+  var next_text_object, topic_indexes, topic_index;
+  topic_indexes = text_indexes_for_topics(text_object.ordre,keys);
+  array_util.remove_all(topic_indexes, deja_utilise);
+  topic_index = array_util.random_index(topic_indexes);
+  deja_utilise.push(topic_index);
+  next_text_object = texts[topic_indexes[topic_index]];
   next_text_object.ordre = text_object.ordre;
   return next_text_object;
 
@@ -169,17 +172,19 @@ substituter = {
   }
 };
 span_displayer = {
-  display_text: function(text_object, protagonistes){
-    var paragraph =  this.make_paragraph(text_object, protagonistes);
+  display_text: function(text_object, protagonistes, deja_utilise,keys){
+    var paragraph =  this.make_paragraph(text_object, protagonistes, deja_utilise,keys);
     //not in make_paragraph to avoid interference with animate_paragraph_replacement.
     paragraph.mouseenter(make_detail_slide_function(true));
     paragraph.mouseleave(make_detail_slide_function(false));
     $("#bio").append(paragraph);
-    this.show(paragraph);
+    //works only if paragraph already in dom
+    this.init_widths(paragraph);
+    paragraph.css("visibility","visible");
 
   },
-  make_paragraph: function(text_object, protagonistes){
-    var text, paragraph, p, substitutions, next_text_object;
+  make_paragraph: function(text_object, protagonistes, deja_utilise, keys){
+    var text, paragraph, p, substitutions, next_text_object, next_text_function;
     substitutions = substituter.all_substitutions(text_object, protagonistes);
     text = this.apply_spanned_substitutions(substitutions.text, substitutions.subs);
     text = text.replace(/\|/g,'&shy;');
@@ -188,15 +193,10 @@ span_displayer = {
        '">en savoir plus</a> <a class="next">mais encore</a></p></div>');
     $(".detail",paragraph).mouseenter(this.make_parent_hiding_function('r','o')
   	                 ).mouseleave(this.make_parent_hiding_function('o','r'));
-    $(".next",paragraph).click(this.make_next_text_function(next_text(text_object)));
+    next_text_object = next_text(text_object, deja_utilise, keys);
+    next_text_function = this.make_next_text_function(next_text_object,protagonistes,deja_utilise,keys);
+    $(".next",paragraph).click(next_text_function);
     return paragraph;
-
-  },
-  show: function(paragraph){
-    // this only works when paragraph is in the DOM
-    // otherwise widths == 0
-    this.init_widths(paragraph);
-    paragraph.css("visibility","visible");
 
   },
   init_widths: function(paragraph){
@@ -208,27 +208,14 @@ span_displayer = {
     }).filter(".o").css({width: '0px'});//, display: 'none'});
 
   },
-//TODO fix scope problems: span_displayer, next_paragraph (keys), protagonistes...
-// TODO get rid of global variables keys, protagonistes
-//TODO make slideDown work http://jsfiddle.net/V4SVt/2/ 
-//http://stackoverflow.com/questions/3747683/append-and-slide-together-jquery
-//TODO slide sideways http://www.learningjquery.com/2009/02/slide-elements-in-different-directions
-//TODO avoid repetition, keep sex
-  make_next_text_function: function(next_text_object){
+  make_next_text_function: function(next_text_object, protagonistes, deja_utilise, keys){
     var disp = this;
     return function(){
        var pbefore, pafter;
        pbefore = $(this).parent().parent();
-       pafter = disp.make_paragraph(next_text_object,protagonistes);
+       pafter = disp.make_paragraph(next_text_object,protagonistes,deja_utilise,keys);
        disp.animate_paragraph_replacement(pbefore,pafter);
     };
-
-  },
-  make_next_function: function(pbefore,pafter){
-    var disp = this;
-    return function(){
-      disp.animate_paragraph_replacement(pbefore,pafter);
-    };  
 
   },
   animate_paragraph_replacement: function(pbefore,pafter){
