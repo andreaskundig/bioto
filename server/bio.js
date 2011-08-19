@@ -11,14 +11,11 @@ var displayer, span_displayer, morph_displayer, keys, show_all,
 var ordre = [
   ["nom","presentation", "vie",  "introduction"],
   ["naissance", "origine", "existence", "debut"],
-  ["enfance", "jeunesse", "adolescence", "famille",
-   "relation","divorce","mariage"],
-  ["apparence", "physique", "pouvoir", "sante", "surnom", 
-   "age", "alimentation"],
+  ["enfance", "jeunesse", "adolescence", "famille", "relation","divorce","mariage"],
+  ["apparence", "physique", "pouvoir", "sante", "surnom", "age", "alimentation"],
   ["personnalite", "caractere", "reputation", "ondit","rumeur", "faculte"],
   ["oeuvre", "carriere", "style"],
-  ["citation", "bof", "opinion", "inexplique", "enseignement", 
-   "titre", "chasse"],
+  ["citation", "bof", "opinion", "inexplique", "enseignement", "titre", "chasse"],
   ["retraite", "mort", "legacy"]
 ];
 
@@ -102,6 +99,9 @@ function male_or_female_keys(){
 }
 function next_text(text_object, deja_utilise,keys){
   var next_text_object, topic_indexes, topic_index;
+  if(keys === undefined){
+    return null;
+  }
   topic_indexes = text_indexes_for_topics(text_object.ordre,keys);
   array_util.remove_all(topic_indexes, deja_utilise);
   if(topic_indexes.length === 0){
