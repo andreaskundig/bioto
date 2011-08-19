@@ -104,9 +104,12 @@ function next_text(text_object, deja_utilise,keys){
   var next_text_object, topic_indexes, topic_index;
   topic_indexes = text_indexes_for_topics(text_object.ordre,keys);
   array_util.remove_all(topic_indexes, deja_utilise);
-  topic_index = array_util.random_index(topic_indexes);
+  if(topic_indexes.length === 0){
+    return null;
+  }
+  topic_index = topic_indexes[array_util.random_index(topic_indexes)];
   deja_utilise.push(topic_index);
-  next_text_object = texts[topic_indexes[topic_index]];
+  next_text_object = texts[topic_index];
   next_text_object.ordre = text_object.ordre;
   return next_text_object;
 
@@ -194,8 +197,12 @@ span_displayer = {
     $(".detail",paragraph).mouseenter(this.make_parent_hiding_function('r','o')
   	                 ).mouseleave(this.make_parent_hiding_function('o','r'));
     next_text_object = next_text(text_object, deja_utilise, keys);
-    next_text_function = this.make_next_text_function(next_text_object,protagonistes,deja_utilise,keys);
-    $(".next",paragraph).click(next_text_function);
+    if(next_text_object !==null){
+      next_text_function = this.make_next_text_function(next_text_object,protagonistes,deja_utilise,keys);
+      $(".next",paragraph).click(next_text_function);
+    }else{
+      $(".next",paragraph).css('display','none');
+    }
     return paragraph;
 
   },
