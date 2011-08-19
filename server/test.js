@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
 var text = {text: "En 2001, <elle:pronom_feminin> vient avec <Christophe:nom_masculin_2>. La prestation de <Loana:nom_feminin_1> est pas mal.",
@@ -40,6 +39,12 @@ test("build_paragraph",function() {
 
  });
 
+test("starts_with_vowel", function(){
+  ok(string_util.starts_with_vowel("af"));
+  ok(string_util.starts_with_vowel("Âze"));
+  ok(!string_util.starts_with_vowel("taf"));
+
+ });
 
 test("safe_index", function(){
   var a = [1,2,3];
@@ -90,5 +95,65 @@ test("map_placeholders", function() {
 
  });
 
+test("slide",function(){
+   var para , o_width, r_width,p_width,p_height, showdiv, showwidth;
+   showdiv = $("#show");
+   showdiv.css({overflow:'hidden',border: '1px solid #999999',width:'10%'});
+   showwidth = showdiv.width();
+
+   para = $('<div class="paragraph" style="visibility:hidden"><p>A <span class="r">Ibn Al Rabin</span><span class="o">Yves</span> a notamment</p></div>');
+   
+
+//  equal(showdiv.width(),1008);
+  equal($('.r',para).width(),0);
+  equal($('.o',para).width(),0);
+  equal(para.width(),0);
+  equal(para.height(),0);
+
+  showdiv.append(para);
+
+  r_width = $('.r',para).width();
+  o_width = $('.o',para).width();
+  p_width = para.width();
+  p_height = para.height();
+  ok(r_width>0);
+  ok(o_width>0);
+  ok(p_width>0);
+  ok(p_height>0);
+//  equal(para.width(),1008);
+//  equal(para.height(),20);
+
+
+
+
+  displayer.init_widths(para);
+  equal($('.r',para).data('original_width'),r_width);
+  equal($('.o',para).data('original_width'),o_width);
+  
+  equal(para.height(),p_height);
+  $('.o', para).css('display','none');
+  ok(para.height()<p_height);
+  p_height = para.height();
+
+  //showdiv.css({height:para.height()});
+  
+/*
+  para.css({visibility:'visible'});//,width:showwidth});
+  para.detach();
+  para.css({visibility:'visible',width:showwidth});
+  showdiv.append(para);
+*/
+
+
+
+  //$('#show').css({overflow:'hidden',border: '1px solid #999999',width:'10%',height:p_height});
+  $('#show .paragraph').css({visibility:'visible', marginLeft:200,width:p_width,background:'grey'});
+  $('#show .o').css('display','none');
+  
+
+  para.animate( {marginLeft: 0});
+  //para.animate( {marginLeft: parseInt(para.css('marginLeft'),10)==0?para.outerWidth(): 0});
+
+ });
 });
 

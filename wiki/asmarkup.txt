@@ -1,3 +1,17 @@
+Dans le documentaire d'A&E Biography - <Jeffrey Dahmer:nom_masculin>, on voit son enfance « normale » filmée par ses parents où il montre sa fascination pour les animaux, il ne les caressait pas, mais les palpait.
+clefs: enfance
+
+Il a aussi reconnu « s'être essayé au cannibalisme » en mangeant le biceps d'une de ses victimes.
+clefs: carriere
+
+Il fut assassiné par un co-détenu, Christopher Scarver, à la Columbia Correctional facility à Portage (Wisconsin) le 28 novembre 1994. L'homme, un schizophrène instable se « prenant pour Jésus-Christ » lui a fracassé le crâne au moyen d'un haltère.<:pronom_masculin>
+clefs: mort
+
+http://fr.wikipedia.org/wiki/Jeffrey_Dahmer
+
+-----
+
+
 C'est lui qui, après qu'elle lui a adressé certains de ses écrits, a recommandé à Charlotte Brontë d'abandonner la littérature qui, selon son opinion, s'oppose de nature aux talents et aux devoirs d'une femme.<:pronom_masculin>
 clefs: carriere
 
@@ -1137,7 +1151,7 @@ clefs: mort
 http://fr.wikipedia.org/wiki/Barbe_Noire
 ------
 
-<C':litt:Ce dessinateur> est un pantin de bois, à la tête articulée par un ressort qui se balance d'avant en arrière, comme pour dire oui. 
+<C':litt:Ce dessinateur> est un pantin de bois, à la tête articulée par un ressort qui se balance d'avant en arrière, comme pour dire oui.<:pronom_masculin>
 clefs: physique
 
 <Il:pronom_masculin> porte toujours un bonnet bleu surmonté d'un grelot qui sonne quand sa tête bouge et un éternel foulard jaune à pois rouges.

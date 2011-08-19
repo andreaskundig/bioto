@@ -56,14 +56,13 @@ function show_all(){
   }
 
 }
-//TODO create a function to find a new paragraph
-// pass it as argument to display?
+//TODO fix deja_utilise
 function bio(deja_utilise,indexes) {
-  var subs;
   $("#bio").children().detach();
   keys = male_or_female_keys();
   indexes = indexes || pick_indexes(keys,deja_utilise);
   $.each(indexes, function(i,index){
+      texts[index].ordre = i;
       displayer.display_text(texts[index], protagonistes);
   });
   //write_to_hash(indexes);
@@ -74,7 +73,7 @@ function pick_indexes(keys,exclude){
   var  i,  j, sujet, indexes, index, topic_indexes, topic_index;
   indexes = [];
   for (i=0 ; i<ordre.length ; i+=1) {
-    topic_indexes = text_indexes_for_topics(ordre[i],keys);
+    topic_indexes = text_indexes_for_topics(i,keys);
     array_util.remove_all(topic_indexes, exclude);
     array_util.remove_all(topic_indexes, indexes);
     if(topic_indexes.length > 0){
@@ -86,8 +85,9 @@ function pick_indexes(keys,exclude){
   return indexes;
 
 }
-function text_indexes_for_topics(topics,keys){
-    var indexes, topic, j;
+function text_indexes_for_topics(topic_index,keys){
+    var indexes, topic, j, topics;
+    topics = ordre[topic_index||0]; //||0 pouah
     indexes = [];
     for (j=0 ; j<topics.length ; j+=1) {
       topic = topics[j];
@@ -98,6 +98,14 @@ function text_indexes_for_topics(topics,keys){
 }
 function male_or_female_keys(){
   return Math.random() > 0.5 ? keys_f : keys_m;  
+
+}
+function next_text(text_object){
+  var next_text_object, indexes;
+  indexes = text_indexes_for_topics(text_object.ordre,keys);
+  next_text_object = texts[indexes[array_util.random_index(indexes)]];
+  next_text_object.ordre = text_object.ordre;
+  return next_text_object;
 
 }
 substituter = {
@@ -162,37 +170,96 @@ substituter = {
 };
 span_displayer = {
   display_text: function(text_object, protagonistes){
-    var paragraph = this.make_paragraph(text_object, protagonistes);
+    var paragraph =  this.make_paragraph(text_object, protagonistes);
+    //not in make_paragraph to avoid interference with animate_paragraph_replacement.
+    paragraph.mouseenter(make_detail_slide_function(true));
+    paragraph.mouseleave(make_detail_slide_function(false));
     $("#bio").append(paragraph);
     this.show(paragraph);
 
   },
   make_paragraph: function(text_object, protagonistes){
-    var text, paragraph, p, substitutions;
+    var text, paragraph, p, substitutions, next_text_object;
     substitutions = substituter.all_substitutions(text_object, protagonistes);
     text = this.apply_spanned_substitutions(substitutions.text, substitutions.subs);
     text = text.replace(/\|/g,'&shy;');
     paragraph = $('<div class="paragraph" style="visibility:hidden"><p>'+text+'</p>'+
        '<p class="detail" style="display:none"><a href="'+text_object.url+
        '">en savoir plus</a> <a class="next">mais encore</a></p></div>');
-    paragraph.mouseenter(make_detail_slide_function(true)
-  	     ).mouseleave(make_detail_slide_function(false));
     $(".detail",paragraph).mouseenter(this.make_parent_hiding_function('r','o')
   	                 ).mouseleave(this.make_parent_hiding_function('o','r'));
-    $(".next",paragraph).click(function(){
-       var div = $(this).parent().parent();
-       div.slideUp();
-    });
+    $(".next",paragraph).click(this.make_next_text_function(next_text(text_object)));
     return paragraph;
 
   },
   show: function(paragraph){
     // this only works when paragraph is in the DOM
     // otherwise widths == 0
+    this.init_widths(paragraph);
+    paragraph.css("visibility","visible");
+
+  },
+  init_widths: function(paragraph){
+    // this only works when paragraph is in the DOM
+    // and display is not none
+    // otherwise widths == 0
     $("span",paragraph).each(function(){
         $(this).data('original_width',$(this).width());
-    }).filter(".o").css({width: '0px'});
-    paragraph.css("visibility","visible");
+    }).filter(".o").css({width: '0px'});//, display: 'none'});
+
+  },
+//TODO fix scope problems: span_displayer, next_paragraph (keys), protagonistes...
+// TODO get rid of global variables keys, protagonistes
+//TODO make slideDown work http://jsfiddle.net/V4SVt/2/ 
+//http://stackoverflow.com/questions/3747683/append-and-slide-together-jquery
+//TODO slide sideways http://www.learningjquery.com/2009/02/slide-elements-in-different-directions
+//TODO avoid repetition, keep sex
+  make_next_text_function: function(next_text_object){
+    var disp = this;
+    return function(){
+       var pbefore, pafter;
+       pbefore = $(this).parent().parent();
+       pafter = disp.make_paragraph(next_text_object,protagonistes);
+       disp.animate_paragraph_replacement(pbefore,pafter);
+    };
+
+  },
+  make_next_function: function(pbefore,pafter){
+    var disp = this;
+    return function(){
+      disp.animate_paragraph_replacement(pbefore,pafter);
+    };  
+
+  },
+  animate_paragraph_replacement: function(pbefore,pafter){
+      var p_width, p_height, pafter_text;
+      //init widths of original/replacement spans
+      pbefore.after(pafter);
+      this.init_widths(pafter);
+      //init css of paragraphs
+      p_width = pbefore.width();
+      pbefore.css({position:'absolute', width:p_width, overflow:'hidden', zIndex:-1});
+      pafter.css({visibility:'visible', width:p_width, overflow:'hidden', 
+                  marginLeft: p_width,  background:'white'});
+      //make sure mouse state is known at end of animation
+      pafter.mouseenter(function(){ $(this).data('down',true);});
+      pafter.mouseleave(function(){ $(this).data('down',false);});
+      //animate pbefore and pafter
+      p_height = pafter.height();
+      pafter.css('height',pbefore.height());
+      pbefore.animate({height: p_height},{ duration: 1000});
+      pafter.animate( 
+	{marginLeft: 0, height:p_height},
+	{complete: function(){
+           pbefore.remove();
+           pafter.css({height:''}); //allow detail to appear
+           $('.detail', pafter).css('display', 'none');
+           if(pafter.data('down')){ $('.detail',pafter).slideDown(); }
+           //install sliding at the last moment to keep animation clean
+           pafter.mouseenter(make_detail_slide_function(true));
+           pafter.mouseleave(make_detail_slide_function(false));
+	 },
+	 duration: 1000});
 
   },
   make_parent_hiding_function: function(tohide, toshow){
@@ -300,26 +367,25 @@ string_util = {
 			    a_string.length) === end;
   },
   starts_with_vowel: function(string){
-    var l = string.charAt(0).toLowerCase();
-    return l==='a' || l==='e' || l==='i' || l==='o' || l==='u';
+    return /^[aàáâãäåæeèéêëiìíîïoòóôõöœuùúûüyýÿ]/i.exec(string);
   },
   split: function(str, del, before){
-  var result, i;
-  result = [];
-  if(typeof str === 'string'){
-    if(before){ 
-      result = str.split(new RegExp("(?="+del+")"));
-    }else{ 
-      result = str.split(del);
-      for(i=0;i<result.length-1;i+=1){ result[i] = result[i] + del;}
-    }
-  }else if(str.length){
-    for(i=0;i<str.length;i+=1){ 
-      result.push(string_util.split(str[i],del)); 
-    }
-    result = array_util.flatten(result);
-  }  
-  return result;
+    var result, i;
+    result = [];
+    if(typeof str === 'string'){
+      if(before){ 
+        result = str.split(new RegExp("(?="+del+")"));
+      }else{ 
+        result = str.split(del);
+        for(i=0;i<result.length-1;i+=1){ result[i] = result[i] + del;}
+      }
+    }else if(str.length){
+      for(i=0;i<str.length;i+=1){ 
+        result.push(string_util.split(str[i],del)); 
+      }
+      result = array_util.flatten(result);
+    }  
+    return result;
   }};
 array_util = {
   random_index: function(array){

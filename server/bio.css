@@ -12,8 +12,9 @@ h1{
 }
 div.container{ 
  margin: 10%;
- margin-top: 30px; 
+ margin-top: 15px; 
  margin-bottom: 0;
+ overflow: hidden; 
 }
 span {
  overflow: hidden; 
@@ -37,9 +38,4 @@ p {
   text-align: right;
   line-height: 150%;
   background-color:#cccccc;
-}
-.row {
- width: 90%;
- margin: 0 auto;
- overflow: hidden;
 }

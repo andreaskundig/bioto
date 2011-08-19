@@ -146,9 +146,9 @@ def puts_json(texts, keys_m, keys_f)
  puts "var topics = [\"" + keys_m.merge(keys_f).keys.join("\", \"") + "\"];"
  puts "var keys_m = {" 
  puts keys_m.to_a.map{|pair| "#{pair[0]}: [#{pair[1].join(", ")}]" }.join(", ") 
- puts "}\n"
+ puts "};\n"
  puts "var keys_f = {" 
  puts keys_f.to_a.map{|pair| "#{pair[0]}: [#{pair[1].join(", ")}]" }.join(", ") 
- puts "}\n"
+ puts "};\n"
  puts "var texts = [\n" + texts.enum_with_index.map{|t,i| text2json(t,i)}.join(",\n") + "\n];"
 end
