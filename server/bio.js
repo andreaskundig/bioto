@@ -415,10 +415,6 @@ array_util = {
     array.push( elements[i]);
    }
 
-  },
-  safe_index: function(length,index){
-   return Math.min(length-1 , Math.max(0,index));
-
  }};
 url_helper = {
   get_protagonist_from_url: function(){

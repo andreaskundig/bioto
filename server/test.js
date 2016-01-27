@@ -4,7 +4,7 @@ var text = {text: "En 2001, <elle:pronom_feminin> vient avec <Christophe:nom_mas
  placeholders:[["Loana", "nom_feminin_1"], 
 	  ["Christophe", "nom_masculin_2"], ["elle", "pronom_feminin"]] };
 
-test("build_paragraph",function() {
+test("all_substitutions",function() {
     var text,subs,sub_holder,replaced;
     text = {text: "En 2001, #0# radote. La #1# vient chez #2#. Il dort.",
 	    placeholders:[["#0#", null, "Loana", "nom_feminin_1"],
@@ -46,17 +46,6 @@ test("starts_with_vowel", function(){
 
  });
 
-test("safe_index", function(){
-  var a = [1,2,3];
-  equal(a[array_util.safe_index(a.length,-2)], 1);
-  equal(a[array_util.safe_index(a.length,-1)], 1);
-  equal(a[array_util.safe_index(a.length, 0)], 1);
-  equal(a[array_util.safe_index(a.length, 1)], 2);
-  equal(a[array_util.safe_index(a.length, 2)], 3);
-  equal(a[array_util.safe_index(a.length, 3)], 3);
-
- });
-
 test("make_sub", function(){
     var text, ph, replacement, sub;
     text = {text: "En 2001, #0# vient chez #1#.",
@@ -73,6 +62,7 @@ test("make_sub", function(){
     deepEqual(substituter.make_sub(ph,replacement),["#1#","Asphalte","Fred"]);
 
  });
+
 test("span_words",function(){
    var text = span_displayer.span_words(
    "En 01, <span class='o'>Loa na</span> vient sf<span> ah ah </span>bof. <br>hop");
@@ -103,8 +93,6 @@ test("slide",function(){
 
    para = $('<div class="paragraph" style="visibility:hidden"><p>A <span class="r">Ibn Al Rabin</span><span class="o">Yves</span> a notamment</p></div>');
    
-
-//  equal(showdiv.width(),1008);
   equal($('.r',para).width(),0);
   equal($('.o',para).width(),0);
   equal(para.width(),0);
@@ -120,39 +108,17 @@ test("slide",function(){
   ok(o_width>0);
   ok(p_width>0);
   ok(p_height>0);
-//  equal(para.width(),1008);
-//  equal(para.height(),20);
-
-
-
 
   displayer.init_widths(para);
   equal($('.r',para).data('original_width'),r_width);
   equal($('.o',para).data('original_width'),o_width);
   
   equal(para.height(),p_height);
-  $('.o', para).css('display','none');
-  ok(para.height()<p_height);
-  p_height = para.height();
 
-  //showdiv.css({height:para.height()});
-  
-/*
-  para.css({visibility:'visible'});//,width:showwidth});
-  para.detach();
-  para.css({visibility:'visible',width:showwidth});
-  showdiv.append(para);
-*/
-
-
-
-  //$('#show').css({overflow:'hidden',border: '1px solid #999999',width:'10%',height:p_height});
   $('#show .paragraph').css({visibility:'visible', marginLeft:200,width:p_width,background:'grey'});
   $('#show .o').css('display','none');
   
-
   para.animate( {marginLeft: 0});
-  //para.animate( {marginLeft: parseInt(para.css('marginLeft'),10)==0?para.outerWidth(): 0});
 
  });
 });
