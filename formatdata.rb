@@ -5,9 +5,9 @@ require 'text/hyphen'
 #require 'XmlDataReader'
 #filepath = 'wiki/data.htm' 
 #filepath = 'http://biotomatique.wikidot.com/'
-require 'MarkupReader'
+require_relative 'MarkupReader.rb'
 filepath = 'wiki/asmarkup.txt'
-require 'Formatter.rb'
+require_relative 'Formatter.rb'
 
 
 texts = [] # [[{:text :placeholders :keys},url}],[...],...]
@@ -17,7 +17,7 @@ keys_f = {} # {key => text_index}
 elements = make_generator filepath
 #iterate on paragraphs
 #70.times {|t|
-while elements.next?
+while elements.alive?
   person = read_person elements
   break unless person
   extract_from_person(person, texts, keys_m, keys_f)

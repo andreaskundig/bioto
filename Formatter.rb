@@ -61,7 +61,7 @@ end
 # return person = {:texts => [{:text :placeholders :keys :sex},.. ], :url }
 def read_person(elements)
  person = {:texts=>[]}
- elements.next while !is_para(elements.current) && !data_end(elements)
+ elements.resume while !is_para(elements.current) && !data_end(elements)
  return nil if data_end(elements)
  person[:texts] << format_para(* read_para(elements))  while is_para elements.current
  person[:url]= read_url(elements) 
