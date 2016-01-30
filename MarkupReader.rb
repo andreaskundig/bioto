@@ -1,4 +1,4 @@
-# -*- coding: iso-8859-1 -*-
+# encoding: utf-8
 require 'rubygems'
 require 'open-uri'
 require 'fiber'
@@ -8,16 +8,18 @@ class FiberWrapper
   def initialize(openable)
     @fib =  Fiber.new do
       openable.each_line do |line|
-        puts line
         Fiber.yield line
       end
     end
+    self.next
   end
-  def alive?
+  def next?
     @fib.alive?
   end
-  def resume
+  def next
+    former = @current
     @current = @fib.resume
+    former
   end
   def current
     @current
@@ -30,6 +32,9 @@ def make_generator(uri)
 end
 
 def is_para(element)
+  puts "  #is_para"
+  puts "  history.push elements.current"
+  puts "  #is_para '#{element}'".gsub(/\n/,'\n')
   element.strip.size >0 && !(element =~ /^(http|clefs:|sexe:|----)/)
 end
 
@@ -38,7 +43,9 @@ def is_url(element)
 end
 
 def data_end(elements)
-  !(elements.alive?) || elements.current.start_with?('STOP')
+  puts "  #data_end next?"
+  puts "  history.push elements.next?"
+  !(elements.next?) || elements.current.start_with?('STOP')
 end
 
 def para_end(elements)
@@ -46,23 +53,24 @@ def para_end(elements)
 end
 
 def read_para(elements)
-  text = elements.resume
-  text += "<br>" + elements.resume while ! para_end elements
-  keys = elements.resume
-  elements.resume while elements.current.strip.size == 0
+  puts "  #read_para \n  history.push elements.next"
+  text = elements.next
+  text += "<br>" + elements.next while ! para_end elements
+  keys = elements.next
+  elements.next while elements.current.strip.size == 0
   keys =  extract_keys(keys)
   [text, keys]
 end
 
 def extract_keys(key_text)
   return [] unless key_text #&& (key_text.start_with? "clefs:")
-  puts key_text
+  puts "  #extract_keys '#{key_text}'".gsub(/\n/,'\n')
   k = key_text.strip[6..-1].gsub(/[,.]/,' ').gsub(/(\w+)s\b/,'\1').gsub(/\?+/,'bof')
   k.gsub("\303\251",'e').gsub("\303\250",'e').split
 end
 
 def read_url(elements)
-  return elements.resume.chomp if is_url elements.current
+  return elements.next.chomp if is_url elements.current
   nil
 end
 

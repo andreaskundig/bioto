@@ -329,13 +329,13 @@ Durant son adolescence, <il:pronom_masculin> était alcoolique et toxicomane. Il
 clefs: enfance
 
 <Chase:nom_masculin> développa une hypocondrie en grandissant. Il se plaignait souvent que son cœur "s’arrêtait de battre" et que "quelqu'un lui avait volé ses artères pulmonaires". Il se serait aussi souvent mis des oranges sur la tête, croyant que la Vitamine C serait absorbée par son cerveau par diffusion. Il croyait aussi que ses os crâniens s’étaient séparés et qu’ils bougeaient autour de sa tête, il se rasait donc la tête pour pouvoir observer les mouvements.
-clefs: santé
+clefs: sante
 
 En 1975, <Chase:nom_masculin> fut placé contre son gré dans un institut psychiatrique après qu’il se soit empoisonné le sang. Il s’était injecté du sang de lapin dans les veines. Il partageait souvent ses théories fantaisistes sur les tueries de lapin avec l’équipe médicale.
-clefs: santé carriere
+clefs: sante carriere
 
 Une fois, il fut retrouvé avec du sang autour de la bouche. <Chase:nom_masculin> dit "je me suis coupé en me rasant", mais l’hôpital découvrit qu’il avait bu du sang d’oiseaux. Il avait jeté les corps des oiseaux par la fenêtre. L’équipe médicale commença à l’appeler " Dracula ".
-clefs: santé carriere
+clefs: sante carriere
 
 Le 11 janvier 1978, <Chase:nom_masculin> demanda une cigarette à sa voisine avant de l’obliger à lui donner le paquet entier.
 clefs: carriere
@@ -688,13 +688,13 @@ Bien qu'<il:pronom_masculin> soit la créature la plus ancienne de l'univers, pl
 clefs: ???
 
 Tout comme ses pairs, <Galactus:nom_masculin> est au-delà du Bien et du Mal, il n'éprouve pas de sentiment comme la haine ou l'amour, ce qui fait de lui un être froid dénué de sentiment humain, d'une sagesse absolue.
-clefs: personnalité
+clefs: personnalite
 
 <Galactus:nom_masculin> se fait généralement précéder d'un heraut pour annoncer sa venue. Il s'agit d'un être qu'il choisit et qu'il dote du pouvoir cosmique. Plusieurs se sont succédé (Gabriel, Morg, Red Shift, Firelord, Nova, Terrax le Destructeur). Le plus célèbre d'entre eux est le Surfer d'Argent.
 clefs: carriere ???
 
 Un autre mystère demeure : où donc <Galactus:nom_masculin>, prédateur cosmique et créature de l’espace, a-t-il appris à faire du surf et pourquoi choisit-il d’en équiper Norrin Radd ?
-clefs: inexpliqué
+clefs: inexplique
 
 <Galactus:nom_masculin> est revenu plusieurs fois sur Terre, mais chacune de ses tentatives de détruire la Terre a été contrecarrée par les Quatre Fantastiques et leurs alliés.
 clefs: carriere
@@ -719,7 +719,7 @@ En période de stress ou d'énervement sa force augmente : elle n'a alors plus d
 clefs: pouvoirs 
 
 Dans World War <Hulk:nom_masculin>, Spider-Man qualifie <Hulk:nom_masculin> d'humain le plus puissant de la galaxie (avec une définition très large de l'humain) après Sentry, ajoutant qu'il a révisé son classement après la victoire d'<Hulk:nom_masculin> sur Flèche Noire. Il semble que même ce classement était trop défavorable à <Hulk:nom_masculin>, car finalement Sentry et <Hulk:nom_masculin> se neutralisent mutuellement. <Hulk:nom_masculin> s'est souvent battu avec la Chose (Groupe des 4 Fantastiques) qui a un avantage moral et physique sur lui, car Hulk est solitaire et toujours poursuivi par la violence et l'incompréhension
-clefs: personnalité, pouvoirs
+clefs: personnalite pouvoirs
 
 http://fr.wikipedia.org/wiki/Hulk
 ------
@@ -1073,7 +1073,7 @@ http://fr.wikipedia.org/wiki/Marsupilami
 ----
 
 Onzième enfant d'une famille ouvrière d'origine lituanienne d'origine Tatare, <Charles Bronson:nom_masculin_1> est d'abord mineur de fond, puis mitrailleur de queue d'un bombardier pendant la Seconde Guerre mondiale.
-clefs: origines, carrière
+clefs: origines carriere
 
 <Charles Bronson:nom_masculin_1> ne mesurait qu'1,58m.
 clefs: physique

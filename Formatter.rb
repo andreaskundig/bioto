@@ -1,5 +1,4 @@
-#! /usr/bin/ruby
-# -*- coding: iso-8859-1 -*-
+# encoding: utf-8
 require 'set'
 require 'text/hyphen'
 
@@ -61,9 +60,16 @@ end
 # return person = {:texts => [{:text :placeholders :keys :sex},.. ], :url }
 def read_person(elements)
  person = {:texts=>[]}
- elements.resume while !is_para(elements.current) && !data_end(elements)
+ while !is_para(elements.current) && !data_end(elements)
+   puts "  #read_person next"
+   puts "  history.push elements.next"
+   elements.next
+ end
  return nil if data_end(elements)
- person[:texts] << format_para(* read_para(elements))  while is_para elements.current
+ while is_para elements.current
+   puts "  history.push elements.current"
+   person[:texts] << format_para(* read_para(elements))
+ end
  person[:url]= read_url(elements) 
  person
 end

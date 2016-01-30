@@ -1,5 +1,4 @@
-#! /usr/bin/ruby
-# -*- coding: iso-8859-1 -*-
+# encoding: utf-8
 require 'set'
 require 'text/hyphen'
 #require 'XmlDataReader'
@@ -17,7 +16,8 @@ keys_f = {} # {key => text_index}
 elements = make_generator filepath
 #iterate on paragraphs
 #70.times {|t|
-while elements.alive?
+while elements.next?
+  puts '  history.push elements.next?'
   person = read_person elements
   break unless person
   extract_from_person(person, texts, keys_m, keys_f)
