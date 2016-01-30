@@ -17,7 +17,7 @@ elements = make_generator filepath
 #iterate on paragraphs
 #70.times {|t|
 while elements.next?
-  puts '  history.push elements.next?'
+  # puts '  history.push elements.next?'
   person = read_person elements
   break unless person
   extract_from_person(person, texts, keys_m, keys_f)

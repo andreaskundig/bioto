@@ -32,9 +32,9 @@ def make_generator(uri)
 end
 
 def is_para(element)
-  puts "  #is_para"
-  puts "  history.push elements.current"
-  puts "  #is_para '#{element}'".gsub(/\n/,'\n')
+  # puts "  #is_para"
+  # puts "  history.push elements.current"
+  # puts "  #is_para '#{element}'".gsub(/\n/,'\n')
   element.strip.size >0 && !(element =~ /^(http|clefs:|sexe:|----)/)
 end
 
@@ -43,8 +43,8 @@ def is_url(element)
 end
 
 def data_end(elements)
-  puts "  #data_end next?"
-  puts "  history.push elements.next?"
+  # puts "  #data_end next?"
+  # puts "  history.push elements.next?"
   !(elements.next?) || elements.current.start_with?('STOP')
 end
 
@@ -53,7 +53,7 @@ def para_end(elements)
 end
 
 def read_para(elements)
-  puts "  #read_para \n  history.push elements.next"
+  # puts "  #read_para \n  history.push elements.next"
   text = elements.next
   text += "<br>" + elements.next while ! para_end elements
   keys = elements.next
@@ -64,7 +64,7 @@ end
 
 def extract_keys(key_text)
   return [] unless key_text #&& (key_text.start_with? "clefs:")
-  puts "  #extract_keys '#{key_text}'".gsub(/\n/,'\n')
+  # puts "  #extract_keys '#{key_text}'".gsub(/\n/,'\n')
   k = key_text.strip[6..-1].gsub(/[,.]/,' ').gsub(/(\w+)s\b/,'\1').gsub(/\?+/,'bof')
   k.gsub("\303\251",'e').gsub("\303\250",'e').split
 end

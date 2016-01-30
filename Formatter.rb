@@ -61,13 +61,13 @@ end
 def read_person(elements)
  person = {:texts=>[]}
  while !is_para(elements.current) && !data_end(elements)
-   puts "  #read_person next"
-   puts "  history.push elements.next"
+   # puts "  #read_person next"
+   # puts "  history.push elements.next"
    elements.next
  end
  return nil if data_end(elements)
  while is_para elements.current
-   puts "  history.push elements.current"
+   # puts "  history.push elements.current"
    person[:texts] << format_para(* read_para(elements))
  end
  person[:url]= read_url(elements) 
@@ -156,5 +156,5 @@ def puts_json(texts, keys_m, keys_f)
  puts "var keys_f = {" 
  puts keys_f.to_a.map{|pair| "#{pair[0]}: [#{pair[1].join(", ")}]" }.join(", ") 
  puts "};\n"
- puts "var texts = [\n" + texts.enum_with_index.map{|t,i| text2json(t,i)}.join(",\n") + "\n];"
+ puts "var texts = [\n" + texts.each_with_index.map{|t,i| text2json(t,i)}.join(",\n") + "\n];"
 end
