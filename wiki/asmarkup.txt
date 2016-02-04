@@ -1,3 +1,9 @@
+Suite à une succession d'évènements assez ironiques, <Sedgwick:nom_masculin> meurt au début de la bataille de Spotsylvania, le 9 mai 1864. Avec ses troupes, il menait une reconnaissance sur le flanc gauche des confédérés et dirigeait le positionnement de l'artillerie. Des tireurs embusqués adverses étaient situés à environ 900m et leurs tirs incitaient les membres de son état-major et les artilleurs à se mettre à couvert. <Sedgwick:nom_masculin>, pour sa part, marchait à découvert en disant : "What? Men dodging this way for single bullets? What will you do when they open fire along the whole line? I am ashamed of you. They couldn't hit an elephant at this distance." Bien que honteux, ses hommes tressaillaient toujours et il répéta : « I'm ashamed of you, dodging that way. They couldn't hit an elephant at this distance. » Quelques secondes plus tard, il tomba au sol, frappé par une balle au-dessus de l'œil gauche.
+clefs: mort
+
+https://fr.wikipedia.org/wiki/John_Sedgwick
+-----------
+
 Ce <plasmode:litt:dessinateur> n'est pas enfermé dans une paroi rigide; il peut donc être animé de mouvements convulsifs et se déplacer (quelques centimètres par heure).<:pronom_masculin>
 clefs: apparence
 
@@ -49,7 +55,7 @@ http://fr.wikipedia.org/wiki/Genie
 Dans le documentaire d'A&E Biography - <Jeffrey Dahmer:nom_masculin>, on voit son enfance « normale » filmée par ses parents où il montre sa fascination pour les animaux, il ne les caressait pas, mais les palpait.
 clefs: enfance
 
-Il a aussi reconnu « s'être essayé au cannibalisme » en mangeant le biceps d'une de ses victimes.
+<Il:pronom_masculin> a aussi reconnu « s'être essayé au cannibalisme » en mangeant le biceps d'une de ses victimes.
 clefs: carriere
 
 Il fut assassiné par un co-détenu, Christopher Scarver, à la Columbia Correctional facility à Portage (Wisconsin) le 28 novembre 1994. L'homme, un schizophrène instable se « prenant pour Jésus-Christ » lui a fracassé le crâne au moyen d'un haltère.<:pronom_masculin>
@@ -78,7 +84,7 @@ clefs: reputation
 <Byron:nom_masculin> implore le pardon de son épouse, lui adressant un poème pathétique, Porte-toi bien, mais elle le lui refuse, et la séparation à l’amiable a lieu le 2 février 1816.
 clefs: relations
 
-On l’a quelquefois comparé à Robert Burns ; tous deux, le pair et le paysan, écrivent d’après leurs impressions et leurs sentiments personnels, se montrant tout entiers dans leurs œuvres ; esclaves de passions impérieuses, livrés également au doute et à la mélancolie, ils meurent prématurément, après une vie d’extraordinaire activité physique et intellectuelle.
+On l’a quelquefois comparé à Robert Burns ; tous deux, le pair et le paysan, écrivent d’après leurs impressions et leurs sentiments personnels, se montrant tout entiers dans leurs œuvres ; esclaves de passions impérieuses, livrés également au doute et à la mélancolie, ils meurent prématurément, après une vie d’extraordinaire activité physique et intellectuelle.<:pronom_masculin>
 clefs: legacy
 
 http://fr.wikipedia.org/wiki/George_Gordon_Byron
@@ -254,7 +260,7 @@ http://fr.wikipedia.org/wiki/Felix_Pisani
 ----
 
 Familièrement, le mot <microbe:nom_unisexe> désigne un micro-organisme (le plus souvent une bactérie) responsable d'une maladie.
-clefs: reputation
+clefs: description
 
 http://fr.wikipedia.org/wiki/Microbe
 ----
@@ -440,9 +446,6 @@ http://fr.wikipedia.org/wiki/Khayr_ad-Din_Barberousse
 
 <Arudj Reïs:nom_masculin> (turc : Oruç Reis) (1464, Lesbos - 1518, Rio Salado) (ou Horuk) dit Baba-Oruç (turc : baba, père prononcé baba-oroutch) qui par déformation donna Barberousse, est un corsaire ottoman albanais.
 clefs: presentation
-
-Ce fut un échec cuisant au cours duquel <Arudj:nom_masculin> perdit son bras gauche.
-clefs: carriere
 
 <Arudj:nom_masculin> occupa d’abord Cherchell avant de se rendre maître d'Alger en faisant étrangler le cheikh Salim dans son bain. Il fit ainsi de la ville une redoutable base de corsaires qui allait résister pendant plus de trois siècles.
 clefs: carriere
@@ -855,7 +858,7 @@ http://fr.wikipedia.org/wiki/Stakhanov
 ------
 
 <Pac-Man:nom_masculin> est un jeu vidéo créé en 1979 par le concepteur Toru Iwatani pour l'entreprise japonaise Namco. Le but du jeu est de déplacer <Pac-Man:nom_masculin>, un personnage en forme de camembert, à l'intérieur d'un labyrinthe, et de lui faire ramasser toutes les pac-gommes qui s'y trouvent en évitant d'être touché par des fantômes.
-clefs: legacy
+clefs: presentation
 
 http://fr.wikipedia.org/wiki/Pac-Man
 ------
@@ -1505,7 +1508,7 @@ http://fr.wikipedia.org/wiki/Undertaker
 <L'ornithorynque:litt:Ce dessinateur> (Ornithorhynchus anatinus) est une petite espèce de mammifère semi-aquatique endémique de l'est de l'Australie, y compris en Tasmanie. C'est l'une des cinq espèces de l'ordre des monotrèmes, les seuls mammifères qui pondent des œufs au lieu de donner naissance à des petits vivants (les quatre autres espèces sont des échidnés). <C':nom_masculin> est la seule espèce survivante de la famille des Ornithorhynchidae et du genre Ornithorhynchus bien qu'un grand nombre de fragments d'espèces fossiles de cette famille et de ce genre aient été découverts.
 clefs: physique
 
-L'apparence bizarre de ce <mammifère:litt:dessinateur> pondant des œufs, muni d'aiguillons venimeux, à bec de canard, à queue de castor, qui lui sert à la fois de gouvernail dans l'eau et de réserve de graisse, et à pattes de loutre a fortement surpris les premiers explorateurs qui l'ont découvert et bon nombre de naturalistes européens ont cru à une plaisanterie.
+L'apparence bizarre de ce <mammifère:litt:dessinateur> pondant des œufs, muni d'aiguillons venimeux, à bec de canard, à queue de castor, qui lui sert à la fois de gouvernail dans l'eau et de réserve de graisse, et à pattes de loutre a fortement surpris les premiers explorateurs qui l'ont découvert et bon nombre de naturalistes européens ont cru à une plaisanterie.<:pronom_masculin>
 clefs: physique
 
 http://fr.wikipedia.org/wiki/Ornitorinque
@@ -1795,7 +1798,7 @@ http://fr.wikipedia.org/wiki/Bernard-Henri_L%C3%A9vy
 ----
 
 <Obi-Wan:nom_masculin> est un humain châtain aux yeux bleus.
-clefs: physique
+clefs: description
 
 http://fr.wikipedia.org/wiki/Obi-Wan_Kenobi
 ----
