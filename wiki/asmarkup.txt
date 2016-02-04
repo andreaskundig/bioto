@@ -1,4 +1,28 @@
-<La WBC:nom_unisexe> base son action autour de son slogan le plus connu, qui est aussi l'adresse de son tout premier site internet : « God hates fags » (Dieu hait les tapettes), et exprime l'idée, fondée sur son interprétation de la Bible, qu'à peu près toutes les tragédies dans le monde sont liées à l'homosexualité
+Ce <plasmode:litt:dessinateur> n'est pas enfermé dans une paroi rigide; il peut donc être animé de mouvements convulsifs et se déplacer (quelques centimètres par heure).<:pronom_masculin>
+clefs: apparence
+
+https://fr.wikipedia.org/wiki/Myxomycètes
+-----------
+
+<Ada Lovelace:nom_feminin>, de son nom complet <Augusta Ada:nom_feminin> King, comtesse de Lovelace, née <Ada:nom_feminin> Byron le 10 décembre 1815 à Londres et morte le 27 novembre 1852 à Marylebone dans la même ville, fille de <Lord Byron:nom_masculin_2>, est une pionnière de la science informatique.
+clefs: presentation
+
+Dans l’espoir de subventionner les projets de <Babbage:nom_masculin_2>, qui n'avaient pas obtenu de financement du gouvernement britannique, <Lady Lovelace:nom_feminin> se mit à jouer. Elle travailla à un système qui devait lui permettre de remporter le derby d'Epsom mais ne l'entraîna que dans l'accumulation de dettes.
+clefs: carriere
+
+https://fr.wikipedia.org/wiki/Ada_Lovelace
+----------
+
+En 1919 il inventa l’« éthérophone » ou thérémine, premier instrument de musique électronique. Cet appareil a comme particularité qu’on en joue sans le toucher, en bougeant les mains dans un champ électromagnétique émis par deux antennes. Il en joue devant Lénine en 1922 et enthousiasme l’intelligentsia.<:pronom_masculin>
+clefs: oeuvre
+
+En 1938, <l’inventeur:litt:le dessinateur> disparaît mystérieusement, et sa mort est officiellement annoncée. Les recherches de son épouse et de ses amis n’aboutissent pas et il est progressivement oublié. Il s'avèrera qu'il a été enlevé par des agents du NKVD qui le renvoyèrent dans son pays natal.<:pronom_masculin>
+clefs: carriere
+
+https://fr.wikipedia.org/wiki/Lev_Sergueïevitch_Termen
+-----------
+
+<La WBC:nom_unisexe> base son action autour de son slogan le plus connu, qui est aussi l'adresse de son tout premier site internet : « God hates fags » (Dieu hait les tapettes), et exprime l'idée, fondée sur son interprétation de la Bible, qu'à peu près toutes les tragédies dans le monde sont liées à l'homosexualité.
 clefs: opinions
 
 http://fr.wikipedia.org/wiki/Westboro_Baptist_Church
