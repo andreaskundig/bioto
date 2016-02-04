@@ -10,9 +10,9 @@ var displayer, span_displayer, morph_displayer, keys, show_all,
 
 var ordre = [
   ["nom","presentation", "vie",  "introduction"],
+   ["apparence", "physique", "pouvoir", "sante", "surnom", "age", "alimentation"],
   ["naissance", "origine", "existence", "debut"],
   ["enfance", "jeunesse", "adolescence", "famille", "relation","divorce","mariage"],
-  ["apparence", "physique", "pouvoir", "sante", "surnom", "age", "alimentation"],
   ["personnalite", "caractere", "reputation", "ondit","rumeur", "faculte"],
   ["oeuvre", "carriere", "style"],
   ["citation", "bof", "opinion", "inexplique", "enseignement", "titre", "chasse"],
@@ -20,9 +20,9 @@ var ordre = [
 ];
 
 var protagonistes = ["Ibn Al Rabin", "Andréas Kündig", 
-  "Bob le lapin", "Un certain Gérard", "Bourguiba"];
-var livres =["'l'autre fin du monde'", "la bible", "'Martine à la plage'",
- "'Cot cot'", "'Figaro Madame'"];
+  "Bob le lapin", "Un certain Gérard", "Le guitariste des Brochettes"];
+var livres =["'l'autre fin du monde'", "la Bible", "'Martine à la plage'",
+ "'Cot cot'", "'Figaro Madame'", "'Mes meilleurs Jésus'", "'La fabrique de fanzines par ses ouvriers mêmes'"];
 
 function stats() {
   var sujet, sujets, i, j, tot;
