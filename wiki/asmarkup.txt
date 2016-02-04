@@ -1731,7 +1731,7 @@ clefs: relations
 C'est aussi à ce moment où, en secret, il rédige spontanément (en trois nuits), dans un événement extatique, <Les Sept Sermons aux morts:livre_ext>, son écrit le plus mystique  dans lequel il se voit sous les traits du gnostique Basilide, créateur de l'abraxas. Néanmoins la dimension hermétique de ce livre et ses conditions de rédaction, parapsychologiques, poussent <Jung:nom_masculin> à ne pas en parler, craignant d'être accusé de se considérer comme un visionnaire.
 clefs: carriere
 
-En 1932, le journal Neue Zürcher Zeitung demande à <Jung:nom_masculin> un article sur Pablo Picasso à l'occasion d'une exposition à la Kunsthaus. Jung accepte mais rédige un article dénué de compréhension pour l'art moderne, ce qui lui vaut de nombreuses critiques. La même année, l'analyse qu'il fait du Ulysse de James Joyce est également un fiasco.
+En 1932, le journal Neue Zürcher Zeitung demande à <Jung:nom_masculin> un article sur Pablo Picasso à l'occasion d'une exposition à la Kunsthaus. <Jung:nom_masculin> accepte mais rédige un article dénué de compréhension pour l'art moderne, ce qui lui vaut de nombreuses critiques. La même année, l'analyse qu'il fait du Ulysse de James Joyce est également un fiasco.
 clefs: carriere
 
 <Jung:nom_masculin> est ensuite touché par une violente dysenterie  amibienne qui le cloue au lit. Il est alors assailli par des rêves pénétrants qui tous renvoient à l'image du Saint Graal.
