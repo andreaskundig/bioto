@@ -350,7 +350,7 @@ http://fr.wikipedia.org/wiki/Issei_Sagawa
 Son alimentation était étroitement surveillée, et se compose habituellement d'une poignée de foin et d'une tasse de grain, deux fois par jour.
 clefs: alimentation
 
-Vue sous un certain angle, <Thumbelina:nom_unisexe> ressemble plus à un bison miniature ou à un cochon qu'à un cheval, et son corps évoque un tonneau posé sur de toutes petites jambes.
+Vue sous un certain angle, <Thumbelina:nom_feminin> ressemble plus à un bison miniature ou à un cochon qu'à un cheval, et son corps évoque un tonneau posé sur de toutes petites jambes.
 clefs: physique
 
 
@@ -470,7 +470,7 @@ En 1975, <Chase:nom_masculin> fut placé contre son gré dans un institut psychi
 clefs: sante carriere
 
 Une fois, il fut retrouvé avec du sang autour de la bouche. <Chase:nom_masculin> dit "je me suis coupé en me rasant", mais l’hôpital découvrit qu’il avait bu du sang d’oiseaux. Il avait jeté les corps des oiseaux par la fenêtre. L’équipe médicale commença à l’appeler " Dracula ".
-clefs: sante carriere
+clefs: carriere
 
 Le 11 janvier 1978, <Chase:nom_masculin> demanda une cigarette à sa voisine avant de l’obliger à lui donner le paquet entier.
 clefs: carriere
@@ -884,8 +884,8 @@ http://fr.wikipedia.org/wiki/Bernadette_Soubirous
 
 ------
 
-<C':pronom_masculin_1> est un singe maléfique à la peau verdâtre qui vit dans l'observatoire au sommet du volcan dans le parc de Townsville.
-clefs: physique
+<C':nom_masculin> est un singe maléfique à la peau verdâtre qui vit dans l'observatoire au sommet du volcan dans le parc de Townsville.
+clefs: introduction
 
 http://fr.wikipedia.org/wiki/Liste_des_personnages_des_Supers_Nanas
 
@@ -1259,7 +1259,7 @@ http://fr.wikipedia.org/wiki/Dieu
 
 ------
 
-Mais ce fut <Ovide:nom_masculin_2> dans <ses Métamorphoses:livre_ext> qui donna au <Chaos:nom_masculin_1> la signification en usage jusqu'à ce jour en le décrivant comme une masse grossiere inorganisée et informe.
+<Mais c:litt:C>e fut <Ovide:nom_masculin_2> dans <ses Métamorphoses:livre_ext> qui donna au <Chaos:nom_masculin_1> la signification en usage jusqu'à ce jour en le décrivant comme une masse grossiere inorganisée et informe.
 clefs: physique
 
 http://fr.wikipedia.org/wiki/Chaos_%28mythologie%29
@@ -1293,7 +1293,7 @@ http://fr.wikipedia.org/wiki/%C3%89ros
 ------
 
 <Le sasquatch:nom_masculin_1> serait un primate humanoïde proche du <Yéti:nom_masculin_2>.
-clefs: physique.
+clefs: introduction
 
 La recherche de l'existence du <sasquatch:nom_masculin> relève du domaine de la cryptozoologie. Toutes les traces trouvées jusqu'ici (excréments, cadavres d'animaux tués d'une manière ne correspondant pas à celle de leurs prédateurs naturels ou bien énormes empreintes de pas laissées dans la terre) ne se sont pas révélées concluantes après analyses.
 clefs: existence
@@ -1308,7 +1308,7 @@ http://fr.wikipedia.org/wiki/Barbe_Noire
 ------
 
 <C':litt:Ce dessinateur> est un pantin de bois, à la tête articulée par un ressort qui se balance d'avant en arrière, comme pour dire oui.<:pronom_masculin>
-clefs: physique
+clefs: introduction
 
 <Il:pronom_masculin> porte toujours un bonnet bleu surmonté d'un grelot qui sonne quand sa tête bouge et un éternel foulard jaune à pois rouges.
 clefs: physique
@@ -1382,7 +1382,7 @@ http://fr.wikipedia.org/wiki/Commodore_64
 -------------------
 
 <C':litt:Ce dessinateur> est un métal de transition gris-acier blanc, très dur, et lourd qui est reconnu pour ses propriétés physiques. On trouve du <tungstène:nom_masculin> dans de nombreux minerais comme le wolframite et le scheelite.
-clefs: physique
+clefs: introduction
 
 <Cet élément:litt:Ce dessinateur> a le plus haut point de fusion (3 422 °C) de tous les métaux, la plus faible pression de vapeur et la plus grande force de traction de tous les métaux à une température supérieure à 1 650 °C.<:pronom_masculin>
 clefs: physique
@@ -1611,10 +1611,10 @@ http://fr.wikipedia.org/wiki/Undertaker
 ------
 
 <L'ornithorynque:litt:Ce dessinateur> (Ornithorhynchus anatinus) est une petite espèce de mammifère semi-aquatique endémique de l'est de l'Australie, y compris en Tasmanie. C'est l'une des cinq espèces de l'ordre des monotrèmes, les seuls mammifères qui pondent des œufs au lieu de donner naissance à des petits vivants (les quatre autres espèces sont des échidnés). <C':nom_masculin> est la seule espèce survivante de la famille des Ornithorhynchidae et du genre Ornithorhynchus bien qu'un grand nombre de fragments d'espèces fossiles de cette famille et de ce genre aient été découverts.
-clefs: physique
+clefs: introduction
 
 <L'ornithorynque:litt:Cette dessinatrice> (Ornithorhynchus anatinus) est une petite espèce de mammifère semi-aquatique endémique de l'est de l'Australie, y compris en Tasmanie. C'est l'une des cinq espèces de l'ordre des monotrèmes, les seuls mammifères qui pondent des œufs au lieu de donner naissance à des petits vivants (les quatre autres espèces sont des échidnés). <C':nom_feminin> est la seule espèce survivante de la famille des Ornithorhynchidae et du genre Ornithorhynchus bien qu'un grand nombre de fragments d'espèces fossiles de cette famille et de ce genre aient été découverts.
-clefs: physique
+clefs: introduction
 
 L'apparence bizarre de ce <mammifère:litt:dessinateur> pondant des œufs, muni d'aiguillons venimeux, à bec de canard, à queue de castor, qui lui sert à la fois de gouvernail dans l'eau et de réserve de graisse, et à pattes de loutre a fortement surpris les premiers explorateurs qui l'ont découvert et bon nombre de naturalistes européens ont cru à une plaisanterie.<:pronom_masculin>
 clefs: physique
@@ -1730,8 +1730,7 @@ clefs: debuts
 La sécurité sociale le considère comme invalide à 60%.<:pronom_masculin>
 clefs: physique
 
-http://fr.wikipedia.org/wiki/Alain_Robert
-
+https://fr.wikipedia.org/wiki/Alain_Robert_(escalade)
 ---------
 
 Lorsqu'il quitte le groupe, il sombre encore plus dans la drogue, qu'il se fait livrer à son appartement. Lorsque <Sharon:nom_feminin_2>, la fille du président du label de Black Sabbath, vient lui réclamer le paiement de dettes, elle décide de l'aider à se sortir de sa situation. Elle lui aurait dit alors : « Lève-toi, prends une douche, on va voir des maisons de disques ». Elle se propose de lui amener deux colombes en signe de liberté. Sous l'emprise de l'alcool, il se rend chez Sony Music et libère les deux oiseaux, mais l'un d'eux reste sur sa jambe : c'est alors qu'il la prend et lui arrache la tête avec les dents. Le personnel de Sony trouve qu'<Osbourne:nom_masculin_1> est le produit qu'il leur faut. 
@@ -1882,7 +1881,7 @@ Le nom <zaraθ-uštra:nom_masculin> est un composé Bahuvrihi  en avestique  de 
 clefs: nom
 
 Le Spena Nask, 13e section de l'Avesta, décrit la vie de <Zoroastre:nom_masculin>. Ce chapitre, transmis oralement, n'a plus aucune cohérence.
-clefs: introduction
+clefs: vie
 
 Sa femme est dénommée Hvōvi. Ils ont trois filles : Freni, Friti et Pourucista, ainsi que trois fils : Isat Vastar, Uruvat-Nara et Hvare Ciθra. Sa mère s'appelait Dughdova ; son père était Pourushaspa Spitāma. Son grand-père s'appelait Haecadaspa Spitāma.
 clefs: origine
@@ -2051,6 +2050,91 @@ On a retrouvé des représentations personnifiées d'<Axomama:nom_feminin>, sous
 clefs: oeuvre
 
 https://fr.wikipedia.org/wiki/Axomama
+--------
+
+"I myself have never been able to find out what feminism is; I only know that people call me a feminist whenever I express sentiments that differentiate me from a doormat or a prostitute." - "Je n'ai jamais été à même de savoir ce qu'est le féminisme ; je sais seulement que des gens m'appellent ainsi quand j'exprime des sentiments qui me différencient d'un paillasson ou d'une prostituée."<:pronom_feminin>
+clefs: citation
+
+"Avant une guerre, la science militaire fait figure de science, comme l'astronomie. Après une guerre, elle tient plus de l'astrologie."
+clefs: citation
+
+https://fr.wikipedia.org/wiki/Rebecca_West
+------
+
+Le 21 octobre 2011, <Courtney:nom_feminin> est condamnée à payer 68 000 euros de dommages et intérêts au bijoutier Jacob and Co. pour n'avoir jamais rendu des parures de bijoux, qui lui avaient été prêtées pour un gala de charité à New York en 2010.
+clefs: carriere
+
+https://fr.wikipedia.org/wiki/Courtney_Love
+
+-------
+En 2006, <elle:pronom_feminin> a été photographiée par le magazine Elle dans les cardigans et pantalon de pyjama marron de son père dans le cadre d'un article mettant en vedette des enfants de stars du rock dans les vêtements de leurs parents. Elle a expliqué : « Je porte son pyjama parce qu'il le portait quand il a épousé ma mère. Il était trop paresseux pour mettre un smoking le jour de son mariage ! "
+clefs: citation
+
+https://fr.wikipedia.org/wiki/Frances_Cobain
+-------
+
+On lui donne le surnom de The Body (« Le Corps ») en raison de ses mensurations de rêve (90-61-88).<:pronom_feminin>
+clefs: physique
+
+https://fr.wikipedia.org/wiki/Elle_Macpherson
+------
+
+Le mariage de <Bertrade:nom_feminin> avec <Pépin:nom_masculin_2> pose un certain nombre de problèmes. 
+clefs: mariage
+
+https://fr.wikipedia.org/wiki/Bertrade_de_Laon
+------
+
+<La poupée Barbie:nom_feminin> est une <poupée:litt:dessinatrice> de 29 cm commercialisée depuis 1959 par Mattel, une société américaine de jouets et jeux.
+clefs: introduction
+
+Si la <Barbie:nom_feminin> caractéristique est blonde aux cheveux longs et aux traits européens, sa couleur de cheveux varie en fait considérablement et son type ethnique s'est diversifié dès 1967 et plus systématiquement à partir de 1980, si bien qu'à ce jour il existe une <Barbie:nom_feminin> pour à peu près tous les groupes ethniques du monde.
+clefs: physique
+
+Ses mensurations, initialement hypertrophiées, sont ramenées à des proportions plus habituelles au fil des années.<:pronom_feminin>
+clefs: physique
+
+Des parents l'accusent de fausser l'image de la femme et d'encourager notamment l'anorexie.<:pronom_feminin>
+clefs: physique reputation
+
+https://fr.wikipedia.org/wiki/Poupée_Barbie
+--------
+
+<Lara Croft:nom:feminin> est une jeune femme athlétique. Ses yeux sont marron, comme ses cheveux, qui sont fréquemment coiffés en tresse ou en queue de cheval.
+clefs: physique
+
+Après avoir interviewé des <joueurs:litt:dessinateurs> en 1998, le Dr Mark Griffiths (en), psychologue et professeur de l'université de Nottingham Trent, précise qu'ils parlent régulièrement de la poitrine de <Lara Croft:nom_feminin> lorsqu'ils la mentionnent.
+clefs: physique reputation
+
+De la pornographie mettant en scène le <personnage:litt:dessinateur> apparaît également sur internet.<:pronom_masculin>
+clefs: reputation
+
+De la pornographie mettant en scène <le personnage:litt:la dessinatrice> apparaît également sur internet.<:pronom_feminin>
+clefs: reputation
+
+<Mark Cohen:nom_masculin_2> attribue l'érotisme de <Lara Croft:nom_feminin> à son apparence et à un instinct protecteur masculin. <Oscar Holzberg:nom_masculin_3> y décrit ce comportement protecteur comme résultat de l'opportunité d'agir comme un héros dans des mondes virtuels mêlée à la peur de l'émancipation de femmes puissantes.
+clefs: opinion
+
+https://fr.wikipedia.org/wiki/Lara_Croft
+--------
+
+Le 28 janvier 2016, à l'issue du Festival international de la bande dessinée d'Angoulême, la ministre de la Culture, Fleur Pellerin annonce que <Tanxxx:nom_feminin> est élevée au rang de Chevalier des arts et lettres, récompense que l'intéressée refuse.
+clefs: carriere
+
+https://fr.wikipedia.org/wiki/Tanxxx
+--------
+
+Artiste provocatrice, <elle:pronom_feminin> milite pour l'acceptation du corps et a posé nue dans plusieurs magazines. Elle a refusé un contrat avec Gap, arguant que les magasins de la marque ne vendaient pas de vêtements dans sa taille.
+clefs: physique caractere
+
+https://fr.wikipedia.org/wiki/Beth_Ditto
+--------
+
+<Il:pronom_masculin> est généralement décrit comme ressemblant à un serpent de mer ou à un plésiosaure.
+clefs: physique
+
+https://fr.wikipedia.org/wiki/Monstre_du_Loch_Ness
+
 
 
 

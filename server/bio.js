@@ -12,7 +12,7 @@ var ordre = [
   ["nom","presentation", "introduction", "description"],
   ["apparence", "physique", "pouvoir", "sante", "surnom", "age", "alimentation", "vie"],
   ["naissance", "origine", "existence", "debut", "debuts", "enfance", "jeunesse", "adolescence"],
-  ["personnalite", "caractere", "reputation", "ondit","rumeur", "faculte", "relation","divorce","mariage", "famille"],
+  ["personnalite", "caractere", "reputation", "ondit", "rumeur", "faculte", "relation","divorce","mariage", "famille"],
   ["carriere"],
   ["carriere"], 
   ["oeuvre", "style", "citation", "bof", "opinion", "inexplique", "enseignement", "titre", "chasse"],
