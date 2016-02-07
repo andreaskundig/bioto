@@ -9,18 +9,18 @@ var displayer, span_displayer, morph_displayer, keys, show_all,
   string_util, array_util, url_helper, substituter;
 
 var ordre = [
-  ["nom","presentation", "vie",  "introduction"],
-   ["apparence", "physique", "pouvoir", "sante", "surnom", "age", "alimentation"],
-  ["naissance", "origine", "existence", "debut"],
-  ["enfance", "jeunesse", "adolescence", "famille", "relation","divorce","mariage"],
-  ["personnalite", "caractere", "reputation", "ondit","rumeur", "faculte"],
-  ["oeuvre", "carriere", "style"],
-  ["citation", "bof", "opinion", "inexplique", "enseignement", "titre", "chasse"],
+  ["nom","presentation", "introduction", "description"],
+  ["apparence", "physique", "pouvoir", "sante", "surnom", "age", "alimentation", "vie"],
+  ["naissance", "origine", "existence", "debut", "debuts", "enfance", "jeunesse", "adolescence"],
+  ["personnalite", "caractere", "reputation", "ondit","rumeur", "faculte", "relation","divorce","mariage", "famille"],
+  ["carriere"],
+  ["carriere"], 
+  ["oeuvre", "style", "citation", "bof", "opinion", "inexplique", "enseignement", "titre", "chasse"],
   ["retraite", "mort", "legacy"]
 ];
 
 var protagonistes = ["Ibn Al Rabin", "Andréas Kündig", 
-  "Bob le lapin", "Un certain Gérard", "Le guitariste des Brochettes"];
+  "Bob le lapin", "Un certain Gérard", "Klaus (guitariste des Brochettes)"];
 var livres =["'l'autre fin du monde'", "la Bible", "'Martine à la plage'",
  "'Cot cot'", "'Figaro Madame'", "'Mes meilleurs Jésus'", "'La fabrique de fanzines par ses ouvriers mêmes'"];
 
@@ -94,7 +94,7 @@ function text_indexes_for_topics(topic_index,keys){
 
 }
 function male_or_female_keys(){
-  return Math.random() > 0.5 ? keys_f : keys_m;  
+  return Math.random() > .75 ? keys_f : keys_m;  
 
 }
 function next_text(text_object, deja_utilise,keys){

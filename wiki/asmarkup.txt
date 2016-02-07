@@ -1,3 +1,108 @@
+<Voyageant:litt:Dessinant> de planète en planète, <Barbarella:nom_feminin> est une héroïne de science-fiction dessinée sur le modèle de Brigitte Bardot. Peu farouche, elle incarne pour son créateur la femme moderne à l'ère de la libération sexuelle.
+clefs: description
+
+https://fr.wikipedia.org/wiki/Barbarella
+-----
+
+<L'orgasmotron, orgazmotron, orgasmatron ou encore Orgazmo rayon:nom_unisexe> est une machine fictive qui est censée apporter un orgasme immédiat aux personnes qui l'utilisent.
+clefs: description
+
+
+https://fr.wikipedia.org/wiki/Orgasmotron
+----------
+
+En 1922, <elle:pronom_feminin> falsifie sa date de naissance en 7 juillet 1910, année du début de la révolution mexicaine.
+clefs: debuts
+
+<Frida Kahlo:nom_feminin> découvre que son mari a une liaison avec sa sœur, Cristina. Profondément blessée, elle quitte le foyer pour un appartement au centre de Mexico. Pendant cette période, elle a plusieurs relations extraconjugales, notamment avec des femmes. Au milieu de 1935, elle part avec deux amies pour New York. Elle ne revient au Mexique qu'après la fin de la liaison entre sa sœur et son mari, à la fin de l'année.
+clefs: relation
+
+Le 9 janvier 1937, le président Lázaro Cárdenas del Río accorde, conformément à ses pouvoirs constitutionnels, l'asile politique à Léon Trotski. Lui et sa femme sont accueillis par <Frida:nom_feminin> et <Diego:nom_masculin_2>, à la Casa azul (la Maison bleue). Une brève liaison que l'on dit passionnée se développe entre Trotski et <Frida:nom_feminin>.
+clefs: relation
+
+En 1939, <Frida:nom_feminin> se rend à Paris à la grande exposition sur le Mexique organisée par le gouvernement Lázaro Cárdenas à la galerie Renou et Pierre Colle. Elle loge chez André Breton et rencontre les peintres Yves Tanguy, Picasso et Vassili Kandinsky. Elle n'aime pas Paris, qu'elle trouve sale, et la nourriture ne lui convient pas ; elle attrape une colibacillose. L'exposition lui déplaît : son avis est « qu'elle est envahie par cette bande de fils de putes lunatiques que sont les surréalistes », elle trouve superflue « toute cette saloperie » exposée autour du Mexique.
+clefs: carriere
+
+Dans une lettre à Nickolas Murray, <elle:pronom_feminin> fait part de son profond dégoût pour les intellectuels parisiens :
+« Ils ont tellement de foutus intellectuels pourris que je ne peux plus les supporter. Ils sont vraiment trop pour moi. J'aimerais mieux m'asseoir par terre dans le marché de Toluca pour vendre des tortillas que d'avoir quoi que ce soit à voir avec ces connards artistiques de Paris... Je n'ai jamais vu <Diego:nom_masculin_2> ni toi perdre leur temps à ces bavardages stupides et ces discussions intellectuelles. C'est pour ça que vous êtes de vrais hommes et non des artistes minables — Bon sang ! ça valait la peine de venir jusqu'ici juste pour comprendre pourquoi l'Europe est en train de pourrir, pourquoi tous ces incapables sont la cause de tous les Hitler et les Mussolini. »
+clefs: citation
+
+https://fr.wikipedia.org/wiki/Frida_Kahlo
+--------
+
+En septembre 1978, <elle:pronom_feminin> arrive à New York avec 35 $ en poche, et se rend au quartier des théâtres, à Times Square, en espérant y trouver la gloire. Elle devient rapidement étudiante de la très respectée danseuse classique Pearl Lang, et vit d'emplois occasionnels dans une grande précarité, esseulée et avec le peu d'argent que lui rapportent ses emplois de serveuse, danseuse ou modèle de nu.
+clefs: debut
+
+https://fr.wikipedia.org/wiki/Madonna
+--------
+
+De ses fiançailles avec le prince de Galles à sa mort dans un accident de voiture à Paris en 1997, <Diana:nom_feminin> fut l'une des femmes les plus célèbres du monde de la fin du xxe siècle. 
+clefs: presentation
+
+Sa détresse émotionnelle pendant les années 1980 et les années 1990 inspira nombre de biographies, de photos, d'articles de journaux et de films de télévision.
+clefs: caractere
+
+<Elle:pronom_feminin> confirma plus tard (dans une interview avec le journaliste britannique Martin Bashir) qu'elle avait eu une liaison avec son moniteur d'équitation, <James Hewitt:nom_masculin_2>.
+clefs: relation
+
+<Diana:nom_feminin> entama en 1995 une idylle passionnée avec le docteur Hasnat Khan, chirurgien cardio-thoracique à l'hôpital royal de Brompton où elle l'avait rencontré le 1er septembre 1995 alors qu'il venait d'opérer un de ses vieux amis. Elle découvrit les joies de l'anonymat pour cacher leur relation, portant perruques, foulards et lunettes.
+clefs: relation
+
+Son influence sur la signature du Traité pour l’interdiction des mines antipersonnel, Traité d'Ottawa le 3 décembre 1997 (donc, peu de temps après son décès) par 122 pays fut prépondérante.
+clefs: legacy
+
+En août 2013, le Metropolitan Police Service examine des allégations faites lors du procès du sergent <Danny Nightingale:nom_masculin_2>, tireur d'élite des SAS (Special Air Service) reconnu coupable de possession illégale d'arme. Les beaux-parents d'un autre militaire, qui avait affirmé lors du procès qu'il était courant pour les membres de cette unité de collectionner des armes illégalement, avaient écrit au chef de corps de son régiment pour signaler que son comportement devenait inquiétant. Le soldat - dont l'identité n'a pas été révélée - aurait menacé son épouse de mort en lui affirmant que son unité avait organisé l'assassinat de <Diana Spencer:nom_feminin>.
+clefs: mort
+
+En 2003, l’éditeur Marvel Comics a annoncé la publication de cinq tomes ayant pour titre <Di:nom_feminin> Another Day (en référence au film de James Bond, Die Another Day) où <Diana, princesse de Galles,:nom_feminin> est représentée sous les traits d’un mutant aux super-pouvoirs. Après un grand nombre de protestations, l’idée fut rapidement abandonnée.
+clefs: legacy
+
+https://fr.wikipedia.org/wiki/Diana_Spencer
+------
+
+<Nina Childress:nom_feminin>, issue de la scène punk alternative parisienne comme chanteuse et auteur du groupe Lucrate Milk, a joué avec Einstürzende Neubauten lors de la Biennale de Paris en 1983.
+clefs: introduction
+
+https://fr.wikipedia.org/wiki/Nina_Childress
+------
+
+<Mary Celine Fasenmyer:nom_feminin> (4 octobre 1906, Crown (en) - 27 décembre 1996, Érié) est une mathématicienne de Pennsylvanie (États-Unis), connue sous le nom de sœur <Celine:nom_femini> pour ses travaux sur les identités hypergéométriques.
+clefs: introduction
+
+Deux ans avant sa mort, <elle:pronom_feminin> put se rendre compte de la portée de ses travaux, lors de l'hommage émouvant d'une invitation par <Wilf:nom_masculin_2> à une conférence de spécialistes.
+clefs: legacy retraite
+
+https://fr.wikipedia.org/wiki/Mary_Celine_Fasenmyer
+-------
+
+Ses résultats la qualifient pour enseigner les langues dans les écoles réservées aux jeunes filles, mais <elle:pronom_feminin> choisit de poursuivre ses études à l'université d'Erlangen. Cette décision est peu courante: deux ans auparavant, la direction de l'université a déclaré que l'instauration de la mixité « bouleverserait l'ordre académique ». <Noether:nom_feminin> est l'une des deux seules femmes, parmi les 986 étudiants de l'université. Elle doit demander personnellement la permission de chaque professeur duquel elle veut assister au cours.
+clefs: debuts
+
+<Amalie Emmy Noether:nom_feminin> (23 mars 1882 - 14 avril 1935) est une mathématicienne allemande spécialiste d'algèbre abstraite et de physique théorique. Décrite par Albert Einstein comme « le génie mathématique créatif le plus considérable produit depuis que les femmes ont eu accès aux études supérieures », elle a révolutionné les théories des anneaux, des corps et des algèbres.
+clefs: introduction
+
+En physique, le théorème de <Noether:nom_feminin> explique le lien fondamental entre la symétrie et les lois de conservation.
+clefs: legacy
+
+Au printemps 1915, <Noether:nom_feminin> est invitée à revenir à l'université de Göttingen par <David Hilbert:nom_masculin_2> et <Felix Klein:nom_masculin_3>. Leurs efforts pour la recruter sont cependant entravés par les philosophes et les historiens au sein de la faculté de philosophie: selon eux, les femmes ne doivent pas devenir Privatdozent. Un membre de la faculté proteste: « Que penseront nos soldats, quand ils reviendront à l'université et verront qu'ils doivent apprendre aux pieds d'une femme ? » <Hilbert:nom_masculin_2> répond avec indignation, en indiquant: « je ne vois pas pourquoi le sexe de la candidate serait un argument contre son admission comme Privatdozent. Après tout, nous sommes une université, pas des bains publics. »
+clefs: debuts citation
+
+
+https://fr.wikipedia.org/wiki/Emmy_Noether
+--------
+
+<Elle:pronom_feminin> apparait en 2011 dans le téléfilm en deux parties "La Pire Semaine de ma vie".
+clefs: carriere
+
+<Elle:pronom_feminin> devient une des reines du théâtre de boulevard durant les années 1990 et décide de finalement prendre sa retraite théâtrale en 2009.
+clefs: carriere 
+
+<Elle:pronom_feminin> monte par la suite un tour de chant et se produit dans différents cabarets parisiens où elle développe ses talents d'excellente « siffleuse ». <Elle:pronom_feminin> enregistre tout spécialement plusieurs disques microsillons démontrant son talent supplémentaire dans cet art, dont un CD intitulé Les Plus Grands Airs sifflés en 1995.
+clefs: carriere
+
+https://fr.wikipedia.org/wiki/Micheline_Dax
+------
+
 Suite à une succession d'évènements assez ironiques, <Sedgwick:nom_masculin> meurt au début de la bataille de Spotsylvania, le 9 mai 1864. Avec ses troupes, il menait une reconnaissance sur le flanc gauche des confédérés et dirigeait le positionnement de l'artillerie. Des tireurs embusqués adverses étaient situés à environ 900m et leurs tirs incitaient les membres de son état-major et les artilleurs à se mettre à couvert. <Sedgwick:nom_masculin>, pour sa part, marchait à découvert en disant : "What? Men dodging this way for single bullets? What will you do when they open fire along the whole line? I am ashamed of you. They couldn't hit an elephant at this distance." Bien que honteux, ses hommes tressaillaient toujours et il répéta : « I'm ashamed of you, dodging that way. They couldn't hit an elephant at this distance. » Quelques secondes plus tard, il tomba au sol, frappé par une balle au-dessus de l'œil gauche.
 clefs: mort
 
@@ -28,7 +133,7 @@ clefs: carriere
 https://fr.wikipedia.org/wiki/Lev_Sergueïevitch_Termen
 -----------
 
-<La WBC:nom_unisexe> base son action autour de son slogan le plus connu, qui est aussi l'adresse de son tout premier site internet : « God hates fags » (Dieu hait les tapettes), et exprime l'idée, fondée sur son interprétation de la Bible, qu'à peu près toutes les tragédies dans le monde sont liées à l'homosexualité.
+<La WBC:nom_unisexe> base son action autour de son slogan le plus connu, qui est aussi l'adresse de son tout premier site internet: « God hates fags » (Dieu hait les tapettes), et exprime l'idée, fondée sur son interprétation de la Bible, qu'à peu près toutes les tragédies dans le monde sont liées à l'homosexualité.
 clefs: opinions
 
 http://fr.wikipedia.org/wiki/Westboro_Baptist_Church
@@ -102,7 +207,7 @@ clefs: carriere
 Nommé le 13 mai 1988, ministre de la Défense des gouvernements Rocard I et II, il démissionne le 29 janvier 1991 pour protester contre l'engagement de l'armée française dans la guerre en Irak.<:pronom_masculin>
 clefs: carriere
 
-Il est l'un des rares « entartés » à avoir porté plainte : il a obtenu en octobre 2002 la condamnation de Noël Godin, un agitateur anarcho-humoristique belge à 800 euros d'amende pour « violences volontaires avec préméditation » (amende portée à 2 500 euros en appel en 2004).
+<Il:pronom_masculin> est l'un des rares « entartés » à avoir porté plainte : il a obtenu en octobre 2002 la condamnation de Noël Godin, un agitateur anarcho-humoristique belge à 800 euros d'amende pour « violences volontaires avec préméditation » (amende portée à 2 500 euros en appel en 2004).
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Jean-Pierre_Chev%C3%A8nement
@@ -170,7 +275,7 @@ clefs: physique
 http://fr.wikipedia.org/wiki/Jean-Pierre_Talbot
 ----
 
-L'âge de <Tintin:nom_masculin> est difficile à déterminer. Ce n'est pas un adulte, comme le laisse à penser sa petite taille et son aspect chétif.
+L'âge de <Tintin:nom_unisexe> est difficile à déterminer. Ce n'est pas un adulte, comme le laisse à penser sa petite taille et son aspect chétif.
 clefs: age
 
 En outre, <Tintin:nom_unisexe> semble n'avoir aucune famille. Son seul compagnon de tous les jours est son petit chien blanc, Milou.
@@ -320,7 +425,7 @@ http://fr.wikipedia.org/wiki/Docteur_Merlin
 ----
 
 <Mary Toft:nom_feminin>, née Denyer, (vers 1701 - 1763) également appelée <Mary Toft:nom_feminin>s, était une anglaise de Godalming, dans le Surrey, qui en 1726 a créée une controverse quand elle fit croire à des médecins qu'elle avait donné naissance à des lapins.
-clefs: naissance vie
+clefs: presentation
 
 http://fr.wikipedia.org/wiki/Mary_Toft
 ------
@@ -697,7 +802,7 @@ http://fr.wikipedia.org/wiki/Danielle_Cravenne
 ------
 
 <Galactus:nom_masculin> est un être gigantesque issu d'une race antérieure au Big Bang apparue dans un univers préexistant au nôtre.
-clefs:naissance
+clefs:introduction
 
 Depuis, cet être tout-puissant doté de pouvoirs quasi illimités doit sans cesse se nourrir de l'essence vitale des mondes qu'<il:pronom_masculin> croise sur son chemin, ce qui lui vaut le surnom de « Dévoreur de mondes ».
 clefs: carriere
@@ -745,7 +850,7 @@ http://fr.wikipedia.org/wiki/Red_Hulk
 En période de stress ou d'énervement sa force augmente : elle n'a alors plus de limites connues et <il:pronom_masculin> peut faire des bonds jusqu'à 5 kilomètres. Il est alors inépuisable, la hargne le rendant plus fort là où ses ennemis s'affaiblissent. Il n'y a jamais eu de limite à sa force. Il peut soulever des montagnes, provoquer des tremblements de terre en frappant sur le sol ou provoquer des ondes de choc très puissantes en claquant des mains (ce genre d'exploits le place à un niveau comparable à Superman, à qui on n'a jamais défini de limites précises à ses pouvoirs).
 clefs: pouvoirs 
 
-Dans World War <Hulk:nom_masculin>, Spider-Man qualifie <Hulk:nom_masculin> d'humain le plus puissant de la galaxie (avec une définition très large de l'humain) après Sentry, ajoutant qu'il a révisé son classement après la victoire d'<Hulk:nom_masculin> sur Flèche Noire. Il semble que même ce classement était trop défavorable à <Hulk:nom_masculin>, car finalement Sentry et <Hulk:nom_masculin> se neutralisent mutuellement. <Hulk:nom_masculin> s'est souvent battu avec la Chose (Groupe des 4 Fantastiques) qui a un avantage moral et physique sur lui, car Hulk est solitaire et toujours poursuivi par la violence et l'incompréhension
+Dans World War <Hulk:nom_masculin>, Spider-Man qualifie <Hulk:nom_masculin> d'humain le plus puissant de la galaxie (avec une définition très large de l'humain) après Sentry, ajoutant qu'il a révisé son classement après la victoire d'<Hulk:nom_masculin> sur <Flèche Noire:nom_masculin_2>. Il semble que même ce classement était trop défavorable à <Hulk:nom_masculin>, car finalement Sentry et <Hulk:nom_masculin> se neutralisent mutuellement. <Hulk:nom_masculin> s'est souvent battu avec la Chose (Groupe des 4 Fantastiques) qui a un avantage moral et physique sur lui, car Hulk est solitaire et toujours poursuivi par la violence et l'incompréhension
 clefs: personnalite pouvoirs
 
 http://fr.wikipedia.org/wiki/Hulk
@@ -848,7 +953,7 @@ clefs: presentation
 http://fr.wikipedia.org/wiki/Mathieu_Baillif
 ------
 
-Lors d'un concours organisé par le Komsomol, ce mineur du Donbass aurait accompli quatorze fois la norme dans l’extraction du charbon, le 31 août 1935 : 102 tonnes en 6 heures de travail.<:pronom_masculin>
+Lors d'un concours organisé par le Komsomol, ce <mineur:litt:dessinateur> du Donbass aurait accompli quatorze fois la norme dans l’extraction du charbon, le 31 août 1935 : 102 tonnes en 6 heures de travail.<:pronom_masculin>
 clefs: carriere
 
 <Stakhanov:nom_masculin> fut député du premier Soviet suprême. Il reçut deux Ordres de Lénine, un Ordre du Drapeau Rouge et de nombreuses médailles. Le dernier dimanche d'août fut déclaré « Journée du mineur de charbon », vraisemblablement en son honneur.
@@ -940,7 +1045,7 @@ http://fr.wikipedia.org/wiki/Athena
 --------
 
 Esclave, elle fut emmenée en Europe par un Britannique à Londres en 1810 où on la baptisa du nom de <Saartjie Baartman:nom_feminin_1> avec l'autorisation spéciale de l'évêque de Chester. Vendue, elle devient bête de foire eu égard à sa morphologie hors du commun : hypertrophie des hanches et des fesses (stéatopygie), organes génitaux protubérants. Elle est exposée en Angleterre, en Hollande et ensuite en France. Elle devient par la suite objet sexuel (prostitution, soirées privées).
-clefs: vie
+clefs: debut
 
 Georges Cuvier, zoologue et chirurgien, estime que <Saartjie:nom_feminin> est la preuve de l'infériorité de certaines races. Peu après sa mort, il entreprend de la disséquer au nom du progrès des connaissances humaines. Il réalise un moulage complet du corps et prélève le squelette ainsi que le cerveau et les organes génitaux qu'il place dans des bocaux de formol.
 clefs: mort
@@ -960,7 +1065,7 @@ http://fr.wikipedia.org/wiki/Louise_Lab%C3%A9
 ------
 
 <Elle:nom_feminin> devient veuve à vingt-cinq ans en 1651, quand son époux est tué lors d’un duel contre Miossens, chevalier d’Albret pour les beaux yeux de Mme de Gondran, sa maîtresse.
-clefs: debuts
+clefs: debut
 
 <Elle:nom_feminin> ne voulut pas échapper à cette esthétique ambiante qui lui permettait de déployer toute l’arrogance de son lignage et son indiscutable talent de conteuse et d’écrivain. 
 clefs: style
@@ -972,7 +1077,7 @@ http://fr.wikipedia.org/wiki/Marie_de_Rabutin-Chantal,_marquise_de_S%C3%A9vign%C
 ------
 
 Guitariste, <il:pronom_masculin> se rend à Paris en 1961 pour devenir chanteur de rue. Sous le pseudonyme de Claude Celler, il a sorti plusieurs chansons inspirées par son idole Jacques Brel en 1966, dont : Le miel et la cannelle, Madam' Pipi, Monsieur votre femme me trompe, Quand on se mariera, et Sacrée sale gueule ; en 1971 : Mon amour Patricia. Il entre chez Disc'AZ avec Lucien Morisse, où il fait six disques, dont Le Miel et la Cannelle. Cependant, en septembre 1970, son producteur se suicide et la carrière de Claude Celler, le « petit Brel », s'arrête là.
-clefs: debuts
+clefs: debut
 
 <Claude Vorilhon:nom_masculin> affirme avoir vécu deux expériences de rencontre avec des extraterrestres qui sont les fondements de son idéologie. Des coïncidences troublantes penchent plutôt pour un plagiat de certains ouvrages de Jean Sendy et de la Genèse.
 clefs: debuts
@@ -1002,7 +1107,7 @@ http://fr.wikipedia.org/wiki/Julien_Green
 Apparu sur la place de Nuremberg le 26 mai 1828, <il:pronom_masculin> était probablement âgé d'environ 17 ans. Surnommé « l'orphelin de l'Europe », il est encore aujourd'hui au centre d'une énigme relative à ses origines.
 clefs: adolescence
 
-<Kaspar Hauser:nom_masculin> apparaît le 26 mai 1828 dans une rue de Nuremberg, épuisé, titubant, gesticulant et grognant de façon incompréhensible ...
+<Kaspar Hauser:nom_masculin> apparaît le 26 mai 1828 dans une rue de Nuremberg, épuisé, titubant, gesticulant et grognant de façon incompréhensible.
 clefs: adolescence
 
 En décembre 1833, <Kaspar:nom_masculin> est attiré, la nuit, dans un parc d'Ansbach, en Franconie, par un mystérieux individu qui le poignarde. Il meurt quelques heures plus tard ; à l'emplacement de l'attentat, une inscription indique aujourd'hui encore « hic occultus occulto occisus est » (ici, un inconnu fut assassiné par un inconnu).
@@ -1216,7 +1321,7 @@ http://fr.wikipedia.org/wiki/Oui-Oui
 ------
 
 <Nureyev:nom_masculin_1> était un cheval de course pur-sang anglais né aux États-Unis en 1977 de l'union de <Northern Dancer:nom_masculin_2> et de <Special:nom_feminin_2>, par Forli. Il est le 3/4 frère de Sadler's Wells et de Fairy King.
-clefs: physique
+clefs: introduction
 
 Acheté 1.300.000 dollars yearling, un record à l'époque, <il:pronom_masculin> remporta ses trois premières courses, dont les 2000 guinées , qu'il perdit ensuite sur le tapis vert. On ne le revit plus en compétition, et il se retira au haras. Après une année de monte en France, il fut syndiqué pour 14 millions de dollars et partit aux Etats-Unis.
 clefs: carriere
@@ -1508,6 +1613,9 @@ http://fr.wikipedia.org/wiki/Undertaker
 <L'ornithorynque:litt:Ce dessinateur> (Ornithorhynchus anatinus) est une petite espèce de mammifère semi-aquatique endémique de l'est de l'Australie, y compris en Tasmanie. C'est l'une des cinq espèces de l'ordre des monotrèmes, les seuls mammifères qui pondent des œufs au lieu de donner naissance à des petits vivants (les quatre autres espèces sont des échidnés). <C':nom_masculin> est la seule espèce survivante de la famille des Ornithorhynchidae et du genre Ornithorhynchus bien qu'un grand nombre de fragments d'espèces fossiles de cette famille et de ce genre aient été découverts.
 clefs: physique
 
+<L'ornithorynque:litt:Cette dessinatrice> (Ornithorhynchus anatinus) est une petite espèce de mammifère semi-aquatique endémique de l'est de l'Australie, y compris en Tasmanie. C'est l'une des cinq espèces de l'ordre des monotrèmes, les seuls mammifères qui pondent des œufs au lieu de donner naissance à des petits vivants (les quatre autres espèces sont des échidnés). <C':nom_feminin> est la seule espèce survivante de la famille des Ornithorhynchidae et du genre Ornithorhynchus bien qu'un grand nombre de fragments d'espèces fossiles de cette famille et de ce genre aient été découverts.
+clefs: physique
+
 L'apparence bizarre de ce <mammifère:litt:dessinateur> pondant des œufs, muni d'aiguillons venimeux, à bec de canard, à queue de castor, qui lui sert à la fois de gouvernail dans l'eau et de réserve de graisse, et à pattes de loutre a fortement surpris les premiers explorateurs qui l'ont découvert et bon nombre de naturalistes européens ont cru à une plaisanterie.<:pronom_masculin>
 clefs: physique
 
@@ -1660,7 +1768,7 @@ On discerne des thèmes rémanents dans son œuvre, tels que la folie - dont ét
 clefs: oeuvre
 
 Hanté par de nombreuses phobies, <il:pronom_masculin> ne pouvait supporter la proximité de la mer, ni même les objets en provenant, tant était grande son aversion pour l'élément primordial de la vie. Le froid le rendait malade et les seuls êtres vivants qui semblent ne pas lui avoir déplu étaient les chats, il en avait toujours plusieurs chez lui pour seule compagnie. Il avouait souvent qu'il aurait préféré vivre au XVIIIe siècle.
-clefs: vie
+clefs: personnalite
 
 http://fr.wikipedia.org/wiki/Lovecraft
 -----------
@@ -1677,11 +1785,13 @@ clefs: physique
 http://fr.wikipedia.org/wiki/Yog-Sothoth
 ----
 
-<Le volcan:litt:Ce dessinateur> est surtout connu pour son explosion du 27 août 1883, une des plus violentes de mémoire d'homme, qui tua plusieurs dizaines de milliers de personnes et engendra un tsunami dont les vagues furent alors perceptibles jusqu'en Europe. Cette catastrophe a grandement inspiré la littérature, le cinéma, la télévision et la musique.
+<Le volcan:litt:Ce dessinateur> est surtout connu pour son explosion du 27 août 1883, une des plus violentes de mémoire d'homme, qui tua plusieurs dizaines de milliers de personnes et engendra un tsunami dont les vagues furent alors perceptibles jusqu'en Europe. Cette catastrophe a grandement inspiré la littérature, le cinéma, la télévision et la musique.<:pronom_masculin>
+clefs: carriere
+
+<Le volcan:litt:Cette dessinatrice> est surtout connu< :litt:e> pour son explosion du 27 août 1883, une des plus violentes de mémoire d'homme, qui tua plusieurs dizaines de milliers de personnes et engendra un tsunami dont les vagues furent alors perceptibles jusqu'en Europe. Cette catastrophe a grandement inspiré la littérature, le cinéma, la télévision et la musique.<:pronom_feminin>
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Krakatoa
-
 ----
 
 <Le yéti:nom_masculin> serait un primate velu, ayant un visage ressemblant à celui de l'homme. Sa taille se situerait entre 1,50 et 3,75 mètres. Selon certains témoins, la démarche bipède ressemblerait plus à celle d'un ursidé qu'à celle d'un primate. Ceci est en contradiction avec le fait que les traces supposées ont pu être suivies sur de très longues distances ; un ours ne peut en effet marcher debout que sur quelques mètres.
@@ -1753,8 +1863,11 @@ clefs: carriere
 http://fr.wikipedia.org/wiki/Phineas_Gage
 
 ----
-La publication des Écrits en 1966 lui apporte une célébrité longtemps attendue : il fait dorénavant partie des ténors du structuralisme et son nom est cité à côté de ceux de <Claude Lévi-Strauss:nom_masculin_2>, de <Roland Barthes:nom_masculin_3> et de <Michel Foucault:nom_masculin_4>. Cette célébrité nouvelle amène un afflux important de jeunes à l'EFP, jeunes qui se mettent à imiter son style, à s'habiller et à parler comme lui.
+La publication des Écrits en 1966 lui apporte une célébrité longtemps attendue : <il:pronom_masculin> fait dorénavant partie des ténors du structuralisme et son nom est cité à côté de ceux de <Claude Lévi-Strauss:nom_masculin_2>, de <Roland Barthes:nom_masculin_3> et de <Michel Foucault:nom_masculin_4>. Cette célébrité nouvelle amène un afflux important de jeunes à l'EFP, jeunes qui se mettent à imiter son style, à s'habiller et à parler comme lui.
 clefs:carriere
+
+Le linguiste et philosophe américain Noam Chomsky, qui a connu <Lacan:nom_masculin> dans les années 1970, a confié qu'il le considérait comme un « charlatan conscient de l'être qui se jouait du milieu intellectuel parisien pour voir jusqu'à quel point il pouvait produire de l'absurdité tout en continuant à être pris au sérieux ».
+clefs: citation style
 
 http://fr.wikipedia.org/wiki/Jacques_Lacan
 
@@ -1768,7 +1881,7 @@ http://fr.wikipedia.org/wiki/Harry_Harlow
 Le nom <zaraθ-uštra:nom_masculin> est un composé Bahuvrihi  en avestique  de zarəta- « ancien, faible » et de uštra « chameau », qui se traduit par « celui qui a de vieux chameaux ».
 clefs: nom
 
-Le Spena Nask, 13e section de l'Avesta, décrit la vie de <Zoroastre:nom_masculin>. Ce chapitre, transmis oralement, n'a plus aucune cohérence
+Le Spena Nask, 13e section de l'Avesta, décrit la vie de <Zoroastre:nom_masculin>. Ce chapitre, transmis oralement, n'a plus aucune cohérence.
 clefs: introduction
 
 Sa femme est dénommée Hvōvi. Ils ont trois filles : Freni, Friti et Pourucista, ainsi que trois fils : Isat Vastar, Uruvat-Nara et Hvare Ciθra. Sa mère s'appelait Dughdova ; son père était Pourushaspa Spitāma. Son grand-père s'appelait Haecadaspa Spitāma.
@@ -1844,5 +1957,101 @@ Il n'est pas interdit de penser qu'<il:pronom_masculin> a beaucoup influencé le
 clefs: legacy
 
 http://fr.wikipedia.org/wiki/Von_Neumann
+
+-----
+
+Dans la plupart des adaptations, <Wonder Woman:nom_feminin> est la princesse Diana d'une tribu d'amazones dont les origines sont liées à la mythologie grecque. Ambassadrice amazone dans notre monde, elle possède différents pouvoirs surnaturels ainsi que des cadeaux des dieux grecs, comme un lasso magique et des bracelets à l'épreuve des balles.
+clefs: description
+
+<Wonder Woman:nom_feminin> n'arrête pas simplement les criminels, mais veut les réformer. Il y a, près de Paradise Island, une petite île appelée Transformation Island, sur laquelle se trouve un centre de réhabilitation. La « soumission par l'amour » est en effet un des thèmes importants de <Wonder Woman:nom_feminin>, même s'il fut parfois parodié, les criminels se rendant à la belle <héroïne:litt:dessinatrice> pour profiter de sa compagnie.
+clefs: style
+
+https://fr.wikipedia.org/wiki/Wonder_Woman
+------
+
+<La longeole:nom_feminin> est une <saucisse:litt:dessinatrice> composée de viande de porc et de fenouil, une spécialité du canton de Genève en Suisse protégée par une Indication géographique protégée.
+clefs: introduction
+
+<La longeole:nom_masculin> est <une saucisse:litt:un dessinateur> composé<e:litt:> de viande de porc et de fenouil, une spécialité du canton de Genève en Suisse protégée par une Indication géographique protégée.
+clefs: introduction
+
+https://fr.wikipedia.org/wiki/Longeole
+--------
+
+<L’andouille de Vire:nom_feminin> est une <charcuterie:litt:dessinatrice> à base de chaudins de porc qui sont coupés en lanières avant d’être embossés dans une partie du gros intestin.
+clefs: introduction
+
+<L’andouille de Vire:nom_masculin> est <une charcuterie:litt:un dessinateur> à base de chaudins de porc qui sont coupés en lanières avant d’être embossés dans une partie du gros intestin.
+clefs: introduction
+
+https://fr.wikipedia.org/wiki/Andouille_de_Vire
+------
+
+<Jutta Kleinschmidt:nom_feminin> (29 août 1962, Cologne) est une <pilote:litt:dessinatrice> allemande de rallye-raid, résidant à Monaco. Elle est la seule femme à avoir remporté le rallye Dakar.
+clefs: introduction
+
+https://fr.wikipedia.org/wiki/Jutta_Kleinschmidt
+------
+
+Toute sa vie est tendue par son désir de vie pauvre.
+clefs: style
+
+<Elle:pronom_feminin> a été proclamée patronne de la télévision dans le monde par Pie XII le 14 février 1958. 
+clefs: legacy
+
+Malade depuis près de trente ans, une nuit de Noël, clouée au lit, <elle:pronom_feminin> aurait selon la tradition rapportée par son hagiographe <Thomas de Celano:nom_masculin_2>, vu et entendu la messe chez les frères, donc bien loin de son lieu d'alitement. Elle est depuis la patronne des télécommunications mais aussi des brodeuses car selon la tradition, elle s'accordait occasionnellement un temps de loisir pour broder des tissus liturgiques.
+clefs: legacy
+
+https://fr.wikipedia.org/wiki/Claire_d%27Assise
+-------
+
+<Catherine:nom_feminin> d'Alexandrie, plus connue sous le nom sainte <Catherine:nom_feminin>, est une vierge et martyre qui aurait vécu aux IIIe et IVe siècles. 
+clefs: introduction
+
+Un jour, <elle:pronom_feminin> voit une séance d'apostasie de chrétiens organisée par l'empereur <Maxence:nom_masculin_2> ; elle s'adresse à lui et « dispute longuement avec lui, en utilisant diverses démonstrations des syllogismes, l'allégorie, la métonymie et en parlant de claire et mystique façon ». Après un deuxième entretien, où <Catherine:nom_feminin> tente de convaincre l'empereur de l'existence du dieu unique des chrétiens, celui-ci « constatant qu'il ne pourrait trouver de parade à la sagesse de <Catherine:nom_feminin>, » convoque une assemblée de cinquante doctes grammairiens et rhéteurs, et leur promet d'« immenses récompenses s'ils triomphaient par leurs raisonnement de la vierge argumentatrice ».
+clefs: carriere
+
+https://fr.wikipedia.org/wiki/Catherine_d%27Alexandrie
+---------
+
+<Amy Winehouse:nom_feminin> et ses relations avec les produits stupéfiants ont fait l'objet d'une grande attention des médias.
+clefs: personnalite
+
+Peu de temps après, <Amy Winehouse:nom_feminin> et son mari sont photographiés, ensanglantés et meurtris, dans les rues de Londres après une possible lutte. La <chanteuse:litt:dessinatrice> soutient s'être fait elle-même ses blessures.
+clefs: carriere
+
+Dans une interview en juin 2007 avec World Entertainment News Network, <elle:pronom_feminin> déclare : « Il m'arrive de frapper <Blake:nom_masculin_2> quand je suis ivre. Je ne pense pas lui avoir déjà infligé des blessures, mais quand même. S'il dit quelque chose qui me déplaît, je lui en colle une ».
+clefs: citation
+
+https://fr.wikipedia.org/wiki/Amy_Winehouse
+-------
+
+<Emily:nom_feminin> acquiert, chez ceux qui viennent à la connaître, une réputation de sauvagerie, de courage physique et d'amour des animaux.
+clefs: style
+
+En une autre occasion, son second chien Keeper, un bull mastiff au caractère difficile dont <elle:pronom_feminin> s'occupera jusqu'au dernier jour de sa vie, transgresse ses ordres en s'en allant dormir sur un lit. Blême de colère, elle attrape le chien et le bat à poings nus, de façon telle que plus jamais Keeper ne contreviendra à ses ordres.
+clefs: style
+
+https://fr.wikipedia.org/wiki/Emily_Brontë
+-------
+
+<La Pachamama:nom_feminin> (Terre-Mère), étroitement liée à la fertilité dans la cosmogonie andine, est la déesse-terre dans certaines cultures présentes essentiellement dans l'espace correspondant à l'ancien empire inca.
+clefs: introduction
+
+<La Terre-Mère:nom_feminin> est considérée comme un être vivant. Elle est à la base de tout: être vivants, végétaux, minéraux, textile, technologie, etc. Il convient donc de lui faire des cadeaux pour s'attirer ses bonnes grâces. Ainsi, on creuse un trou dans le sol, pour y déposer de la nourriture, de la bière et des feuilles de coca, à l'attention de <Pachamama:nom_feminin> ou la Vierge Marie selon ses croyances.
+clefs: pouvoir
+
+https://fr.wikipedia.org/wiki/Pachamama
+------
+
+<Axomama:nom_feminin> était, dans la mythologie des Incas, la déesse de la pomme de terre.
+clefs: introduction
+
+On a retrouvé des représentations personnifiées d'<Axomama:nom_feminin>, sous forme de vases de cérémonie en terre cuite provenant de la culture Moche datant du début de notre ère.
+clefs: oeuvre
+
+https://fr.wikipedia.org/wiki/Axomama
+
+
 
 STOP
