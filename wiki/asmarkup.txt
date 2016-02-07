@@ -801,8 +801,11 @@ http://fr.wikipedia.org/wiki/Danielle_Cravenne
 
 ------
 
-<Galactus:nom_masculin> est un être gigantesque issu d'une race antérieure au Big Bang apparue dans un univers préexistant au nôtre.
-clefs:introduction
+<Galactus:nom_masculin> est un être gigantesque issu d'une race antérieure au Big Bang apparue dans un univers préexistant au nôtre. 
+clefs: introduction
+
+Scientifique et explorateur, <Galactus:nom_masculin> (Galan à cette époque) anticipa la fin proche de son monde et s'employa à trouver un moyen de la freiner. Sans autre solution, il monta à bord d'un vaisseau et se dirigea vers le centre de l'univers, où il découvrit l'Œuf Cosmique.
+clefs: carriere
 
 Depuis, cet être tout-puissant doté de pouvoirs quasi illimités doit sans cesse se nourrir de l'essence vitale des mondes qu'<il:pronom_masculin> croise sur son chemin, ce qui lui vaut le surnom de « Dévoreur de mondes ».
 clefs: carriere
@@ -814,16 +817,16 @@ En <lui:pronom_masculin> dort le pouvoir ultime, et des forces que lui même ne 
 clefs: pouvoirs
 
 Comme il le dit lui-même, <Galactus:nom_masculin> n'est pas un dieu.
-clefs: ???
+clefs: citation
 
 Bien qu'<il:pronom_masculin> soit la créature la plus ancienne de l'univers, plus vieux même que Mort et Éternité, il juge sa mort inévitable.
-clefs: ???
+clefs: mort
 
 Tout comme ses pairs, <Galactus:nom_masculin> est au-delà du Bien et du Mal, il n'éprouve pas de sentiment comme la haine ou l'amour, ce qui fait de lui un être froid dénué de sentiment humain, d'une sagesse absolue.
 clefs: personnalite
 
 <Galactus:nom_masculin> se fait généralement précéder d'un heraut pour annoncer sa venue. Il s'agit d'un être qu'il choisit et qu'il dote du pouvoir cosmique. Plusieurs se sont succédé (Gabriel, Morg, Red Shift, Firelord, Nova, Terrax le Destructeur). Le plus célèbre d'entre eux est le Surfer d'Argent.
-clefs: carriere ???
+clefs: carriere 
 
 Un autre mystère demeure : où donc <Galactus:nom_masculin>, prédateur cosmique et créature de l’espace, a-t-il appris à faire du surf et pourquoi choisit-il d’en équiper Norrin Radd ?
 clefs: inexplique
@@ -1368,12 +1371,6 @@ clefs: naissance
 
 http://fr.wikipedia.org/wiki/Gondwana
 ----------------
-
-<Galactus:nom_masculin> est un être gigantesque issu d'une race antérieure au Big Bang apparue dans un univers préexistant au nôtre. Scientifique et explorateur, <Galactus:nom_masculin> (Galan à cette époque) anticipa la fin proche de son monde et s'employa à trouver un moyen de la freiner. Sans autre solution, il monta à bord d'un vaisseau et se dirigea vers le centre de l'univers, où il découvrit l'Œuf Cosmique.
-clefs: carriere
-
-http://fr.wikipedia.org/wiki/Galactus
------------------
 
 <Le Commodore 64:nom_masculin> utilise un microprocesseur 8 bits 6510 (un dérivé proche du 6502 qui a la possibilité de gérer des banques de mémoires en les amenant à la demande dans l'espace d'adressage du processeur) et dispose de 64 kiloctets de mémoire vive.
 clefs: physique
