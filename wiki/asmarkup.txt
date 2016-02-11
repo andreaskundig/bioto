@@ -171,7 +171,7 @@ http://fr.wikipedia.org/wiki/Jeffrey_Dahmer
 -----
 
 
-C'est lui qui, après qu'elle lui a adressé certains de ses écrits, a recommandé à Charlotte Brontë d'abandonner la littérature qui, selon son opinion, s'oppose de nature aux talents et aux devoirs d'une femme.<:pronom_masculin>
+C'est lui qui, après qu'elle lui a adressé certains de ses écrits, a recommandé à <Charlotte Brontë:nom_feminin_2> d'abandonner la littérature qui, selon son opinion, s'oppose de nature aux talents et aux devoirs d'une femme.<:pronom_masculin>
 clefs: carriere
 
 http://fr.wikipedia.org/wiki/Robert_Southey
@@ -1817,7 +1817,7 @@ http://fr.wikipedia.org/wiki/Alex_le_perroquet
 Ces bouleversements dans la vie de <Wittgenstein:nom_masculin_1>, à la fois à la fin de sa première période et au commencement de sa seconde, le menèrent à vivre une vie d'ascèse. Son geste le plus spectaculaire fut de laisser sa part d'héritage à des artistes d'avant-garde autrichiens et allemands dont <Rilke:nom_masculin_2>, ainsi qu'à ses frères et sœurs, en insistant pour qu'ils promettent de ne jamais le lui rendre. Il avait le sentiment que donner de l'argent aux pauvres ne pourrait que les corrompre, alors qu'il ne faisait pas de mal aux riches.
 clefs: carriere opinions
 
-Considérant à l'époque que <Tractatus:livre_int> signait la fin de la philosophie,  <Wittgenstein:nom_masculin_1> retourna en Autriche  et devint instituteur.
+Considérant à l'époque que <Tractatus:livre_ext> signait la fin de la philosophie,  <Wittgenstein:nom_masculin_1> retourna en Autriche  et devint instituteur.
 clefs: carriere
 
 En 1929, <Wittgenstein:nom_masculin_1> décida, sur les conseils de <Frank Ramsey:nom_masculin_2>  et d'autres de ses amis, de retourner à Cambridge. Il fut accueilli à la gare par une foule composée de quelques-uns des plus grands intellectuels d'Angleterre et réalisa avec horreur qu'il était l'un des philosophes les plus célèbres au monde.
@@ -1931,7 +1931,7 @@ clefs: carriere opinions
 <Gödel:nom_masculin>, en plus de sa croyance divine, s'interrogeait sur l'existence des anges et démons dans un univers mathématique, un univers idéel, par opposition à l'univers réel perceptible, dans lequel vivraient les 'anges' et 'démons', comme nous vivons dans l'univers réel. Ceci était une conséquence de ses réflexions sur l'intuition et l'incomplétude, puisque l'intuition a parfois produit des thèses mathématiques ne pouvant être prouvées ou infirmées mathématiquement. Il considérait que soit le cerveau est une machine de Turing, et il existe donc des problèmes indécidables pour l'humain, ce qui signifie que « les propriétés mathématiques qui nous échappent ont une existence autonome », soit le cerveau surpasse les machines de Turing, et donc l'esprit humain est « une réalité indépendante du monde sensible ». 
 clefs: opinions
 
-<Gödel:nom_masculin> préfère rester discret sur cette vision des choses, qui n'est décrite que dans ses notes personnelles :« je ne rends public que les parties de ma philosophie qui se prêtent le moins à la controverse », à cause de l'esprit du temps, à la fois réception de ses confrères et ordre du monde.
+<Gödel:nom_masculin> préfère rester discret sur <cette:litt:sa> vision des choses, qui n'est décrite que dans ses notes personnelles :« je ne rends public que les parties de ma philosophie qui se prêtent le moins à la controverse », à cause de l'esprit du temps, à la fois réception de ses confrères et ordre du monde.
 clefs: opinions
 
 <Gödel:nom_masculin> fut, tout au long de sa vie, un homme timide et en retrait. Approchant la mort, il se sentit de plus en plus concerné par sa santé, se convainquant de l'existence d'un complot visant à l'empoisonner. Il cessa alors de s'alimenter, tombant progressivement dans la cachexie. Il mourut le 14 janvier 1978, à Princeton, état du New Jersey, États-Unis.
@@ -2131,7 +2131,30 @@ https://fr.wikipedia.org/wiki/Beth_Ditto
 clefs: physique
 
 https://fr.wikipedia.org/wiki/Monstre_du_Loch_Ness
+--------
 
+<Jeannie Longo:nom_feminin> ou <Jeannie Longo:nom_feminin>-Ciprelli est une coureuse cycliste française, née le 31 octobre 1958 à Annecy. Dotée d'une longévité sportive exceptionnelle (elle a gagné ses premiers titres mondiaux en 1985, alors que les rivales qu'elle a battues à l'occasion de ses derniers titres n'étaient pas encore nées), elle possède un palmarès unique, avec 59 titres nationaux, 13 titres de championne du monde et un titre olympique.
+clefs: introduction
+
+<Jeannie Longo:nom_feminin> commence à pratiquer le cyclisme à l'âge de 20 ans, en 1978. L'année suivante, elle obtient son premier titre de championne de France.
+clefs: debut
+
+<Elle:pronom_feminin> est exclue de l'équipe de France devant disputer les championnats du monde sur route à Stuttgart pour avoir refusé d'utiliser les pédales de la marque qui équipe la Fédération française de cyclisme.
+clefs: carriere
+
+https://fr.wikipedia.org/wiki/Jeannie_Longo
+-------
+
+<Elle:pronom_feminin> est issue du BMX où elle a été championne de France, d'Europe et du monde à 15 ans.
+clefs: vie
+
+https://fr.wikipedia.org/wiki/Anne-Caroline_Chausson
+-------
+
+<Elle:pronom_feminin> a commencé le cyclisme à l'âge de 35 ans, tout en étant ophtalmologiste libérale à Marseille.
+clefs: debuts
+
+https://fr.wikipedia.org/wiki/Magdalena_de_Saint-Jean
 
 
 

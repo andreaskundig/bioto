@@ -4,7 +4,7 @@ var keys_m = {
 description: [1, 85, 415], caractere: [9, 41, 414], legacy: [12, 45, 84, 126, 132, 133, 165, 168, 170, 214, 277, 278, 287, 312, 316, 356, 358, 412, 416, 417, 425], mort: [25, 39, 56, 72, 90, 111, 115, 133, 142, 163, 164, 179, 184, 211, 224, 242, 266, 281, 310, 311, 312, 313, 316, 317, 374, 398, 421, 422], apparence: [26, 113, 120], oeuvre: [29, 383], carriere: [30, 38, 40, 46, 47, 48, 49, 50, 51, 52, 54, 60, 61, 73, 74, 78, 81, 92, 98, 99, 100, 101, 105, 106, 107, 108, 109, 114, 116, 118, 119, 122, 130, 137, 146, 150, 153, 159, 160, 161, 162, 171, 174, 175, 181, 183, 203, 204, 205, 206, 208, 209, 215, 216, 218, 221, 222, 223, 237, 239, 246, 251, 253, 261, 284, 286, 291, 292, 298, 299, 300, 301, 307, 308, 309, 314, 346, 347, 352, 353, 354, 355, 359, 361, 362, 364, 365, 371, 373, 377, 379, 380, 381, 382, 388, 392, 393, 394, 395, 396, 400, 401, 402, 403, 404, 405, 411, 418, 424], opinion: [31, 86, 87, 250, 300, 305, 306, 329, 330, 369, 370, 394, 397, 418, 419, 420, 423, 424], enfance: [37, 97, 102, 103, 112, 128, 169, 217, 219, 220, 238, 244, 245, 249, 254, 288], physique: [42, 62, 79, 89, 145, 156, 171, 185, 212, 243, 247, 255, 257, 259, 260, 262, 264, 265, 267, 268, 270, 271, 273, 283, 295, 297, 342, 343, 350, 376, 385, 386, 387, 390, 464], reputation: [43, 70, 93, 95, 135, 141, 200, 213, 459], relation: [44, 67, 399], rumeur: [55], age: [63, 64], personnalite: [65, 66, 68, 69, 180, 188, 384], mariage: [75], divorce: [76], sante: [77, 104, 105], presentation: [80, 94, 110, 121, 123, 124, 131, 207, 210, 407], alimentation: [82], faculte: [88], naissance: [91, 189, 273, 288, 294, 315, 340, 341, 351], surnom: [100, 113], enseignement: [117], titre: [125], citation: [127, 178, 195, 289, 309, 406, 448], famille: [129], debut: [134, 136, 149, 152, 167, 202, 203, 235, 236, 352, 363, 368, 375], introduction: [136, 138, 151, 166, 173, 194, 279, 282, 285, 296, 348, 429, 431], existence: [143, 256, 280], style: [155, 201, 252, 305, 355, 357, 379, 406, 433], jeunesse: [157, 158], pouvoir: [167, 176, 177, 185, 186, 187, 188], inexplique: [182], adolescence: [240, 241, 263, 366, 367, 413], retraite: [248], ondit: [255, 258, 269, 272, 274, 275, 276, 290, 291, 298, 299, 314, 356, 360, 378, 382], origine: [261, 410], vie: [372, 409], nom: [408]
 };
 var keys_f = {
-description: [0, 1, 85, 426], debut: [2, 7, 18, 21, 147, 198, 228, 232, 319, 320, 325], relation: [3, 4, 10, 11], carriere: [5, 22, 23, 24, 28, 53, 139, 144, 148, 154, 196, 199, 225, 227, 231, 300, 304, 318, 319, 321, 322, 323, 325, 327, 328, 331, 332, 333, 335, 338, 339, 344, 345, 361, 389, 391, 437, 439, 449, 462], citation: [6, 21, 127, 195, 440, 447, 448, 450], presentation: [8, 27, 96, 302], caractere: [9, 34, 463], legacy: [12, 14, 17, 20, 84, 126, 192, 277, 434, 435], mort: [13, 59, 72, 172, 193, 229, 339], introduction: [15, 16, 19, 190, 349, 428, 430, 432, 436, 443, 445, 453], retraite: [17], opinion: [31, 230, 234, 300, 304, 461], enfance: [32, 33, 35, 36, 191], existence: [57], jeunesse: [58], age: [63, 64], rumeur: [71], physique: [79, 83, 147, 324, 333, 335, 336, 337, 451, 454, 455, 456, 458, 463], alimentation: [82], famille: [129], reputation: [140, 197, 456, 458, 460], naissance: [189, 226, 293], bof: [199], style: [201, 233, 303, 427, 433, 441, 442], adolescence: [321, 324], ondit: [326, 334], origine: [410], personnalite: [438], pouvoir: [444], oeuvre: [446], mariage: [452]
+description: [0, 1, 85, 426], debut: [2, 7, 18, 21, 147, 198, 228, 232, 319, 320, 325, 466, 469], relation: [3, 4, 10, 11], carriere: [5, 22, 23, 24, 28, 53, 139, 144, 148, 154, 196, 199, 225, 227, 231, 300, 304, 318, 319, 321, 322, 323, 325, 327, 328, 331, 332, 333, 335, 338, 339, 344, 345, 361, 389, 391, 437, 439, 449, 462, 467], citation: [6, 21, 127, 195, 440, 447, 448, 450], presentation: [8, 27, 96, 302], caractere: [9, 34, 463], legacy: [12, 14, 17, 20, 84, 126, 192, 277, 434, 435], mort: [13, 59, 72, 172, 193, 229, 339], introduction: [15, 16, 19, 190, 349, 428, 430, 432, 436, 443, 445, 453, 465], retraite: [17], opinion: [31, 230, 234, 300, 304, 461], enfance: [32, 33, 35, 36, 191], existence: [57], jeunesse: [58], age: [63, 64], rumeur: [71], physique: [79, 83, 147, 324, 333, 335, 336, 337, 451, 454, 455, 456, 458, 463], alimentation: [82], famille: [129], reputation: [140, 197, 456, 458, 460], naissance: [189, 226, 293], bof: [199], style: [201, 233, 303, 427, 433, 441, 442], adolescence: [321, 324], ondit: [326, 334], origine: [410], personnalite: [438], pouvoir: [444], oeuvre: [446], mariage: [452], vie: [468]
 };
 var texts = [
 {i:0, text:"#0# de pla|nète en pla|nète, #1# est une héroïne de science-fic|tion des|sinée sur le modèle de Bri|gitte Bar|dot. Peu farouche, elle incarne pour son créa|teur la femme moderne à l'ère de la libé|ration sexuelle. ",
@@ -127,8 +127,8 @@ var texts = [
 {i:39, text:"Il fut assas|siné par un co-déte|nu, Chris|topher Scar|ver, à la Colum|bia Cor|rec|tio|nal faci|lity à Por|tage (Wis|con|sin) le 28 novembre 1994. L'homme, un schi|zophrène instable se « pre|nant pour Jésus-Christ » lui a fra|cas|sé le crâne au moyen d'un hal|tère. ",
  placeholders:[],
  url:"http://fr.wikipedia.org/wiki/Jeffrey_Dahmer" },
-{i:40, text:"C'est lui qui, après qu'elle lui a adres|sé cer|tains de ses écrits, a recom|man|dé à Char|lotte Brontë d'aban|don|ner la lit|téra|ture qui, selon son opi|nion, s'oppose de nature aux talents et aux devoirs d'une femme. ",
- placeholders:[],
+{i:40, text:"C'est lui qui, après qu'elle lui a adres|sé cer|tains de ses écrits, a recom|man|dé à #0# d'aban|don|ner la lit|téra|ture qui, selon son opi|nion, s'oppose de nature aux talents et aux devoirs d'une femme. ",
+ placeholders:[["#0#", null, "Charlotte Brontë", "nom_feminin_2"]],
  url:"http://fr.wikipedia.org/wiki/Robert_Southey" },
 {i:41, text:"Le carac|tère aigri, orgueilleux, capri|cieux et empor|té de sa mère, qui l’accable tour à tour de caresses et de mau|vais trai|tements, fait naître en lui cette irri|tabi|lité et cette sus|cep|tibi|lité exces|sives qui sont les prin|cipaux défauts de son carac|tère. ",
  placeholders:[],
@@ -1193,7 +1193,7 @@ var texts = [
  placeholders:[["#0#", ["d'","de "], "Wittgenstein", "nom_masculin_1"], ["#1#", null, "Rilke", "nom_masculin_2"]],
  url:"http://fr.wikipedia.org/wiki/Wittgenstein" },
 {i:395, text:"Consi|dérant à l'époque #0# signait la fin de la phi|loso|phie, #1# retour|na en Autriche et devint ins|titu|teur. ",
- placeholders:[["#0#", ["qu'","que "], "Tractatus", "livre_int"], ["#1#", null, "Wittgenstein", "nom_masculin_1"]],
+ placeholders:[["#0#", ["qu'","que "], "Tractatus", "livre_ext"], ["#1#", null, "Wittgenstein", "nom_masculin_1"]],
  url:"http://fr.wikipedia.org/wiki/Wittgenstein" },
 {i:396, text:"En 1929, #0# déci|da, sur les conseils #1# et d'autres de ses amis, de retour|ner à Cam|bridge. Il fut accueilli à la gare par une foule com|posée de quelques-uns des plus grand|s intel|lec|tuels d'Angle|terre et réa|lisa avec hor|reur qu'il était l'un des phi|losophes les plus célèbres au monde. ",
  placeholders:[["#0#", null, "Wittgenstein", "nom_masculin_1"], ["#1#", ["d'","de "], "Frank Ramsey", "nom_masculin_2"]],
@@ -1267,8 +1267,8 @@ var texts = [
 {i:419, text:"#0#, en plus de sa croyance divine, s'inter|rogeait sur l'exis|tence des anges et démons dans un uni|vers mathé|matique, un uni|vers idéel, par oppo|sition à l'uni|vers réel per|cep|tible, dans lequel vivraient les 'anges' et 'démons', comme nous vivons dans l'uni|vers réel. Ceci était une consé|quence de ses réflexions sur l'intui|tion et l'incom|plé|tude, puisque l'intui|tion a par|fois pro|duit des thèses mathé|matiques ne pou|vant être prou|vées ou infir|mées mathé|mati|que|ment. Il consi|dérait que soit le cer|veau est une machine de Turing, et il existe donc des pro|blèmes indé|cidables pour l'humain, ce qui signi|fie que « les pro|prié|tés mathé|matiques qui nous échappent ont une exis|tence auto|nome », soit le cer|veau sur|passe les machines de Turing, et donc l'esprit humain est « une réa|lité indé|pen|dante du monde sen|sible ». ",
  placeholders:[["#0#", null, "Gödel", "nom_masculin"]],
  url:"http://fr.wikipedia.org/wiki/Kurt_G%C3%B6del" },
-{i:420, text:"#0# pré|fère res|ter dis|cret sur cette vision des choses, qui n'est décrite que dans ses notes per|son|nelles :« je ne rend|s public que les par|ties de ma phi|loso|phie qui se prêtent le moins à la contro|verse », à cause de l'esprit du temps, à la fois récep|tion de ses confrères et ordre du monde. ",
- placeholders:[["#0#", null, "Gödel", "nom_masculin"]],
+{i:420, text:"#0# pré|fère res|ter dis|cret sur #1# vision des choses, qui n'est décrite que dans ses notes per|son|nelles :« je ne rend|s public que les par|ties de ma phi|loso|phie qui se prêtent le moins à la contro|verse », à cause de l'esprit du temps, à la fois récep|tion de ses confrères et ordre du monde. ",
+ placeholders:[["#0#", null, "Gödel", "nom_masculin"], ["#1#", null, "cette", "litt:sa"]],
  url:"http://fr.wikipedia.org/wiki/Kurt_G%C3%B6del" },
 {i:421, text:"#0# fut, tout au long de sa vie, un homme timide et en retrait. Appro|chant la mort, il se sen|tit de plus en plus concer|né par sa san|té, se convain|quant de l'exis|tence d'un com|plot visant à l'empoi|son|ner. Il ces|sa alors de s'ali|men|ter, tom|bant pro|gres|sive|ment dans la cachexie. Il mou|rut le 14 jan|vier 1978, à Prin|ceton, état du New Jer|sey, États-Unis. ",
  placeholders:[["#0#", null, "Gödel", "nom_masculin"]],
@@ -1401,5 +1401,20 @@ var texts = [
  url:"https://fr.wikipedia.org/wiki/Beth_Ditto" },
 {i:464, text:"Il est géné|rale|ment décrit comme res|sem|blant à un ser|pent de mer ou à un plé|sio|saure. ",
  placeholders:[],
- url:"https://fr.wikipedia.org/wiki/Monstre_du_Loch_Ness" }
+ url:"https://fr.wikipedia.org/wiki/Monstre_du_Loch_Ness" },
+{i:465, text:"#0# ou #1#-Ciprel|li est une cou|reuse cycliste fran|çaise, née le 31 octobre 1958 à Anne|cy. Dotée d'une lon|gévi|té spor|tive excep|tion|nelle (elle a gagné ses pre|miers titres mon|diaux en 1985, alors que les rivales qu'elle a bat|tues à l'occa|sion de ses der|niers titres n'étaient pas encore nées), elle pos|sède un pal|marès unique, avec 59 titres natio|naux, 13 titres de cham|pionne du monde et un titre olym|pique. ",
+ placeholders:[["#0#", null, "Jeannie Longo", "nom_feminin"], ["#1#", null, "Jeannie Longo", "nom_feminin"]],
+ url:"https://fr.wikipedia.org/wiki/Jeannie_Longo" },
+{i:466, text:"#0# com|mence à pra|tiquer le cyclisme à l'âge de 20 ans, en 1978. L'année sui|vante, elle obtient son pre|mier titre de cham|pionne de France. ",
+ placeholders:[["#0#", null, "Jeannie Longo", "nom_feminin"]],
+ url:"https://fr.wikipedia.org/wiki/Jeannie_Longo" },
+{i:467, text:"Elle est exclue de l'équipe de France devant dis|puter les cham|pion|nats du monde sur route à Stutt|gart pour avoir refu|sé d'uti|liser les pédales de la marque qui équipe la Fédé|ration fran|çaise de cyclisme. ",
+ placeholders:[],
+ url:"https://fr.wikipedia.org/wiki/Jeannie_Longo" },
+{i:468, text:"Elle est issue du BMX où elle a été cham|pionne de France, d'Europe et du monde à 15 ans. ",
+ placeholders:[],
+ url:"https://fr.wikipedia.org/wiki/Anne-Caroline_Chausson" },
+{i:469, text:"Elle a com|men|cé le cyclisme à l'âge de 35 ans, tout en étant oph|tal|molo|giste libé|rale à Mar|seille. ",
+ placeholders:[],
+ url:"https://fr.wikipedia.org/wiki/Magdalena_de_Saint-Jean" }
 ];
